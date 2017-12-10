@@ -1,37 +1,25 @@
-## Welcome to GitHub Pages
+## 欢迎来到AI量化实验室，专注于将最前沿人工智能技术应用于量化投资，去辅助理解复杂的金融世界。
 
-You can use the [editor on GitHub](https://github.com/ailabx/test2/edit/master/index.md) to maintain and preview the content for your website in Markdown files.
+金融是一个古老的行业，支撑着世界经济运转，甚至文化的传承。AI是一门年轻的技术，但承载了世界的未来。把AI应用到量化金融，是未来的必然趋势。
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+AI即人工智能，包括传统机器学习，最近很火的深度学习，深度强化学习等。金融量化，包括基本面量化，技术面量化，甚至是舆情等各种信息源。
 
-### Markdown
+### 回测系统
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+回测系统是一个基础功能。金融行业有一个好处，就是历史数据很完整，尤其是财务报表数据以及交易数据，每一笔都真实存在着。我们可以通过对历史进行回溯测试，去检验一个交易策略，交易方法是否有效，以及相应的风险。
 
-```markdown
-Syntax highlighted code block
+### 深度强化学习
 
-# Header 1
-## Header 2
-### Header 3
+#### 强化学习
 
-- Bulleted
-- List
+强化学习是一个框架，甚至代表一种理念，它符合人类学习的本质，就是寻找最优reward的过程。它会不断试错，在过程和当下的过程中，去总结，学习好的经验，去掉不好的教训，让自己不断进化。
 
-1. Numbered
-2. List
+#### 深度学习
 
-**Bold** and _Italic_ and `Code` text
+深度学习，是一种很有效的“学习”工具，非常擅长学习图片中，序列中的信息映射。
+[pytorch从入门到精通](https://ailabx.github.io/ailabx/pytorch)
 
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/ailabx/test2/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+### ailabX量化实验室
+[关于我](https://ailabx.github.io/ailabx/about)
+QQ群
+微信群
