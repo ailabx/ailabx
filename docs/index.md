@@ -22,5 +22,7 @@ AI即人工智能，包括传统机器学习，最近很火的深度学习，深
 
 ### ailabX量化实验室
 [关于我](https://ailabx.github.io/ailabx/about)
+
 QQ群
+
 微信群
