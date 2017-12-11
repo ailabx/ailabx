@@ -20,6 +20,8 @@ AI即人工智能，包括传统机器学习，最近很火的深度学习，深
 
 [pytorch从入门到精通](https://ailabx.github.io/ailabx/pytorch)
 
+### 系统部署
+[docker上mongodb的部署与操作](https://ailabx.github.io/ailabx/mongodb)
 ### ailabX量化实验室
 [关于我](https://ailabx.github.io/ailabx/about)
 
