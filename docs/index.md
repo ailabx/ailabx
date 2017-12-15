@@ -14,6 +14,8 @@ AI即人工智能，包括传统机器学习，最近很火的深度学习，深
 
 [量化回测系统之benchmark管理](https://ailabx.github.io/ailabx/backtestIII)
 
+[量化回测系统之benchmark绩效管理](https://ailabx.github.io/ailabx/backtestIV)
+
 ### 深度强化学习
 
 #### 强化学习
