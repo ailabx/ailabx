@@ -1,0 +1,5 @@
+tushare
+pymongo
+empyrical
+plotly
+pyqtgraph
