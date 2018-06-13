@@ -1,0 +1,9 @@
+.idea/
+__pycache__
+*.pyc
+text8
+text8.*
+*.npy
+*.npz
+*.model
+*.h5
