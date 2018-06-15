@@ -9,14 +9,20 @@ class DataFeed(object):
 
 class CSVDataFeed(DataFeed):
     def __init__(self,csv):
-        self.data = pd.read_csv(csv)
+        data = pd.read_csv(csv)
+        data.index =data['date'] #date,open,high,low,close,return
+        data = data.sort_index()
+        data['return'] = data['close']/data['close'].shift(1) - 1
+
+        self.data = data
+        print(self.data.head())
         self.idx = 0
 
     def reset(self):
         self.idx = 0
 
     def step(self):
-        obs = self.data.iloc[self.idx].as_matrix()
+        obs = self.data.iloc[self.idx]#.as_matrix()
         self.idx += 1
         done = self.idx >= len(self.data)
         return obs, done
@@ -36,7 +42,7 @@ class TradingSim(object) :
         self.navs             = np.ones(self.steps)
         self.mkt_nav         = np.ones(self.steps)
         self.strat_retrns     = np.ones(self.steps)
-        self.posns            = np.zeros(self.steps)
+        self.positions            = np.zeros(self.steps)
         self.costs            = np.zeros(self.steps)
         self.trades           = np.zeros(self.steps)
         self.mkt_retrns       = np.zeros(self.steps)
@@ -47,16 +53,19 @@ class TradingSim(object) :
         self.navs.fill(1)
         self.mkt_nav.fill(1)
         self.strat_retrns.fill(0)
-        self.posns.fill(0)
+        self.positions.fill(0)
         self.costs.fill(0)
         self.trades.fill(0)
         self.mkt_retrns.fill(0)
 
 
-    def _step(self, action, retrn):
+    def do_step(self, action, retrn):
 
-        bod_posn = 0.0 if self.step == 0 else self.posns[self.step - 1]
-        bod_nav = 1.0 if self.step == 0 else self.navs[self.step - 1]
+        #上一期的持仓状态,如果当前step==0，则持仓为0，即未持仓
+        old_position = 0.0 if self.step == 0 else self.positions[self.step - 1]
+
+        #上一步的持仓净值及市场净值
+        old_nav = 1.0 if self.step == 0 else self.navs[self.step - 1]
         mkt_nav = 1.0 if self.step == 0 else self.mkt_nav[self.step - 1]
 
 
@@ -69,21 +78,27 @@ class TradingSim(object) :
         LONG (2)
         '''
 
-        self.posns[self.step] = action - 1 #(0,1,2)-1 => (-1,0,1) 持仓状态：做多是1,坐空是-1,0是FLAT不变
-        self.trades[self.step] = self.posns[self.step] - bod_posn #
+        self.positions[self.step] = action - 1 #(0,1,2)-1 => (-1,0,1) 持仓状态：做多是1,坐空是-1,0是FLAT不变
+        self.trades[self.step] = self.positions[self.step] - old_position
+        #trades是否交易，比如指令给出位置是1，而上一期也是1，则无状态改变，不需要交易。这里取舍空间为[-2,2]，可以跨两态
+        #比如坐空到坐多
 
+        #交易成本率
         trade_costs_pct = abs(self.trades[self.step]) * self.trading_cost_bps
         self.costs[self.step] = trade_costs_pct + self.time_cost_bps
-        reward = ((bod_posn * retrn) - self.costs[self.step])
+
+        #奖励 = 上期持仓状态*回报率 - 交易成本
+        reward = ((old_position * retrn) - self.costs[self.step])
         self.strat_retrns[self.step] = reward
 
         if self.step != 0:
-            self.navs[self.step] = bod_nav * (1 + self.strat_retrns[self.step - 1])
+            self.navs[self.step] = old_nav * (1 + self.strat_retrns[self.step - 1])
             self.mkt_nav[self.step] = mkt_nav * (1 + self.mkt_retrns[self.step - 1])
 
         info = {'reward': reward, 'nav': self.navs[self.step], 'costs': self.costs[self.step]}
 
         self.step += 1
+        print(reward,info)
         return reward, info
 
 
@@ -97,12 +112,11 @@ class TradingEnv(object):
         return self.src.step()[0]
 
     def step(self, action):
-        #assert self.action_space.contains(action), "%r (%s) invalid" % (action, type(action))
         observation, done = self.src.step()
-        # Close    Volume     Return  ClosePctl  VolumePctl
-        yret = observation[2]
+        #
+        ret = observation['return']
 
-        reward, info = self.sim._step(action, yret)
+        reward, info = self.sim.do_step(action, ret)
 
         # info = { 'pnl': daypnl, 'nav':self.nav, 'costs':costs }
 
@@ -110,17 +124,17 @@ class TradingEnv(object):
 
     #运行策略入口
     def run_strat(self, strategy, return_df=True):
-        observation = self.reset()
+        observation = self.reset() #这里得到初始的观察状态
         done = False
         while not done:
-            action = strategy(observation, self)  # call strategy
+            action = strategy(observation, self)  # 调用策略函数
             observation, reward, done, info = self.step(action)
 
         return self.sim.to_df() if return_df else None
 
 
 if __name__ == '__main__':
-    buyandhold = lambda o, e: 2  # buy on day #1 and hold
+    buyandhold = lambda o, e: 2  # 买入并持用，策略是一个函数，这里用lambda的形式
     env = TradingEnv()
     bhdf = env.run_strat(buyandhold)
     print(bhdf.head())
