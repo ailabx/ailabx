@@ -5,5 +5,5 @@ import os
 
 
 if __name__ == '__main__':
-    df = ts.get_h_data('000001',index=True,start='2008-01-01')
-    df.to_csv('d://devgit//ailabx//data//000001_index.csv')
+    df = ts.get_h_data('000300',index=True,start='2015-12-01')
+    df.to_csv('d://devgit//ailabx//data//000300.csv')
