@@ -2,6 +2,12 @@ from PyQt5 import QtWidgets
 from PyQt5 import QtGui
 from .forms.formsetting import FormSetting
 from .frames.framemain import FrameMain
+import os
+import pandas as pd
+from .consts import *
+from .models import table_models
+import traceback
+from engine.data import CSVDataFeed
 
 class MainWindow(QtWidgets.QMainWindow):
     def __init__(self,parent=None):
@@ -30,6 +36,27 @@ class MainWindow(QtWidgets.QMainWindow):
         setting = self.addToolBar('设置')
         setting.addAction(setting_action)
 
+        loaddata_action = QtWidgets.QAction(QtGui.QIcon('images/logo.png'),'加载数据',self)
+        loaddata_action.triggered.connect(self.loaddata)
+        loaddata = self.addToolBar('加载数据')
+        loaddata.addAction(loaddata_action)
+
     def show_setting(self):
         self.setting = FormSetting()
         self.setting.show()
+
+    def loaddata(self):
+        try:
+            filename, filetype = QtWidgets.QFileDialog.getOpenFileName(self,
+                                                                       "选取数据文件",
+                                                                       os.getcwd() + '//data',
+                                                                       "CSV Files (*.csv);;All Files (*)")  # 设置文件扩展名过滤,注意用双分号间隔
+            #self.text_file.setText(filename)
+            datafeed = CSVDataFeed(csv=filename)
+
+
+            table = mgr_frames.get_frame(FRAMES.FRAME_DATA_TABLE)
+
+            table.setModel(table_models.DataFrameTableModel(df=datafeed.data))
+        except:
+            print(traceback.print_exc())

@@ -1,5 +1,6 @@
 import unittest
-from engine.trading_env import CSVDataFeed,Portfolio
+from engine.data import CSVDataFeed
+from engine.trading_env import Portfolio
 
 class TestTradingEnv(unittest.TestCase):
     def __test_csv_datafeed(self):
