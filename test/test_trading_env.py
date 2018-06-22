@@ -1,6 +1,6 @@
 import unittest
 from engine.data import CSVDataFeed
-from engine.trading_env import Portfolio
+from engine.trading_env import Trader
 
 class TestTradingEnv(unittest.TestCase):
     def __test_csv_datafeed(self):
@@ -9,7 +9,7 @@ class TestTradingEnv(unittest.TestCase):
         print(type(obv),obv['close'])
 
     def test_trading_sim(self):
-        port = Portfolio(period=252)
+        port = Trader(period=252)
         port.update_first_step(action=2)
         self.assertEqual(port.costs[0],0.0003)
         self.assertEqual(port.positions[0],1)

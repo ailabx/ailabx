@@ -6,9 +6,18 @@ from ..consts import *
 from ..models import table_models
 import pandas as pd
 from engine.data import CSVDataFeed
+from engine.trading_env import TradingEnv,Trader
 import traceback
 from datetime import datetime
 from datetime import timedelta
+import traceback
+
+import matplotlib.pyplot as plt
+
+
+import random
+def sample():
+    return random.sample([0,1,2],1)[0]
 
 class FrameData(QtWidgets.QWidget):
     def __init__(self,parent=None):
@@ -48,7 +57,22 @@ class FrameData(QtWidgets.QWidget):
         combo.addItems(['买入并持有','随机买卖','海龟交易原则','深度强化学习'])
         grid.addWidget(combo,2,1)
 
-        grid.addWidget(QPushButton('开始回测'),3,1)
+        bkt_btn = QPushButton('开始回测')
+        bkt_btn.clicked.connect(self.bkt_clicked)
+        grid.addWidget(bkt_btn,3,1)
+
+    def bkt_clicked(self):
+
+        try:
+            randomtrader = lambda o, e: sample()  # retail trader
+            buyandhold = lambda o, e: 2  # 买入并持用，策略是一个函数，这里用lambda的形式
+            env = TradingEnv()
+            df = env.run_strategy(buyandhold)
+            print(df.tail())
+            df[['navs', 'mkt_navs']].plot(grid=True)
+            plt.show()
+        except:
+            traceback.print_exc()
 
     def loaddata(self):
         try:

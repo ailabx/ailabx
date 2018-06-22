@@ -20,13 +20,10 @@ class DataFrameTableModel(QAbstractTableModel):
 
     def sort(self, columnId, order=Qt.AscendingOrder):
         self.layoutAboutToBeChanged.emit()
-        #self.sortingAboutToStart.emit()
         column = self.df.columns[columnId]
         #df = pd.DataFrame()
         self.df.sort_values(column, ascending=not bool(order), inplace=True)
         self.layoutChanged.emit()
-        #self.sortingFinished.emit()
-        #pass
 
     def flags(self, index):
         flags = super(self.__class__, self).flags(index)
@@ -47,45 +44,21 @@ class DataFrameTableModel(QAbstractTableModel):
                 value = round(float(self._dataFrame.ix[row, col]), self._float_precisions[str(columnDtype)])
             elif columnDtype in self._intDtypes:
                 value = int(self._dataFrame.ix[row, col])
-            elif columnDtype in self._boolDtypes:
-                # TODO this will most likely always be true
-                # See: http://stackoverflow.com/a/715455
-                # well no: I am mistaken here, the data is already in the dataframe
-                # so its already converted to a bool
                 value = bool(self._dataFrame.ix[row, col])
-
             elif columnDtype in self._dateDtypes:
-                # print numpy.datetime64(self._dataFrame.ix[row, col])
                 value = pd.Timestamp(self._dataFrame.ix[row, col])
                 value = QtCore.QDateTime.fromString(str(value), self.timestampFormat)
-                # print value
-            # else:
-            #     raise TypeError, "returning unhandled data type"
             return value
 
         if role == Qt.DisplayRole:
             row = index.row()
             col = index.column()
-            #columnDtype = self.df.icol(col).dtype
-
             result = self.df.ix[row, col]
             return str(result)
 
         return QVariant()
 
     def headerData(self, section, orientation, role=Qt.DisplayRole):
-        """return the header depending on section, orientation and Qt::ItemDataRole
-        Args:
-            section (int): For horizontal headers, the section number corresponds to the column number.
-                Similarly, for vertical headers, the section number corresponds to the row number.
-            orientation (Qt::Orientations):
-            role (Qt::ItemDataRole):
-        Returns:
-            None if not Qt.DisplayRole
-            _dataFrame.columns.tolist()[section] if orientation == Qt.Horizontal
-            section if orientation == Qt.Vertical
-            None if horizontal orientation and section raises IndexError
-        """
         if role != Qt.DisplayRole:
             return None
 

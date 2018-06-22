@@ -9,7 +9,8 @@ AI量化实验室，专注将前沿人工智能技术(深度学习/强化学习/
 是这个我们这个平台的核心目标。
 
 ![image](https://note.youdao.com/yws/public/resource/067274b445e630e44bd81a0b6dd3b9cc/xmlnote/89A2E040138D4EEFAA436AE64F5FC039/7757)
-```
+
+![image](https://note.youdao.com/yws/public/resource/067274b445e630e44bd81a0b6dd3b9cc/xmlnote/31B98FA2AA264C6884978FCF137309C7/8071)
 
 ### 联系我们
 

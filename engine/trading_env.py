@@ -2,10 +2,11 @@
 
 import numpy as np
 import pandas as pd
+import os
 
 from .data import CSVDataFeed
 
-class Portfolio(object):
+class Trader(object):
     def __init__(self,period,trading_cost=0.0003):
         self.trading_cost = trading_cost
         self.period = period #回测总期数
@@ -109,8 +110,8 @@ class Portfolio(object):
 
 class TradingEnv(object):
     def __init__(self):
-        self.datafeed = CSVDataFeed(csv='../data/000300_index.csv')
-        self.portfolio = Portfolio(period=len(self.datafeed.data))
+        self.datafeed = CSVDataFeed(csv=os.getcwd()+'/data/000300_index.csv')
+        self.portfolio = Trader(period=len(self.datafeed.data))
 
     def reset(self):
         self.datafeed.reset()
@@ -124,7 +125,6 @@ class TradingEnv(object):
 
     #运行策略入口
     def run_strategy(self, strategy):
-
         #先读第一步的数据
         done = False
         while not done:
@@ -136,7 +136,6 @@ class TradingEnv(object):
 
             if done:
                 print('done!!')
-
         df = self.portfolio.to_df()
         df.index = self.datafeed.data.index
         return df
