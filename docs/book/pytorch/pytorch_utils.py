@@ -4,8 +4,15 @@ from torch import optim
 from copy import deepcopy
 
 class BaseModel(nn.Module):
-    def __init__(self):
+    def __init__(self,sequential=None):
         super(BaseModel,self).__init__()
+        self.sequential = sequential
+
+    def forward(self, x):
+        if self.sequential:
+            out = self.sequential(x)
+            return out
+        return None
 
     def predict(self,x_test):
         self.eval()
@@ -18,7 +25,7 @@ class BaseModel(nn.Module):
         acc = 0.0
         for data in test_loader:
             img, y_train = data
-            img = img.view(img.size(0), -1)
+            #img = img.view(img.size(0), -1)
             y_pred = self(img)
 
             loss = self.loss_fn(y_pred, y_train)
@@ -35,13 +42,14 @@ class BaseModel(nn.Module):
 
     def compile(self,optimizer,loss,metrics=None):
 
+
         self.optimizer = optimizer(self.parameters(), lr=1e-4)
         self.loss_fn = loss()
         if metrics is not None:
             self.metrics = metrics()
 
     def fit_dataloader(self,loader):
-        num_epochs = 10
+        num_epochs = 100
         for epoch in range(num_epochs):
 
             batch_loss = 0.0
@@ -49,7 +57,10 @@ class BaseModel(nn.Module):
             step = 300
             for i,data in enumerate(loader):
                 img,y_train = data
-                y_pred = self(img.view(img.size()[0],-1))
+                #print('input size:',img.size())
+                y_pred = self(img)
+                #print(y_pred.size())
+                #y_pred = self(img.view(img.size()[0],-1))
 
                 #计算当前批次的准确率（max:返回每列最大的，第二个返回值是对应的下标)
                 _, pred = torch.max(y_pred, 1)
@@ -143,12 +154,37 @@ class Cnn(BaseModel):
         out = self.fc(out)
         return out
 
+import numpy as np
+def test_linear2():
+    seq = nn.Sequential(
+        nn.Linear(1,1)
+    )
+    model = BaseModel(seq)
+    model.compile(optimizer=optim.SGD, loss=nn.MSELoss)
+    x_train = np.array([[3.3], [4.4], [5.5], [6.71], [6.93], [4.168],
+                        [9.779], [6.182], [7.59], [2.167], [7.042],
+                        [10.791], [5.313], [7.997], [3.1]])
+
+    y_train = np.array([[1.7], [2.76], [2.09], [3.19], [1.694], [1.573],
+                        [3.366], [2.596], [2.53], [1.221], [2.827],
+                        [3.465], [1.65], [2.904], [1.3]])
+
+    model.fit(torch.Tensor(x_train), torch.Tensor(y_train))
+    y_pred = model.predict(torch.Tensor(x_train))
+
+    data = y_pred.data
+
+    import matplotlib.pyplot as plt
+    plt.plot(x_train, y_pred.data.numpy(), label='Fitting Line')
+    plt.show()
+
+
 def test_linear():
     model = LinearRegression()
     model.compile(optimizer=optim.SGD,loss=nn.MSELoss)
 
 
-    import numpy as np
+
     x_train = np.array([[3.3], [4.4], [5.5], [6.71], [6.93], [4.168],
                         [9.779], [6.182], [7.59], [2.167], [7.042],
                         [10.791], [5.313], [7.997], [3.1]])
@@ -185,15 +221,29 @@ def test_cnn(loader,test_loader):
     model.fit_dataloader(loader)
     model.predict_dataloader(test_loader)
 
+
+class Trans(object):
+    def __call__(self, pic):
+        #print('pic:',pic.size())
+        out = pic.view(-1)
+        #print('out',out.size())
+        return out
+
+    def __repr__(self):
+        return self.__class__.__name__ + '()'
+
 if __name__ == '__main__':
     from torchvision import datasets,transforms
     from torch.utils.data import DataLoader
 
+    composed = transforms.Compose([transforms.ToTensor(),
+                                  ])
+
     train_dataset = datasets.MNIST(
-        root='./data', train=True, transform=transforms.ToTensor(), download=True)
+        root='./data', train=True, transform=composed, download=True)
 
     test_dataset = datasets.MNIST(
-        root='./data', train=False, transform=transforms.ToTensor())
+        root='./data', train=False, transform=composed)
 
     train_loader = DataLoader(train_dataset, batch_size=32, shuffle=True)
     test_loader = DataLoader(test_dataset, batch_size=32, shuffle=False)
