@@ -154,6 +154,25 @@ class Cnn(BaseModel):
         out = self.fc(out)
         return out
 
+# 定义 Recurrent Network - LSTM模型
+class Lstm(BaseModel):
+    def __init__(self, in_dim, hidden_dim, n_layer, n_class):
+        super(Lstm, self).__init__()
+        self.n_layer = n_layer
+        self.hidden_dim = hidden_dim
+        self.lstm = nn.LSTM(in_dim, hidden_dim, n_layer, batch_first=True)
+        self.classifier = nn.Linear(28*hidden_dim, n_class)
+
+    def forward(self, x):
+        out, _ = self.lstm(x)
+        #print(type(out),out.size())
+        out = out[:, -1, :] #这里直接把（32，28，128） => (32,128)，直接扔掉？
+        #out = out.view(32,-1) view操作竟然不行
+        #print(out.size())
+        out = self.classifier(out)
+        return out
+
+
 import numpy as np
 def test_linear2():
     seq = nn.Sequential(
@@ -221,6 +240,19 @@ def test_cnn(loader,test_loader):
     model.fit_dataloader(loader)
     model.predict_dataloader(test_loader)
 
+def test_lstm(loader,test_loader):
+    model = Lstm(28, 128, 2, 10)  # 图片大小是28x28
+    model.compile(optimizer=optim.Adam, loss=nn.CrossEntropyLoss)
+    model.fit_dataloader(loader)
+    model.predict_dataloader(test_loader)
+
+class LstmTrans(object):
+    def __call__(self, pic):
+        out = pic.squeeze(0)# 1x28x28 =>28x28,把channel压缩掉
+        return out
+
+    def __repr__(self):
+        return self.__class__.__name__ + '()'
 
 class Trans(object):
     def __call__(self, pic):
@@ -237,7 +269,7 @@ if __name__ == '__main__':
     from torch.utils.data import DataLoader
 
     composed = transforms.Compose([transforms.ToTensor(),
-                                  ])
+                                  LstmTrans()])
 
     train_dataset = datasets.MNIST(
         root='./data', train=True, transform=composed, download=True)
@@ -251,4 +283,5 @@ if __name__ == '__main__':
 
     #test_linear()
     #test_MLP(train_loader,test_loader)
-    test_cnn(train_loader,test_loader)
+    #test_cnn(train_loader,test_loader)
+    test_lstm(train_loader,test_loader)
