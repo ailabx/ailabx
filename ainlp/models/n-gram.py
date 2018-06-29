@@ -24,27 +24,23 @@ handler = NlpDataset()
 handler.build_ngram(words)
 
 
-class CBOW(BaseModel):
-    def __init__(self, n_word, n_dim, context_size):
-        super(CBOW, self).__init__()
-        self.embedding = nn.Embedding(n_word, n_dim)
-        self.project = nn.Linear(n_dim, n_dim, bias=False)
-        self.linear1 = nn.Linear(n_dim, 128)
-        self.linear2 = nn.Linear(128, n_word)
+class NGramLanguageModeler(BaseModel):
+    def __init__(self, vocab_size, embedding_dim, context_size):
+        super(NGramLanguageModeler, self).__init__()
+        self.embeddings = nn.Embedding(vocab_size, embedding_dim)
+        self.linear1 = nn.Linear(context_size * embedding_dim, 128)
+        self.linear2 = nn.Linear(128, vocab_size)
 
-    def forward(self, x):
-        x = self.embedding(x)
-        x = self.project(x)
-        x = torch.sum(x, 0, keepdim=True)
-        x = self.linear1(x)
-        x = F.relu(x, inplace=True)
-        x = self.linear2(x)
-        x = F.log_softmax(x)
-        return x
+    def forward(self, inputs):
+        embeds = self.embeddings(inputs).view((1, -1))
+        out = F.relu(self.linear1(embeds))
+        out = self.linear2(out)
+        log_probs = F.log_softmax(out, dim=1)
+        return log_probs
 
-CONTEXT_SIZE=2
+CONTEXT_SIZE = 2
+EMBEDDING_DIM = 10
 
-model = CBOW(len(handler.vocab), 100, CONTEXT_SIZE)
-model.compile(optimizer=optim.SGD, loss=nn.NLLLoss)
+model = NGramLanguageModeler(len(handler.vocab),EMBEDDING_DIM,CONTEXT_SIZE)
+model.compile(optimizer=optim.SGD,loss=nn.NLLLoss)
 model.fit_dataloader(handler,num_epochs=1000,batch_size=1)
-

@@ -20,6 +20,29 @@ def test_functional():
     o2 = torch.nn.functional.relu(input)
     print(o1==o2)
 
+def test_sum():
+    a = torch.randn(2, 3)
+    print(a)
+    print(torch.sum(a,0).size())
+    print(torch.sum(a,0,keepdim=True).size())
+
+def test_index():
+    a = torch.rand(2,3,5)
+    b = a[:,-1,:]
+    print(b.size(),b)
+
+def test_softmax():
+    a = torch.rand(2,3)
+    #print(a.size(),a)
+    b = torch.nn.functional.softmax(a,dim=0)
+    #print(b.size(),b)
+    c= torch.nn.functional.softmax(a, dim=1)
+    print(c.size(), c)
+
+    log_c = torch.log(c)
+    print('log_c:',log_c)
+    log_softmax_a= torch.nn.functional.log_softmax(a,dim=1)
+    print('log_softmax_a',log_softmax_a)
 
 if __name__ == '__main__':
-    test_functional()
+    test_softmax()

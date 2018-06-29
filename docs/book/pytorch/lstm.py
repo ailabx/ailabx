@@ -10,4 +10,12 @@ lstm = nn.LSTM(input_features, hidden_size, num_layers,batch_first=True)
 
 input = torch.randn(batch,seq_len,input_features)
 output, hn = lstm(input)
-print(output.size()) #(batch,seqLen,hidden)
+output = output[:,-1,:]
+
+#print(output)
+print(output.view(3*5,-1))
+#print(output.size()) #(batch,seqLen,hidden)
+#print(output[:,-1,:])
+
+
+

@@ -3,7 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="e966dac8-e1c8-4be5-8017-00e400b3b447" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/docs/book/pytorch/pytorch_utils.py" afterPath="$PROJECT_DIR$/docs/book/pytorch/pytorch_utils.py" />
+      <change beforePath="$PROJECT_DIR$/ainlp/basemodel.py" afterPath="$PROJECT_DIR$/ainlp/basemodel.py" />
+      <change beforePath="$PROJECT_DIR$/ainlp/models/cbow.py" afterPath="$PROJECT_DIR$/ainlp/models/cbow.py" />
+      <change beforePath="$PROJECT_DIR$/docs/book/pytorch/lstm.py" afterPath="$PROJECT_DIR$/docs/book/pytorch/lstm.py" />
+      <change beforePath="$PROJECT_DIR$/docs/book/pytorch/tensor.py" afterPath="$PROJECT_DIR$/docs/book/pytorch/tensor.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -15,6 +18,7 @@
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/ailabx$numpynn.coverage" NAME="numpy实现nn Coverage Results" MODIFIED="1529479945667" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/docs/book" />
     <SUITE FILE_PATH="coverage/ailabx$pandasutils.coverage" NAME="pandasutils Coverage Results" MODIFIED="1529292449249" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/docs/book" />
+    <SUITE FILE_PATH="coverage/ailabx$cbow.coverage" NAME="cbow Coverage Results" MODIFIED="1530242095879" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/ainlp/models" />
     <SUITE FILE_PATH="coverage/ailabx$stats.coverage" NAME="stats Coverage Results" MODIFIED="1529714972864" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/docs/book/pandas" />
     <SUITE FILE_PATH="coverage/ailabx$loss_fn.coverage" NAME="loss_fn Coverage Results" MODIFIED="1529814183368" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/docs/book/pytorch" />
     <SUITE FILE_PATH="coverage/ailabx$ordered_dict.coverage" NAME="ordered_dict Coverage Results" MODIFIED="1529974943396" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/docs/book/python" />
@@ -24,22 +28,24 @@
     <SUITE FILE_PATH="coverage/ailabx$Unittests_in_test_utils_py.coverage" NAME="Unittests in test_utils.py Coverage Results" MODIFIED="1529027990373" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" />
     <SUITE FILE_PATH="coverage/ailabx$py_test_in_test_trading_env_py.coverage" NAME="py.test in test_trading_env.py Coverage Results" MODIFIED="1529027357539" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/engine/test" />
     <SUITE FILE_PATH="coverage/ailabx$default_dict.coverage" NAME="default_dict Coverage Results" MODIFIED="1529725397409" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/docs/book/python" />
-    <SUITE FILE_PATH="coverage/ailabx$tensor.coverage" NAME="tensor Coverage Results" MODIFIED="1529902051928" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/docs/book/pytorch" />
     <SUITE FILE_PATH="coverage/ailabx$sequential.coverage" NAME="sequential Coverage Results" MODIFIED="1529979186148" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/docs/book/pytorch" />
+    <SUITE FILE_PATH="coverage/ailabx$tensor.coverage" NAME="tensor Coverage Results" MODIFIED="1530151342472" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/docs/book/pytorch" />
     <SUITE FILE_PATH="coverage/ailabx$svm.coverage" NAME="svm Coverage Results" MODIFIED="1529723538500" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/docs/book/sklearn" />
     <SUITE FILE_PATH="coverage/ailabx$main__2_.coverage" NAME="main (2) Coverage Results" MODIFIED="1528872651580" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/ailabx$.coverage" NAME="线性回归 Coverage Results" MODIFIED="1529802388487" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/docs/book/pytorch" />
     <SUITE FILE_PATH="coverage/ailabx$Unittests_in_test_trading_env_py.coverage" NAME="Unittests in test_trading_env.py Coverage Results" MODIFIED="1529634475001" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" />
     <SUITE FILE_PATH="coverage/ailabx$pytorch_utils.coverage" NAME="pytorch_utils Coverage Results" MODIFIED="1530065303168" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/docs/book/pytorch" />
+    <SUITE FILE_PATH="coverage/ailabx$datahandler.coverage" NAME="datahandler Coverage Results" MODIFIED="1530241835505" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/ainlp/data" />
     <SUITE FILE_PATH="coverage/ailabx$mainwindow.coverage" NAME="mainwindow Coverage Results" MODIFIED="1528874517760" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/gui" />
     <SUITE FILE_PATH="coverage/ailabx$framedata.coverage" NAME="framedata Coverage Results" MODIFIED="1529461084177" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/gui/frames" />
     <SUITE FILE_PATH="coverage/ailabx$numpy_utils.coverage" NAME="numpy_utils Coverage Results" MODIFIED="1529815003351" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/docs/book/python" />
     <SUITE FILE_PATH="coverage/ailabx$dequeue.coverage" NAME="dequeue Coverage Results" MODIFIED="1529724469418" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/docs/book/python" />
     <SUITE FILE_PATH="coverage/ailabx$conv.coverage" NAME="conv Coverage Results" MODIFIED="1529979888869" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/docs/book/pytorch" />
-    <SUITE FILE_PATH="coverage/ailabx$lstm.coverage" NAME="lstm Coverage Results" MODIFIED="1530063732011" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/docs/book/pytorch" />
+    <SUITE FILE_PATH="coverage/ailabx$lstm.coverage" NAME="lstm Coverage Results" MODIFIED="1530148412197" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/docs/book/pytorch" />
     <SUITE FILE_PATH="coverage/ailabx$py_test_in_test_pandas_py.coverage" NAME="py.test in test_pandas.py Coverage Results" MODIFIED="1529027977390" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" />
     <SUITE FILE_PATH="coverage/ailabx$squeeze.coverage" NAME="squeeze Coverage Results" MODIFIED="1530060317868" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/docs/book/pytorch" />
     <SUITE FILE_PATH="coverage/ailabx$basic.coverage" NAME="basic Coverage Results" MODIFIED="1530066847572" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/docs/book/pytorch" />
+    <SUITE FILE_PATH="coverage/ailabx$n_gram.coverage" NAME="n-gram Coverage Results" MODIFIED="1530242991423" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/ainlp/models" />
     <SUITE FILE_PATH="coverage/ailabx$main__1_.coverage" NAME="main (1) Coverage Results" MODIFIED="1528872527724" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" />
     <SUITE FILE_PATH="coverage/ailabx$tsutils.coverage" NAME="tsutils Coverage Results" MODIFIED="1529292407710" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/engine/datafeed" />
     <SUITE FILE_PATH="coverage/ailabx$ailabx.coverage" NAME="ailabx Coverage Results" MODIFIED="1529226676255" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
@@ -49,14 +55,12 @@
       <file leaf-file-name="pytorch_utils.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/docs/book/pytorch/pytorch_utils.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="238" column="64" lean-forward="true" selection-start-line="238" selection-start-column="4" selection-end-line="238" selection-end-column="64" />
+            <state relative-caret-position="3196">
+              <caret line="273" column="31" lean-forward="false" selection-start-line="273" selection-start-column="31" selection-end-line="273" selection-end-column="31" />
               <folding>
                 <element signature="e#0#12#0" expanded="true" />
-                <element signature="e#117#3036#0" expanded="false" />
                 <element signature="e#1037#1072#0" expanded="false" />
                 <element signature="e#2551#3036#0" expanded="false" />
-                <element signature="e#3085#3301#0" expanded="false" />
                 <element signature="e#3372#3585#0" expanded="false" />
                 <element signature="e#3613#4004#0" expanded="false" />
                 <element signature="e#5321#6103#0" expanded="false" />
@@ -68,34 +72,27 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="rnn.py" pinned="false" current-in-tab="false">
-        <entry file="file://C:/Anaconda/Lib/site-packages/torch/nn/modules/rnn.py">
+      <file leaf-file-name="mnist.py" pinned="false" current-in-tab="false">
+        <entry file="file://C:/Anaconda/Lib/site-packages/torchvision/datasets/mnist.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="297">
-              <caret line="408" column="16" lean-forward="false" selection-start-line="408" selection-start-column="16" selection-end-line="408" selection-end-column="16" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="线性回归.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/docs/book/pytorch/线性回归.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="347">
-              <caret line="31" column="26" lean-forward="false" selection-start-line="31" selection-start-column="26" selection-end-line="31" selection-end-column="26" />
+            <state relative-caret-position="561">
+              <caret line="188" column="11" lean-forward="false" selection-start-line="188" selection-start-column="11" selection-end-line="188" selection-end-column="11" />
               <folding>
-                <element signature="e#683#923#0" expanded="false" />
+                <element signature="e#3407#5244#0" expanded="false" />
+                <element signature="e#5278#5905#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="squeeze.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/docs/book/pytorch/squeeze.py">
+      <file leaf-file-name="datahandler.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ainlp/data/datahandler.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="13" selection-end-column="54" />
-              <folding />
+            <state relative-caret-position="287">
+              <caret line="34" column="0" lean-forward="true" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
+              <folding>
+                <element signature="e#0#12#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -103,22 +100,10 @@
       <file leaf-file-name="lstm.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/docs/book/pytorch/lstm.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="12" selection-end-column="43" />
+            <state relative-caret-position="221">
+              <caret line="13" column="0" lean-forward="false" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
               <folding>
                 <element signature="e#0#21#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="sequential.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/docs/book/pytorch/sequential.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="251">
-              <caret line="34" column="27" lean-forward="false" selection-start-line="34" selection-start-column="27" selection-end-line="34" selection-end-column="27" />
-              <folding>
-                <element signature="e#0#12#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -127,8 +112,8 @@
       <file leaf-file-name="tensor.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/docs/book/pytorch/tensor.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="22" column="0" lean-forward="false" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+            <state relative-caret-position="714">
+              <caret line="44" column="40" lean-forward="false" selection-start-line="41" selection-start-column="4" selection-end-line="44" selection-end-column="40" />
               <folding>
                 <element signature="e#0#18#0" expanded="true" />
               </folding>
@@ -136,11 +121,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="basic.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/docs/book/pytorch/basic.py">
+      <file leaf-file-name="conv.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/docs/book/pytorch/conv.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="19" column="37" lean-forward="true" selection-start-line="19" selection-start-column="37" selection-end-line="19" selection-end-column="37" />
+            <state relative-caret-position="238">
+              <caret line="15" column="12" lean-forward="false" selection-start-line="15" selection-start-column="12" selection-end-line="15" selection-end-column="12" />
               <folding>
                 <element signature="e#0#12#0" expanded="true" />
               </folding>
@@ -151,12 +136,11 @@
       <file leaf-file-name="basemodel.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ainlp/basemodel.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-765">
-              <caret line="24" column="20" lean-forward="true" selection-start-line="24" selection-start-column="20" selection-end-line="24" selection-end-column="20" />
+            <state relative-caret-position="71">
+              <caret line="55" column="0" lean-forward="false" selection-start-line="55" selection-start-column="0" selection-end-line="55" selection-end-column="0" />
               <folding>
                 <element signature="e#0#12#0" expanded="true" />
-                <element signature="e#1006#1041#0" expanded="false" />
-                <element signature="e#2520#3005#0" expanded="false" />
+                <element signature="e#961#996#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -165,11 +149,33 @@
       <file leaf-file-name="cbow.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/ainlp/models/cbow.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="36" column="51" lean-forward="true" selection-start-line="36" selection-start-column="51" selection-end-line="36" selection-end-column="51" />
+            <state relative-caret-position="230">
+              <caret line="50" column="0" lean-forward="true" selection-start-line="50" selection-start-column="0" selection-end-line="50" selection-end-column="0" />
               <folding>
-                <element signature="e#0#37#0" expanded="true" />
+                <element signature="e#0#12#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="n-gram.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ainlp/models/n-gram.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="213">
+              <caret line="45" column="58" lean-forward="true" selection-start-line="45" selection-start-column="58" selection-end-line="45" selection-end-column="58" />
+              <folding>
+                <element signature="e#0#12#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="functional.py" pinned="false" current-in-tab="false">
+        <entry file="file://C:/Anaconda/Lib/site-packages/torch/nn/functional.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-222">
+              <caret line="1001" column="0" lean-forward="true" selection-start-line="1001" selection-start-column="0" selection-end-line="1001" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -191,6 +197,7 @@
       <find>portfolio_returns</find>
       <find>transform</find>
       <find>print</find>
+      <find>forward</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -232,17 +239,20 @@
         <option value="$PROJECT_DIR$/docs/book/python/default_dict.py" />
         <option value="$PROJECT_DIR$/docs/book/pytorch/loss_fn.py" />
         <option value="$PROJECT_DIR$/docs/book/python/numpy_utils.py" />
-        <option value="$PROJECT_DIR$/docs/book/pytorch/tensor.py" />
         <option value="$PROJECT_DIR$/docs/book/pytorch/.gitignore" />
         <option value="$PROJECT_DIR$/docs/book/python/ordered_dict.py" />
         <option value="$PROJECT_DIR$/docs/book/pytorch/sequential.py" />
         <option value="$PROJECT_DIR$/docs/book/pytorch/conv.py" />
         <option value="$PROJECT_DIR$/docs/book/pytorch/squeeze.py" />
-        <option value="$PROJECT_DIR$/docs/book/pytorch/lstm.py" />
         <option value="$PROJECT_DIR$/docs/book/pytorch/pytorch_utils.py" />
         <option value="$PROJECT_DIR$/docs/book/pytorch/basic.py" />
+        <option value="$PROJECT_DIR$/docs/book/pytorch/lstm.py" />
+        <option value="$PROJECT_DIR$/docs/book/pytorch/tensor.py" />
+        <option value="$PROJECT_DIR$/ainlp/data.py" />
         <option value="$PROJECT_DIR$/ainlp/basemodel.py" />
+        <option value="$PROJECT_DIR$/ainlp/data/datahandler.py" />
         <option value="$PROJECT_DIR$/ainlp/models/cbow.py" />
+        <option value="$PROJECT_DIR$/ainlp/models/n-gram.py" />
       </list>
     </option>
   </component>
@@ -253,7 +263,7 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds" extendedState="1">
-    <option name="x" value="-2" />
+    <option name="x" value="-13" />
     <option name="width" value="1383" />
     <option name="height" value="744" />
   </component>
@@ -276,7 +286,6 @@
     </navigator>
     <panes>
       <pane id="Scope" />
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -288,6 +297,12 @@
               <item name="ailabx" type="b2602c69:ProjectViewProjectNode" />
               <item name="ailabx" type="462c0819:PsiDirectoryNode" />
               <item name="ainlp" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ailabx" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ailabx" type="462c0819:PsiDirectoryNode" />
+              <item name="ainlp" type="462c0819:PsiDirectoryNode" />
+              <item name="data" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="ailabx" type="b2602c69:ProjectViewProjectNode" />
@@ -322,6 +337,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -355,40 +371,40 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.basic">
-    <configuration name="basic" type="PythonConfigurationType" factoryName="Python" temporary="true">
+  <component name="RunManager" selected="Python.n-gram">
+    <configuration name="cbow" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/docs/book/pytorch" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/ainlp/models" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="ailabx" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/docs/book/pytorch/basic.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/ainlp/models/cbow.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
     </configuration>
-    <configuration name="conv" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="datahandler" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/docs/book/pytorch" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/ainlp/data" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="ailabx" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/docs/book/pytorch/conv.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/ainlp/data/datahandler.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -413,26 +429,26 @@
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
     </configuration>
-    <configuration name="pytorch_utils" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="n-gram" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/docs/book/pytorch" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/ainlp/models" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="ailabx" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/docs/book/pytorch/pytorch_utils.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/ainlp/models/n-gram.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
     </configuration>
-    <configuration name="squeeze" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="tensor" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -445,7 +461,7 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="ailabx" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/docs/book/pytorch/squeeze.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/docs/book/pytorch/tensor.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -470,19 +486,19 @@
     </configuration>
     <list size="6">
       <item index="0" class="java.lang.String" itemvalue="Jupyter Notebook.ailabx" />
-      <item index="1" class="java.lang.String" itemvalue="Python.pytorch_utils" />
-      <item index="2" class="java.lang.String" itemvalue="Python.conv" />
-      <item index="3" class="java.lang.String" itemvalue="Python.squeeze" />
-      <item index="4" class="java.lang.String" itemvalue="Python.lstm" />
-      <item index="5" class="java.lang.String" itemvalue="Python.basic" />
+      <item index="1" class="java.lang.String" itemvalue="Python.lstm" />
+      <item index="2" class="java.lang.String" itemvalue="Python.tensor" />
+      <item index="3" class="java.lang.String" itemvalue="Python.datahandler" />
+      <item index="4" class="java.lang.String" itemvalue="Python.n-gram" />
+      <item index="5" class="java.lang.String" itemvalue="Python.cbow" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.basic" />
-        <item index="1" class="java.lang.String" itemvalue="Python.pytorch_utils" />
-        <item index="2" class="java.lang.String" itemvalue="Python.lstm" />
-        <item index="3" class="java.lang.String" itemvalue="Python.squeeze" />
-        <item index="4" class="java.lang.String" itemvalue="Python.conv" />
+        <item index="0" class="java.lang.String" itemvalue="Python.n-gram" />
+        <item index="1" class="java.lang.String" itemvalue="Python.cbow" />
+        <item index="2" class="java.lang.String" itemvalue="Python.datahandler" />
+        <item index="3" class="java.lang.String" itemvalue="Python.tensor" />
+        <item index="4" class="java.lang.String" itemvalue="Python.lstm" />
       </list>
     </recent_temporary>
   </component>
@@ -535,14 +551,14 @@
     </history-entry>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-2" y="0" width="1383" height="744" extended-state="1" />
+    <frame x="-13" y="0" width="1383" height="744" extended-state="1" />
     <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.35433072" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.39370078" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24945135" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -599,6 +615,11 @@
           <line>137</line>
           <option name="timeStamp" value="24" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/docs/book/pytorch/lstm.py</url>
+          <line>15</line>
+          <option name="timeStamp" value="26" />
+        </line-breakpoint>
       </breakpoints>
       <default-breakpoints>
         <breakpoint type="python-exception">
@@ -607,32 +628,11 @@
           </properties>
         </breakpoint>
       </default-breakpoints>
-      <option name="time" value="25" />
+      <option name="time" value="27" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/docs/backtestdata.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="258">
-          <caret line="70" column="26" lean-forward="true" selection-start-line="70" selection-start-column="26" selection-end-line="70" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gui/frames/framemain.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="11" column="32" lean-forward="false" selection-start-line="11" selection-start-column="23" selection-end-line="11" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/docs/book/numpy实现nn.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="4" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="36" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/main.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
@@ -686,7 +686,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-136">
           <caret line="3248" column="4" lean-forward="false" selection-start-line="3248" selection-start-column="4" selection-end-line="3248" selection-end-column="4" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -820,7 +819,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="5015">
           <caret line="300" column="0" lean-forward="false" selection-start-line="300" selection-start-column="0" selection-end-line="300" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -828,7 +826,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
           <caret line="8" column="19" lean-forward="false" selection-start-line="8" selection-start-column="19" selection-end-line="8" selection-end-column="19" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -881,15 +878,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="646">
           <caret line="44" column="8" lean-forward="false" selection-start-line="44" selection-start-column="8" selection-end-line="44" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://C:/Anaconda/Lib/site-packages/torchvision/datasets/mnist.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1156">
-          <caret line="76" column="32" lean-forward="false" selection-start-line="76" selection-start-column="23" selection-end-line="76" selection-end-column="32" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -897,59 +885,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="952">
           <caret line="60" column="0" lean-forward="false" selection-start-line="60" selection-start-column="0" selection-end-line="78" selection-end-column="45" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://C:/Anaconda/Lib/site-packages/torch/nn/functional.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="16694">
-          <caret line="995" column="22" lean-forward="false" selection-start-line="995" selection-start-column="22" selection-end-line="995" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/docs/book/pytorch/conv.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="26" lean-forward="true" selection-start-line="15" selection-start-column="26" selection-end-line="15" selection-end-column="26" />
-          <folding>
-            <element signature="e#0#12#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/docs/book/pytorch/squeeze.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="13" selection-end-column="54" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/docs/book/pytorch/sequential.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="251">
-          <caret line="34" column="27" lean-forward="false" selection-start-line="34" selection-start-column="27" selection-end-line="34" selection-end-column="27" />
-          <folding>
-            <element signature="e#0#12#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/docs/book/pytorch/lstm.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="12" selection-end-column="43" />
-          <folding>
-            <element signature="e#0#21#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/docs/book/pytorch/线性回归.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="347">
+        <state relative-caret-position="374">
           <caret line="31" column="26" lean-forward="false" selection-start-line="31" selection-start-column="26" selection-end-line="31" selection-end-column="26" />
           <folding>
             <element signature="e#683#923#0" expanded="false" />
@@ -957,56 +898,79 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://C:/Anaconda/Lib/site-packages/torch/nn/modules/rnn.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="263">
+          <caret line="599" column="28" lean-forward="true" selection-start-line="599" selection-start-column="28" selection-end-line="599" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/book/pytorch/squeeze.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" column="10" lean-forward="false" selection-start-line="13" selection-start-column="10" selection-end-line="13" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/book/pytorch/sequential.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="544">
+          <caret line="34" column="27" lean-forward="false" selection-start-line="34" selection-start-column="27" selection-end-line="34" selection-end-column="27" />
+          <folding>
+            <element signature="e#0#12#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/book/pytorch/basic.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="19" column="9" lean-forward="false" selection-start-line="19" selection-start-column="9" selection-end-line="19" selection-end-column="9" />
+          <folding>
+            <element signature="e#0#12#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/book/pytorch/conv.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="15" column="12" lean-forward="false" selection-start-line="15" selection-start-column="12" selection-end-line="15" selection-end-column="12" />
+          <folding>
+            <element signature="e#0#12#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/docs/book/pytorch/tensor.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="22" column="0" lean-forward="false" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+        <state relative-caret-position="714">
+          <caret line="44" column="40" lean-forward="false" selection-start-line="41" selection-start-column="4" selection-end-line="44" selection-end-column="40" />
           <folding>
             <element signature="e#0#18#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://C:/Anaconda/Lib/site-packages/torch/nn/modules/rnn.py">
+    <entry file="file://$PROJECT_DIR$/docs/book/pytorch/lstm.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="297">
-          <caret line="408" column="16" lean-forward="false" selection-start-line="408" selection-start-column="16" selection-end-line="408" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/docs/book/pytorch/basic.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="19" column="37" lean-forward="true" selection-start-line="19" selection-start-column="37" selection-end-line="19" selection-end-column="37" />
+        <state relative-caret-position="221">
+          <caret line="13" column="0" lean-forward="false" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
           <folding>
-            <element signature="e#0#12#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ainlp/basemodel.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-765">
-          <caret line="24" column="20" lean-forward="true" selection-start-line="24" selection-start-column="20" selection-end-line="24" selection-end-column="20" />
-          <folding>
-            <element signature="e#0#12#0" expanded="true" />
-            <element signature="e#1006#1041#0" expanded="false" />
-            <element signature="e#2520#3005#0" expanded="false" />
+            <element signature="e#0#21#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/docs/book/pytorch/pytorch_utils.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="238" column="64" lean-forward="true" selection-start-line="238" selection-start-column="4" selection-end-line="238" selection-end-column="64" />
+        <state relative-caret-position="3196">
+          <caret line="273" column="31" lean-forward="false" selection-start-line="273" selection-start-column="31" selection-end-line="273" selection-end-column="31" />
           <folding>
             <element signature="e#0#12#0" expanded="true" />
-            <element signature="e#117#3036#0" expanded="false" />
             <element signature="e#1037#1072#0" expanded="false" />
             <element signature="e#2551#3036#0" expanded="false" />
-            <element signature="e#3085#3301#0" expanded="false" />
             <element signature="e#3372#3585#0" expanded="false" />
             <element signature="e#3613#4004#0" expanded="false" />
             <element signature="e#5321#6103#0" expanded="false" />
@@ -1017,12 +981,70 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/ainlp/data.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/Anaconda/Lib/site-packages/torchvision/datasets/mnist.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="561">
+          <caret line="188" column="11" lean-forward="false" selection-start-line="188" selection-start-column="11" selection-end-line="188" selection-end-column="11" />
+          <folding>
+            <element signature="e#3407#5244#0" expanded="false" />
+            <element signature="e#5278#5905#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ainlp/data/datahandler.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="287">
+          <caret line="34" column="0" lean-forward="true" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#12#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ainlp/basemodel.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="71">
+          <caret line="55" column="0" lean-forward="false" selection-start-line="55" selection-start-column="0" selection-end-line="55" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#12#0" expanded="true" />
+            <element signature="e#961#996#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/Anaconda/Lib/site-packages/torch/nn/functional.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-222">
+          <caret line="1001" column="0" lean-forward="true" selection-start-line="1001" selection-start-column="0" selection-end-line="1001" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ainlp/models/n-gram.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="213">
+          <caret line="45" column="58" lean-forward="true" selection-start-line="45" selection-start-column="58" selection-end-line="45" selection-end-column="58" />
+          <folding>
+            <element signature="e#0#12#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/ainlp/models/cbow.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="36" column="51" lean-forward="true" selection-start-line="36" selection-start-column="51" selection-end-line="36" selection-end-column="51" />
+        <state relative-caret-position="230">
+          <caret line="50" column="0" lean-forward="true" selection-start-line="50" selection-start-column="0" selection-end-line="50" selection-end-column="0" />
           <folding>
-            <element signature="e#0#37#0" expanded="true" />
+            <element signature="e#0#12#0" expanded="true" />
           </folding>
         </state>
       </provider>
