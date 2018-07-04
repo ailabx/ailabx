@@ -1,4 +1,5 @@
 from engine.common.mongo_utils import mongo
+from engine.datafeed.talib_utils import TalibHelper
 import numpy as np
 import pandas as pd
 from datetime import datetime
@@ -19,7 +20,7 @@ def parse_feature(df,feature):
         return df
 
     if feature_name == 'return':
-        df[feature] = df['close'] /df['close'].shift(param+1) -1
+        df[feature] = df['close'] /df['close'].shift(param+1) - 1
     return df
 
 def feature_extractor(instrument,features,start_date='',end_date='',benchmark='000300_index'):
@@ -59,7 +60,14 @@ if __name__ == '__main__':
     instruments = ['600519','000858']
     features = ['return_0','return_4']
     start = datetime(2017,1,1)
-    end = datetime(2017,1,31)
+    end = datetime(2017,6,30)
+    ta= TalibHelper()
+
     df = feature_extractor('600519',features,start_date=start,end_date=end)
+    df['ta_MA5'] = ta.MA(df['close'],5)
+    df['ta_EMA6'] = ta.EMA(df['close'],6)
+    df['pd_MA5'] =  df['close'].rolling(5).mean()
+    df['MACD'],df['MACD_SIGNAL'],df['MACD_HIST'] = ta.MACD(df['close'])
+
     df = auto_labeler(df,'return',5)
-    print(df.head(10))
+    print(df.tail(50))
