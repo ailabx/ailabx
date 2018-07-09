@@ -3,9 +3,14 @@ from engine.datafeed import D
 import unittest
 from datetime import datetime
 
+#context{'instruments':['instrument1',...]}
+
 def handle_bar(bars,context):
     print('========================')
     print(bars)
+    #所有股票买入并持有
+    actions = {stock: 1 for stock in context['instruments']}
+    return actions
 
 class TestBacktest(unittest.TestCase):
     def test_run(self):
