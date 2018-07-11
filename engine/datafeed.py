@@ -5,6 +5,9 @@ class DataFeed(object):
     def __init__(self):
         self.idx = 0
 
+    def get_benchmark_index(self):
+        return self.all_dfs[self.benchmark].index
+
     #往前走一步，如果超过范围返回done
     def step(self):
         bars = {}

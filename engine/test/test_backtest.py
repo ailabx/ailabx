@@ -7,9 +7,9 @@ from datetime import datetime
 
 def handle_bar(bars,context):
     print('========================')
-    print(bars)
+    #print(bars)
     #所有股票买入并持有
-    actions = {stock: 1 for stock in context['instruments']}
+    actions = {'LONG':['600519']}
     return actions
 
 class TestBacktest(unittest.TestCase):

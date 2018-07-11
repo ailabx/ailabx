@@ -26,4 +26,7 @@ def test_series():
     print(se.index)
 
 if __name__ == '__main__':
-    test_series()
+    df = pd.DataFrame(index=['a','b','c'])
+    print(df)
+    df['a'] =[1,2,3]
+    print(df)
