@@ -7,7 +7,6 @@ import pandas as pd
 from .consts import *
 from .models import table_models
 import traceback
-from engine.data import CSVDataFeed
 
 class MainWindow(QtWidgets.QMainWindow):
     def __init__(self,parent=None):

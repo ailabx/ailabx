@@ -93,8 +93,8 @@ class Portfolio(object):
         ten_percent = cash / 10.0
         per_symbol = cash / len(symbols)
 
-        if per_symbol > ten_percent:
-            per_symbol =  ten_percent
+        #if per_symbol > ten_percent:
+            #per_symbol =  ten_percent
 
         return per_symbol
 
@@ -164,5 +164,4 @@ class Portfolio(object):
     def get_result_df(self):
         df = self.df_portfolio
         df['returns'] = df['total'] / df['total'].shift(1) - 1
-        df['equity'] = (1+df['returns']).cumprod()
         return df

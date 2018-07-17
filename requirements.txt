@@ -1,5 +1,4 @@
 tushare
-
 pymongo
 empyrical
 plotly

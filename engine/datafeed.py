@@ -8,6 +8,9 @@ class DataFeed(object):
     def get_benchmark_index(self):
         return self.all_dfs[self.benchmark].index
 
+    def get_benchmark_return(self):
+        return self.all_dfs[self.benchmark]['return_0']
+
     #往前走一步，如果超过范围返回done
     def step(self):
         bars = {}

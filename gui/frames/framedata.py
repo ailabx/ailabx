@@ -5,14 +5,23 @@ import os
 from ..consts import *
 from ..models import table_models
 import pandas as pd
-from engine.data import CSVDataFeed
-from engine.trading_env import TradingEnv,Trader
+
 import traceback
 from datetime import datetime
 from datetime import timedelta
 import traceback
 
 import matplotlib.pyplot as plt
+
+from engine.backtest import M
+from engine.datafeed import D
+
+def handle_bar(bars,context):
+    print('========================')
+    #print(bars)
+    #所有股票买入并持有
+    actions = {'LONG':['600519']}
+    return actions
 
 
 import random
@@ -64,13 +73,14 @@ class FrameData(QtWidgets.QWidget):
     def bkt_clicked(self):
 
         try:
-            randomtrader = lambda o, e: sample()  # retail trader
-            buyandhold = lambda o, e: 2  # 买入并持用，策略是一个函数，这里用lambda的形式
-            env = TradingEnv()
-            df = env.run_strategy(buyandhold)
-            print(df.tail())
-            df[['navs', 'mkt_navs']].plot(grid=True)
-            plt.show()
+            instruments = ['600519', '000858']
+            features = ['return_0', 'return_4']
+            start = datetime(2017, 1, 1)
+            end = datetime(2017, 1, 30)
+
+            D.load_data_with_features(instruments, features, start, end)
+
+            M.run(handle_bar, D)
         except:
             traceback.print_exc()
 
