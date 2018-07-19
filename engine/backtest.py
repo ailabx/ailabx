@@ -48,8 +48,6 @@ class Backtest(object):
     def __init__(self):
         self.context = {}
 
-
-
     def run(self,handle_bar,datafeed):
         print('启动回测引擎...')
         self.datafeed = datafeed

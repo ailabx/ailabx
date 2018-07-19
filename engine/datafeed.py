@@ -1,9 +1,74 @@
 from .common.mongo_utils import mongo
 import pandas as pd
+import re
+import talib
+import numpy as np
+
+class FeatureParser(object):
+    def __init__(self,df):
+        self.df = df
+        self.features_support={
+            'return':self._parse_return,
+            'close':self._parse_close,
+            'ma':self._parse_ma,
+            'cross':self._parse_cross,
+        }
+    def _parse_cross(self,args):
+        para1 = args[0],
+        para2 = args[1]
+
+        diff = self.df[para1] - self.df[para2]
+        diff_lag =  diff.shift(1)
+        diff>=0 and diff_lag<0
+
+    def _parse_ma(self,arg):
+        close = self.df['close']
+        return talib.EMA(np.array(close), timeperiod=arg)
+
+    def _parse_close(self,arg):
+        return self.df['close'].shift(arg)
+
+    def _parse_return(self,arg):
+        close = self.df['close']
+        return close / close.shift(arg) - 1
+
+    #==============================
+    def _parse_func(self,feature):
+        #cross(ma_5,ma_10)这种格式
+        pattern = '(.*?)\((.*?),(.*?)\)'
+        ret = re.search(pattern, feature)
+        if ret and len(ret.groups()) == 3:
+            return ret.groups()[0], ret.groups()[1], ret.groups()[2]
+        return None
+
+    def _parse_arg(self,feature):
+        # return_20这种格式
+        pattern = '(.*?)_(\d+)'
+        ret = re.search(pattern, feature)
+        if ret and len(ret.groups()) == 2:
+            return ret.groups()[0], int(ret.groups()[1])
+        return None
+
+
+    def parse_feature(self,feature):
+        rets = self._parse_func(feature)
+        if not rets:
+            rets = self._parse_arg(feature)
+        return rets
+
+
+    def parse_all_features(self,features):
+        for feature in features:
+            rets = self.parse_feature(feature)
+            if rets is not None and rets[0] in self.features_support.keys():
+                self.df[feature] =self.features_support[rets[0]](rets[1])
+
+        return self.df
 
 class DataFeed(object):
     def __init__(self):
         self.idx = 0
+
 
     def get_benchmark_index(self):
         return self.all_dfs[self.benchmark].index
@@ -36,7 +101,7 @@ class DataFeed(object):
             df = self._load_data(instrument)
             self.all_dfs[instrument] = df
 
-        print(self.all_dfs)
+        return self.all_dfs
 
     def _load_data(self,instrument):
         items = mongo.query_docs('astock_daily_quotes', {'code': instrument,
@@ -49,30 +114,11 @@ class DataFeed(object):
         df.sort_index(inplace=True)
         del df['date']
 
-        df = self._parse_fetures(df,self.features)
+        parser = FeatureParser(df=df)
+        parser.parse_all_features(features=self.features)
         return df
 
-    def _parse_fetures(self,df,features):
-        for feature in features:
-            df = self._parse_feature(df, feature)
-        return df
 
-    def _parse_feature(self,df, feature):
-        features_support = ['return']
 
-        if '_' in feature:
-            feature_name = feature[:feature.index('_')]
-            param = int(feature[feature.index('_') + 1:])
-
-        else:
-            feature_name = feature
-            param = 0
-
-        if feature_name not in features_support:
-            return df
-
-        if feature_name == 'return':
-            df[feature] = df['close'] / df['close'].shift(param + 1) - 1
-        return df
 
 D = DataFeed()
