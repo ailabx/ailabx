@@ -43,6 +43,21 @@ class Performance(object):
             'beta':self.beta
         }
 
+from sklearn.ensemble import GradientBoostingClassifier
+from sklearn.model_selection import train_test_split
+
+class SymbolRanker(object):
+    def split_datasets(self,X,y):
+        X_train, X_test, y_train, y_test = train_test_split(X,y,test_size=0.2)
+        return (X_train,y_train),(X_test,y_test)
+
+    def train(self,X,y):
+        model = GradientBoostingClassifier(random_state=10)
+        model.fit(X, y)
+
+    def predict(self):
+        pass
+
 
 class Backtest(object):
     def __init__(self):

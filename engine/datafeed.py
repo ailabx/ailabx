@@ -11,15 +11,10 @@ class FeatureParser(object):
             'return':self._parse_return,
             'close':self._parse_close,
             'ma':self._parse_ma,
-            'cross':self._parse_cross,
+            #'cross':self._parse_cross,
         }
     def _parse_cross(self,args):
-        para1 = args[0],
-        para2 = args[1]
-
-        diff = self.df[para1] - self.df[para2]
-        diff_lag =  diff.shift(1)
-        diff>=0 and diff_lag<0
+        pass
 
     def _parse_ma(self,arg):
         close = self.df['close']
@@ -69,7 +64,6 @@ class DataFeed(object):
     def __init__(self):
         self.idx = 0
 
-
     def get_benchmark_index(self):
         return self.all_dfs[self.benchmark].index
 
@@ -85,40 +79,47 @@ class DataFeed(object):
         done = self.idx >= len(self.all_dfs[self.benchmark])
         return bars, done
 
-    #加载所有instruments的数据
-    def load_data_with_features(self,instruments,features, start_date, end_date, benchmark='000300_index'):
-        self.instruments = instruments
-        self.features = features
-        self.start_date = start_date
-        self.end_date = end_date
-        self.benchmark = benchmark
-
-        self.all_dfs = {}
-
-        self.all_dfs[self.benchmark] = self._load_data(self.benchmark)
-
-        for instrument in instruments:
-            df = self._load_data(instrument)
-            self.all_dfs[instrument] = df
-
-        return self.all_dfs
-
-    def _load_data(self,instrument):
-        items = mongo.query_docs('astock_daily_quotes', {'code': instrument,
-                                                         'date': {'$gt': self.start_date, '$lt': self.end_date}},
-                                 )
-
-        df = pd.DataFrame(list(items))
-        df = df[['open', 'high', 'low', 'close', 'date', 'code']]
-        df.index = df['date']
-        df.sort_index(inplace=True)
-        del df['date']
-
+    def calc_features(self,df,features):
         parser = FeatureParser(df=df)
-        parser.parse_all_features(features=self.features)
+        return parser.parse_all_features(features=features)
+
+    def auto_label(self,df,hold_days=5):
+        return_hold = 'return_hold'
+        df[return_hold] = (df['close'].shift(hold_days) / df['close'] - 1) * 100
+        # df[return_hold]= df[return_hold].dropna()
+        df['label'] = np.where(df[return_hold] > 20, 20, df[return_hold])
+        df['label'] = np.where(df[return_hold] < -20, -20, df[return_hold])
+        df['label'] = df['label'] + 20
         return df
 
 
+    #加载所有instruments的数据
+    def load_datas(self,instruments,features, start_date, end_date, benchmark='000300_index'):
+        self.all_dfs = {}
+        self.all_dfs[benchmark] = self._load_data(benchmark,start_date,end_date)
 
+        for instrument in instruments:
+            df = self._load_data(instrument,start_date,end_date)
+            df = self.calc_features(df,features)
+            df = self.auto_label(df)
+            self.all_dfs[instrument] = df
+        return self.all_dfs\
+
+    def _load_data(self,instrument,start_date,end_date):
+        items = mongo.query_docs('astock_daily_quotes', {'code': instrument,
+                                                         'date': {'$gt': start_date, '$lt': end_date}},
+                                 )
+
+        df = pd.DataFrame(list(items))
+        if '_index' not in instrument:
+            df = df[['open', 'high', 'low', 'close', 'date', 'code', 'volume','factor']]
+        else:
+            df = df[['open', 'high', 'low', 'close', 'date', 'code', 'volume']]
+
+
+        df.index = df['date']
+        df.sort_index(inplace=True)
+        del df['date']
+        return df
 
 D = DataFeed()

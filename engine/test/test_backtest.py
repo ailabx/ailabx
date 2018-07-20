@@ -1,4 +1,4 @@
-from engine.backtest import M
+from engine.backtest import M,SymbolRanker
 from engine.datafeed import D
 import unittest
 from datetime import datetime
@@ -13,7 +13,18 @@ def handle_bar(bars,context):
     return actions
 
 class TestBacktest(unittest.TestCase):
-    def test_run(self):
+    def test_ranker(self):
+        instruments = ['600519', '000858']
+        features = ['return_0', 'return_4']
+        start = datetime(2017, 1, 1)
+        end = datetime(2017, 1, 30)
+
+        dfs = D.load_data_with_features(instruments, features, start, end)
+        df = dfs['600519']
+        train,test = SymbolRanker().split_datasets(df,df['close'])
+        print(len(train[0]),len(test[0]),test[0],test[1])
+
+    def __test_run(self):
 
         instruments = ['600519', '000858']
         features = ['return_0', 'return_4']

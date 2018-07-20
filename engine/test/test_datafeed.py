@@ -25,8 +25,19 @@ class TestDataFeed(unittest.TestCase):
     def test_load_data(self):
         start = datetime(2016,1,1)
         end = datetime(2017,1,1)
-        features = ['close_5','return_20','ma_5','ma_10','cross(ma_5,ma_10)']
-        all_dfs = D.load_data_with_features(instruments=['600519',],
-                                            features=features,start_date=start,end_date=end)
-        df = all_dfs['600519']
-        print(df.tail(20))
+        df = D._load_data('600519',start,end)
+        print(df.tail())
+
+        features = ['close_5', 'return_20', 'ma_5', 'ma_10']
+        df = D.calc_features(df,features)
+        print(df.tail())
+
+        df = D.auto_label(df)
+        print(df.tail())
+
+
+        dfs = D.load_datas(['600519','601318'],features,start,end)
+
+
+
+
