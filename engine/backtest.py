@@ -43,8 +43,11 @@ class Performance(object):
             'beta':self.beta
         }
 
-from sklearn.ensemble import GradientBoostingClassifier
+from sklearn.ensemble import GradientBoostingClassifier,RandomForestClassifier
 from sklearn.model_selection import train_test_split
+from sklearn.metrics import accuracy_score
+from sklearn.metrics import classification_report
+#https://github.com/GenTang/intro_ds
 
 class SymbolRanker(object):
     def split_datasets(self,X,y):
@@ -53,11 +56,20 @@ class SymbolRanker(object):
 
     def train(self,X,y):
         model = GradientBoostingClassifier(random_state=10)
-        model.fit(X, y)
+        #model = RandomForestClassifier(random_state=10)
+
+        #划分数据集
+        train,test = self.split_datasets(X,y)
+        #模型训练
+        model.fit(train[0], train[1])
+
+        #模型评估
+        print('训练集准确率：',model.score(train[0], train[1]))
+        print('测试集准确率：',model.score(test[0],test[1]))
+        print(classification_report(model.predict(test[0]), test[1]))
 
     def predict(self):
         pass
-
 
 class Backtest(object):
     def __init__(self):

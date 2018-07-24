@@ -3,7 +3,7 @@ from ..datafeed import *
 from datetime import datetime
 
 class TestDataFeed(unittest.TestCase):
-    def test_feature_parser(self):
+    def __test_feature_parser(self):
         parser = FeatureParser(df=None)
         feature,arg = parser.parse_feature('return_5')
         self.assertEqual(feature,'return')

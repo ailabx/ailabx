@@ -1,8 +1,9 @@
 import pymongo
 
 class MongoMgr(object):
-    def __init__(self,db_name='aiquant'):
-        self.mongo_connect = pymongo.MongoClient('localhost', 27017)[db_name]
+    def __init__(self,db_name='astock'):
+        self.mongo_connect = pymongo.MongoClient('47.94.133.21', 27017)[db_name]
+        #self.mongo_connect.authenticate('ailabx_', '@read')
 
     # 添加文档或文档集合
     def insert_doc_or_docs(self,table_name, doc_or_docs):

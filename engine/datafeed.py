@@ -3,6 +3,9 @@ import pandas as pd
 import re
 import talib
 import numpy as np
+import requests
+import json
+from datetime import datetime
 
 class FeatureParser(object):
     def __init__(self,df):
@@ -86,12 +89,19 @@ class DataFeed(object):
     def auto_label(self,df,hold_days=5):
         return_hold = 'return_hold'
         df[return_hold] = (df['close'].shift(hold_days) / df['close'] - 1) * 100
-        # df[return_hold]= df[return_hold].dropna()
-        df['label'] = np.where(df[return_hold] > 20, 20, df[return_hold])
-        df['label'] = np.where(df[return_hold] < -20, -20, df[return_hold])
-        df['label'] = df['label'] + 20
-        return df
 
+        label_name = return_hold
+        # df[return_hold]= df[return_hold].dropna()
+        rank20 = df[label_name].quantile(0.2)
+        rank40 = df[label_name].quantile(0.4)
+        rank60 = df[label_name].quantile(0.6)
+        rank80 = df[label_name].quantile(0.8)
+        df['label'] = np.where(df[label_name] < rank20, 0, None)
+        df['label'] = np.where(df[label_name] > rank20, 1, df['label'])
+        df['label'] = np.where(df[label_name] > rank40, 2, df['label'])
+        df['label'] = np.where(df[label_name] > rank60, 3, df['label'])
+        df['label'] = np.where(df[label_name] > rank80, 4, df['label'])
+        return df
 
     #加载所有instruments的数据
     def load_datas(self,instruments,features, start_date, end_date, benchmark='000300_index'):
@@ -103,18 +113,26 @@ class DataFeed(object):
             df = self.calc_features(df,features)
             df = self.auto_label(df)
             self.all_dfs[instrument] = df
-        return self.all_dfs\
+        return self.all_dfs
 
     def _load_data(self,instrument,start_date,end_date):
-        items = mongo.query_docs('astock_daily_quotes', {'code': instrument,
-                                                         'date': {'$gt': start_date, '$lt': end_date}},
-                                 )
+        #items = mongo.query_docs('astock_daily_quotes', {'code': instrument,
+        #                                                 'date': {'$gt': start_date, '$lt': end_date}},
+        #                         )
 
-        df = pd.DataFrame(list(items))
-        if '_index' not in instrument:
-            df = df[['open', 'high', 'low', 'close', 'date', 'code', 'volume','factor']]
-        else:
-            df = df[['open', 'high', 'low', 'close', 'date', 'code', 'volume']]
+        url = 'http://ailabx.com/kensho/quotes?code=600519&start={}&end={}'.format(
+            start_date.strftime('%Y%m%d'),
+            end_date.strftime('%Y%m%d')
+        )
+
+        json_data = requests.get(url).json()
+        data = json.loads(json_data['data'])
+        df = pd.DataFrame(data)
+        #print(df)
+        #if '_index' not in instrument:
+        #    df = df[['open', 'high', 'low', 'close', 'date', 'code', 'volume','factor']]
+        #else:
+        #    df = df[['open', 'high', 'low', 'close', 'date', 'code', 'volume']]
 
 
         df.index = df['date']
