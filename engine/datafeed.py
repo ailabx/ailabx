@@ -13,9 +13,14 @@ class FeatureParser(object):
         self.features_support={
             'return':self._parse_return,
             'close':self._parse_close,
+            'amount':self._parse_amount,
             'ma':self._parse_ma,
             #'cross':self._parse_cross,
         }
+
+    def _parse_amount(self,arg):
+        return self.df['amount'].shift(arg)
+
     def _parse_cross(self,args):
         pass
 
@@ -88,19 +93,12 @@ class DataFeed(object):
 
     def auto_label(self,df,hold_days=5):
         return_hold = 'return_hold'
-        df[return_hold] = (df['close'].shift(hold_days) / df['close'] - 1) * 100
+        df[return_hold] = (df['close'].shift(hold_days) / df['close'] - 1)
 
         label_name = return_hold
-        # df[return_hold]= df[return_hold].dropna()
-        rank20 = df[label_name].quantile(0.2)
-        rank40 = df[label_name].quantile(0.4)
-        rank60 = df[label_name].quantile(0.6)
-        rank80 = df[label_name].quantile(0.8)
-        df['label'] = np.where(df[label_name] < rank20, 0, None)
-        df['label'] = np.where(df[label_name] > rank20, 1, df['label'])
-        df['label'] = np.where(df[label_name] > rank40, 2, df['label'])
-        df['label'] = np.where(df[label_name] > rank60, 3, df['label'])
-        df['label'] = np.where(df[label_name] > rank80, 4, df['label'])
+        df = df.dropna(axis=0, how='any', thresh=None)
+        df['label'] = df[return_hold]*100 + 10 #[0,20]
+        df['label'] = df['label'].apply(lambda x:int(x))
         return df
 
     #加载所有instruments的数据
@@ -139,5 +137,18 @@ class DataFeed(object):
         df.sort_index(inplace=True)
         del df['date']
         return df
+
+
+    def instruments(self,start_date,end_date):
+        url = 'http://127.0.0.1:8000/kensho/instruments?&start={}&end={}'.format(
+            start_date.strftime('%Y%m%d'),
+            end_date.strftime('%Y%m%d')
+        )
+
+        json_data = requests.get(url).json()
+        data = json.loads(json_data['data'])
+        df = pd.DataFrame(data)
+        return list(df['code'])
+
 
 D = DataFeed()

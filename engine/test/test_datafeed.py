@@ -3,6 +3,12 @@ from ..datafeed import *
 from datetime import datetime
 
 class TestDataFeed(unittest.TestCase):
+    def __test_instruments(self):
+        start = datetime(2010, 1, 1)
+        end = datetime(2017, 7, 19)
+        instruments = D.instruments(start,end)
+        print(len(instruments),instruments[:10])
+
     def __test_feature_parser(self):
         parser = FeatureParser(df=None)
         feature,arg = parser.parse_feature('return_5')
@@ -33,7 +39,7 @@ class TestDataFeed(unittest.TestCase):
         print(df.tail())
 
         df = D.auto_label(df)
-        print(df.tail())
+        print(df.tail(20))
 
 
         dfs = D.load_datas(['600519','601318'],features,start,end)
