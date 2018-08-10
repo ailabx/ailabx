@@ -12,60 +12,127 @@ class FeatureParser(object):
         self.df = df
         self.features_support={
             'return':self._parse_return,
-            'close':self._parse_close,
-            'amount':self._parse_amount,
             'ma':self._parse_ma,
-            #'cross':self._parse_cross,
         }
 
-    def _parse_amount(self,arg):
-        return self.df['amount'].shift(arg)
+        self.funcs={
+            'rank':self.rank
+        }
 
-    def _parse_cross(self,args):
+    def rank(self,feature):{
+        print('rank..............'+feature)
+    }
+
+    def _func_rank(self,basic_feature):
+        se = self.df[basic_feature]
         pass
+
+    def parse_operator(self,item):
+        operators = ['+', '-', '*', '/']
+        # 包含+,-,*,/
+        splited = None
+        for ope in operators:
+            if ope in item:
+                splited = item.split(ope)
+        return splited
+
+    #把features集合里，所有需要提取的因子都列出来
+    def extra_features(self,items):
+        features = []
+
+        new_items = []
+        for item in items:
+            splited = self.parse_operator(item)
+            if splited is None:
+                new_items.append(item.strip())
+            else:
+                new_items.extend(splited)
+
+        for item in new_items:
+            ret =  re.search('([a-z]+_[\d+].*?$)',item)
+            if ret:
+               features.append(ret.group().strip())
+        return list(set(features))
+
+
+    #计算函数的:rank_avg_amount_5_20 => avg,rank,amount_5_20
+    def extra_func(self,feature):
+        funcs,args = self.parse_feature(feature)
+        if funcs is None or args is None or len(funcs) <= 1:
+            return None,None #没有函数
+
+        feature = funcs[-1]
+        for arg in args:
+            feature = feature + '_' + str(arg)
+
+        funcs = funcs[:len(funcs) -1]
+        funcs.reverse()
+
+        return funcs,feature
+
+
+    def _parse_raw_item(self,feature,arg):
+        return self.df[feature].shift(arg)
 
     def _parse_ma(self,arg):
         close = self.df['close']
         return talib.EMA(np.array(close), timeperiod=arg)
 
-    def _parse_close(self,arg):
-        return self.df['close'].shift(arg)
-
     def _parse_return(self,arg):
         close = self.df['close']
         return close / close.shift(arg) - 1
 
-    #==============================
-    def _parse_func(self,feature):
-        #cross(ma_5,ma_10)这种格式
-        pattern = '(.*?)\((.*?),(.*?)\)'
-        ret = re.search(pattern, feature)
-        if ret and len(ret.groups()) == 3:
-            return ret.groups()[0], ret.groups()[1], ret.groups()[2]
-        return None
-
-    def _parse_arg(self,feature):
-        # return_20这种格式
-        pattern = '(.*?)_(\d+)'
-        ret = re.search(pattern, feature)
-        if ret and len(ret.groups()) == 2:
-            return ret.groups()[0], int(ret.groups()[1])
-        return None
-
-
     def parse_feature(self,feature):
-        rets = self._parse_func(feature)
-        if not rets:
-            rets = self._parse_arg(feature)
-        return rets
+        #print(feature)
+        for opt in ['+','-','*','/']:
+            if opt in feature:
+                return None,None
+        items = feature.split('_')
+        funcs = []
+        args = []
+        for item in items:
+            if re.match('\d+$',item):
+                args.append(int(item))
+            else:
+                funcs.append(item)
+        return funcs,args
 
 
     def parse_all_features(self,features):
-        for feature in features:
-            rets = self.parse_feature(feature)
-            if rets is not None and rets[0] in self.features_support.keys():
-                self.df[feature] =self.features_support[rets[0]](rets[1])
+        #先把所有要计算的特征算好，存在df里
+        basic_features = self.extra_features(features)
+        for feature in basic_features:
+            items = feature.split('_')
+            feature_name = items[0]
+            feature_args = int(items[1])
+            if feature_name in self.features_support.keys():
+                self.df[feature] = self.features_support[feature_name](feature_args)
+            else:
+                self.df[feature] = self._parse_raw_item(feature_name,feature_args)
 
+        #avg_amount_5这样的函数运算
+        for feature in features:
+            funcs,feature_name = self.extra_func(feature)
+            if funcs is None:
+                continue
+            else:
+                for func in funcs:
+                    if func in self.funcs.keys():
+                        self.funcs[func](feature_name)
+            #for func in funcs:
+
+        #计算+-*/
+        for feature in features:
+            splited = self.parse_operator(feature)
+            if splited:
+                new_name = ''
+                for item in splited:
+                    new_name += item
+                    new_name += '_'
+
+
+                test = self.df.eval(new_name+'='+feature)
+                #print(test)
         return self.df
 
 class DataFeed(object):
@@ -118,7 +185,8 @@ class DataFeed(object):
         #                                                 'date': {'$gt': start_date, '$lt': end_date}},
         #                         )
 
-        url = 'http://ailabx.com/kensho/quotes?code=600519&start={}&end={}'.format(
+        url = 'http://ailabx.com/kensho/quotes?code={}&start={}&end={}'.format(
+            instrument,
             start_date.strftime('%Y%m%d'),
             end_date.strftime('%Y%m%d')
         )
@@ -126,21 +194,24 @@ class DataFeed(object):
         json_data = requests.get(url).json()
         data = json.loads(json_data['data'])
         df = pd.DataFrame(data)
-        #print(df)
-        #if '_index' not in instrument:
-        #    df = df[['open', 'high', 'low', 'close', 'date', 'code', 'volume','factor']]
-        #else:
-        #    df = df[['open', 'high', 'low', 'close', 'date', 'code', 'volume']]
-
 
         df.index = df['date']
         df.sort_index(inplace=True)
         del df['date']
+
+        #基本面数据
+        fundamentals = self.fundamentals(instrument,start_date,end_date)
+        fundamentals = fundamentals.reindex(df.index,method='bfill',fill_value=0.0)
+
+        df = df.join(fundamentals)
+        df['pe'] = df['close'] / df['EPS']
+        df['pb'] = df['close'] / df['NAPS']
+
         return df
 
 
     def instruments(self,start_date,end_date):
-        url = 'http://127.0.0.1:8000/kensho/instruments?&start={}&end={}'.format(
+        url = 'http://www.ailabx.com/kensho/instruments?&start={}&end={}'.format(
             start_date.strftime('%Y%m%d'),
             end_date.strftime('%Y%m%d')
         )
@@ -149,6 +220,20 @@ class DataFeed(object):
         data = json.loads(json_data['data'])
         df = pd.DataFrame(data)
         return list(df['code'])
+
+    def fundamentals(self,code,start_date,end_date):
+        url = 'http://www.ailabx.com/kensho/maindata?code={}&start={}&end={}'.format(
+            code,
+            start_date.strftime('%Y%m%d'),
+            end_date.strftime('%Y%m%d')
+        )
+
+        json_data = requests.get(url).json()
+        data = json.loads(json_data['data'])
+        df = pd.DataFrame(data)
+        df.index = df['EndDate']
+        del df['code']
+        return df
 
 
 D = DataFeed()
