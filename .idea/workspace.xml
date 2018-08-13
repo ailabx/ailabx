@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e966dac8-e1c8-4be5-8017-00e400b3b447" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/engine/datafeed.py" afterPath="$PROJECT_DIR$/engine/datafeed.py" />
       <change beforePath="$PROJECT_DIR$/engine/test/test_datafeed.py" afterPath="$PROJECT_DIR$/engine/test/test_datafeed.py" />
     </list>
@@ -40,7 +39,7 @@
     <SUITE FILE_PATH="coverage/ailabx$Unittests_in_test_portfolio_py.coverage" NAME="Unittests in test_portfolio.py Coverage Results" MODIFIED="1531275033033" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/engine/test" />
     <SUITE FILE_PATH="coverage/ailabx$pytorch_utils.coverage" NAME="pytorch_utils Coverage Results" MODIFIED="1530065303168" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/docs/book/pytorch" />
     <SUITE FILE_PATH="coverage/ailabx$datahandler.coverage" NAME="datahandler Coverage Results" MODIFIED="1530241835505" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/ainlp/data" />
-    <SUITE FILE_PATH="coverage/ailabx$Unittests_in_test_datafeed_py.coverage" NAME="Unittests in test_datafeed.py Coverage Results" MODIFIED="1533896091840" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/ailabx$Unittests_in_test_datafeed_py.coverage" NAME="Unittests in test_datafeed.py Coverage Results" MODIFIED="1534151660560" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/ailabx$mainwindow.coverage" NAME="mainwindow Coverage Results" MODIFIED="1528874517760" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/gui" />
     <SUITE FILE_PATH="coverage/ailabx$framedata.coverage" NAME="framedata Coverage Results" MODIFIED="1529461084177" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/gui/frames" />
     <SUITE FILE_PATH="coverage/ailabx$Unittests_in_test_backtest_py.coverage" NAME="Unittests in test_backtest.py Coverage Results" MODIFIED="1532400669594" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/engine/test" />
@@ -61,29 +60,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="test_datafeed.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="test_datafeed.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/engine/test/test_datafeed.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="307">
-              <caret line="73" column="41" lean-forward="true" selection-start-line="73" selection-start-column="41" selection-end-line="73" selection-end-column="41" />
+            <state relative-caret-position="34">
+              <caret line="29" column="21" lean-forward="true" selection-start-line="29" selection-start-column="21" selection-end-line="29" selection-end-column="21" />
               <folding>
                 <element signature="e#0#15#0" expanded="true" />
-                <element signature="e#153#313#0" expanded="false" />
-                <element signature="e#542#895#0" expanded="false" />
-                <element signature="e#944#1645#0" expanded="false" />
-                <element signature="e#1690#1820#0" expanded="false" />
-                <element signature="e#1872#2084#0" expanded="false" />
+                <element signature="e#153#763#0" expanded="false" />
+                <element signature="e#1024#1184#0" expanded="false" />
+                <element signature="e#1415#1768#0" expanded="false" />
+                <element signature="e#1817#2518#0" expanded="false" />
+                <element signature="e#2563#2693#0" expanded="false" />
+                <element signature="e#2745#2957#0" expanded="false" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="case.py" pinned="false" current-in-tab="false">
-        <entry file="file://C:/Anaconda/Lib/unittest/case.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="155">
-              <caret line="624" column="0" lean-forward="false" selection-start-line="624" selection-start-column="0" selection-end-line="624" selection-end-column="0" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -91,18 +81,8 @@
       <file leaf-file-name="generic.py" pinned="false" current-in-tab="false">
         <entry file="file://C:/Anaconda/Lib/site-packages/pandas/core/generic.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="104">
-              <caret line="1044" column="0" lean-forward="false" selection-start-line="1044" selection-start-column="0" selection-end-line="1044" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="test_portfolio.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/engine/test/test_portfolio.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="319">
-              <caret line="34" column="24" lean-forward="false" selection-start-line="34" selection-start-column="24" selection-end-line="34" selection-end-column="24" />
+            <state relative-caret-position="63">
+              <caret line="3022" column="0" lean-forward="false" selection-start-line="3022" selection-start-column="0" selection-end-line="3022" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -111,7 +91,7 @@
       <file leaf-file-name="test_backtest.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/engine/test/test_backtest.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="405">
+            <state relative-caret-position="394">
               <caret line="41" column="13" lean-forward="false" selection-start-line="41" selection-start-column="13" selection-end-line="41" selection-end-column="13" />
               <folding>
                 <element signature="e#0#42#0" expanded="true" />
@@ -120,18 +100,41 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="datafeed.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="datafeed.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/engine/datafeed.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="8" column="0" lean-forward="true" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+            <state relative-caret-position="318">
+              <caret line="241" column="17" lean-forward="true" selection-start-line="241" selection-start-column="17" selection-end-line="241" selection-end-column="17" />
               <folding>
                 <element signature="e#0#37#0" expanded="true" />
+                <element signature="e#192#3792#0" expanded="false" />
                 <element signature="e#1834#1868#0" expanded="false" />
                 <element signature="e#1907#1989#0" expanded="false" />
                 <element signature="e#2032#2100#0" expanded="false" />
-                <element signature="e#4972#5331#0" expanded="false" />
+                <element signature="e#4919#5425#0" expanded="false" />
+                <element signature="e#6616#6937#0" expanded="false" />
+                <element signature="e#7000#7277#0" expanded="false" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="_bootstrap_external.py" pinned="false" current-in-tab="false">
+        <entry file="file://C:/Anaconda/Lib/importlib/_bootstrap_external.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="106">
+              <caret line="425" column="0" lean-forward="false" selection-start-line="425" selection-start-column="0" selection-end-line="425" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="groupby.py" pinned="false" current-in-tab="false">
+        <entry file="file://C:/Anaconda/Lib/site-packages/pandas/core/groupby.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="63">
+              <caret line="804" column="0" lean-forward="false" selection-start-line="804" selection-start-column="0" selection-end-line="804" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -139,38 +142,38 @@
       <file leaf-file-name="frame.py" pinned="false" current-in-tab="false">
         <entry file="file://C:/Anaconda/Lib/site-packages/pandas/core/frame.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="121">
-              <caret line="2365" column="0" lean-forward="false" selection-start-line="2365" selection-start-column="0" selection-end-line="2365" selection-end-column="0" />
+            <state relative-caret-position="63">
+              <caret line="2934" column="0" lean-forward="false" selection-start-line="2934" selection-start-column="0" selection-end-line="2934" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="eval.py" pinned="false" current-in-tab="false">
-        <entry file="file://C:/Anaconda/Lib/site-packages/pandas/core/computation/eval.py">
+      <file leaf-file-name="_decorators.py" pinned="false" current-in-tab="false">
+        <entry file="file://C:/Anaconda/Lib/site-packages/pandas/util/_decorators.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="223">
-              <caret line="294" column="0" lean-forward="false" selection-start-line="294" selection-start-column="0" selection-end-line="294" selection-end-column="0" />
+            <state relative-caret-position="71">
+              <caret line="126" column="0" lean-forward="false" selection-start-line="126" selection-start-column="0" selection-end-line="126" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="expr.py" pinned="false" current-in-tab="false">
-        <entry file="file://C:/Anaconda/Lib/site-packages/pandas/core/computation/expr.py">
+      <file leaf-file-name="base.py" pinned="false" current-in-tab="false">
+        <entry file="file://C:/Anaconda/Lib/site-packages/pandas/core/indexes/base.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="125">
-              <caret line="754" column="26" lean-forward="false" selection-start-line="754" selection-start-column="26" selection-end-line="754" selection-end-column="26" />
+            <state relative-caret-position="335">
+              <caret line="2943" column="0" lean-forward="false" selection-start-line="2943" selection-start-column="0" selection-end-line="2943" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="builtins.py" pinned="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/.PyCharm2017.3/system/python_stubs/-946255732/builtins.py">
+      <file leaf-file-name="internals.py" pinned="false" current-in-tab="false">
+        <entry file="file://C:/Anaconda/Lib/site-packages/pandas/core/internals.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-41">
-              <caret line="3377" column="8" lean-forward="false" selection-start-line="3377" selection-start-column="8" selection-end-line="3377" selection-end-column="8" />
+            <state relative-caret-position="71">
+              <caret line="4138" column="0" lean-forward="false" selection-start-line="4138" selection-start-column="0" selection-end-line="4138" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -197,6 +200,8 @@
       <find>hello</find>
       <find>print</find>
       <find>eval</find>
+      <find>fetch</find>
+      <find>rank</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -289,7 +294,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -312,6 +316,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scratches" />
       <pane id="Scope" />
     </panes>
   </component>
@@ -472,47 +477,48 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="Unittests_in_test_datafeed_py - 2018.08.10 at 18h 03m 27s.xml">
+    <history-entry file="Unittests_in_test_datafeed_py - 2018.08.13 at 15h 41m 34s.xml">
       <configuration name="Unittests in test_datafeed.py" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_test_datafeed_py - 2018.08.10 at 18h 06m 19s.xml">
+    <history-entry file="Unittests_in_test_datafeed_py - 2018.08.13 at 15h 47m 20s.xml">
       <configuration name="Unittests in test_datafeed.py" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_test_datafeed_py - 2018.08.10 at 18h 06m 43s.xml">
+    <history-entry file="Unittests_in_test_datafeed_py - 2018.08.13 at 15h 49m 23s.xml">
       <configuration name="Unittests in test_datafeed.py" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_test_datafeed_py - 2018.08.10 at 18h 07m 03s.xml">
+    <history-entry file="Unittests_in_test_datafeed_py - 2018.08.13 at 15h 49m 52s.xml">
       <configuration name="Unittests in test_datafeed.py" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_test_datafeed_py - 2018.08.10 at 18h 08m 03s.xml">
+    <history-entry file="Unittests_in_test_datafeed_py - 2018.08.13 at 17h 02m 09s.xml">
       <configuration name="Unittests in test_datafeed.py" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_test_datafeed_py - 2018.08.10 at 18h 08m 24s.xml">
+    <history-entry file="Unittests_in_test_datafeed_py - 2018.08.13 at 17h 05m 02s.xml">
       <configuration name="Unittests in test_datafeed.py" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_test_datafeed_py - 2018.08.10 at 18h 08m 51s.xml">
+    <history-entry file="Unittests_in_test_datafeed_py - 2018.08.13 at 17h 06m 28s.xml">
       <configuration name="Unittests in test_datafeed.py" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_test_datafeed_py - 2018.08.10 at 18h 10m 03s.xml">
+    <history-entry file="Unittests_in_test_datafeed_py - 2018.08.13 at 17h 07m 23s.xml">
       <configuration name="Unittests in test_datafeed.py" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_test_datafeed_py - 2018.08.10 at 18h 14m 14s.xml">
+    <history-entry file="Unittests_in_test_datafeed_py - 2018.08.13 at 17h 10m 50s.xml">
       <configuration name="Unittests in test_datafeed.py" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_test_datafeed_py - 2018.08.10 at 18h 14m 54s.xml">
+    <history-entry file="Unittests_in_test_datafeed_py - 2018.08.13 at 17h 14m 39s.xml">
       <configuration name="Unittests in test_datafeed.py" configurationId="tests" />
     </history-entry>
   </component>
   <component name="ToolWindowManager">
     <frame x="1" y="1" width="1364" height="726" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.66835016" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.06734007" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19785276" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20092024" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="SciView" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.12423313" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -604,41 +610,10 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/docs/book/python/numpy_utils.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1207">
-          <caret line="91" column="15" lean-forward="false" selection-start-line="91" selection-start-column="15" selection-end-line="91" selection-end-column="15" />
-          <folding>
-            <element signature="e#38#651#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/docs/book/pytorch_utils.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/docs/book/python常用数据类型与结构.ipynb">
-      <provider selected="true" editor-type-id="ipnb-editor">
-        <state>
-          <selected id="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/docs/book/pandasutils.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="510">
           <caret line="31" column="12" lean-forward="false" selection-start-line="31" selection-start-column="12" selection-end-line="31" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://C:/Anaconda/Lib/site-packages/pandas/core/indexes/base.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="41888">
-          <caret line="2524" column="0" lean-forward="false" selection-start-line="2524" selection-start-column="0" selection-end-line="2524" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -807,13 +782,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://C:/Anaconda/Lib/importlib/_bootstrap_external.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="7225">
-          <caret line="425" column="0" lean-forward="false" selection-start-line="425" selection-start-column="0" selection-end-line="425" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/engine/data/data_features.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="629">
@@ -839,7 +807,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1088">
           <caret line="80" column="37" lean-forward="false" selection-start-line="80" selection-start-column="14" selection-end-line="80" selection-end-column="37" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -847,9 +814,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
           <caret line="14" column="11" lean-forward="false" selection-start-line="14" selection-start-column="11" selection-end-line="14" selection-end-column="11" />
-          <folding>
-            <element signature="e#0#23#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -864,7 +828,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="663">
           <caret line="39" column="3" lean-forward="false" selection-start-line="39" selection-start-column="3" selection-end-line="39" selection-end-column="3" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -872,7 +835,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
           <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -880,39 +842,20 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/engine/test/test_backtest.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="41" column="13" lean-forward="false" selection-start-line="41" selection-start-column="13" selection-end-line="41" selection-end-column="13" />
-          <folding>
-            <element signature="e#0#42#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://C:/Anaconda/Lib/site-packages/pandas/core/computation/eval.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="223">
+        <state relative-caret-position="4913">
           <caret line="294" column="0" lean-forward="false" selection-start-line="294" selection-start-column="0" selection-end-line="294" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://C:/Anaconda/Lib/site-packages/pandas/core/frame.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="121">
-          <caret line="2365" column="0" lean-forward="false" selection-start-line="2365" selection-start-column="0" selection-end-line="2365" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://C:/Anaconda/Lib/unittest/case.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="155">
+        <state relative-caret-position="10387">
           <caret line="624" column="0" lean-forward="false" selection-start-line="624" selection-start-column="0" selection-end-line="624" selection-end-column="0" />
           <folding />
         </state>
@@ -920,7 +863,7 @@
     </entry>
     <entry file="file://C:/Anaconda/Lib/site-packages/pandas/core/computation/expr.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="125">
+        <state relative-caret-position="12495">
           <caret line="754" column="26" lean-forward="false" selection-start-line="754" selection-start-column="26" selection-end-line="754" selection-end-column="26" />
           <folding />
         </state>
@@ -928,53 +871,115 @@
     </entry>
     <entry file="file://$USER_HOME$/.PyCharm2017.3/system/python_stubs/-946255732/builtins.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-41">
+        <state relative-caret-position="57409">
           <caret line="3377" column="8" lean-forward="false" selection-start-line="3377" selection-start-column="8" selection-end-line="3377" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://C:/Anaconda/Lib/site-packages/pandas/core/generic.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="104">
-          <caret line="1044" column="0" lean-forward="false" selection-start-line="1044" selection-start-column="0" selection-end-line="1044" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/engine/test/test_portfolio.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="319">
+        <state relative-caret-position="561">
           <caret line="34" column="24" lean-forward="false" selection-start-line="34" selection-start-column="24" selection-end-line="34" selection-end-column="24" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/engine/datafeed.py">
+    <entry file="file://C:/Anaconda/Lib/site-packages/pandas/core/indexes/base.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="0" lean-forward="true" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+        <state relative-caret-position="335">
+          <caret line="2943" column="0" lean-forward="false" selection-start-line="2943" selection-start-column="0" selection-end-line="2943" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/Anaconda/Lib/site-packages/pandas/core/internals.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="71">
+          <caret line="4138" column="0" lean-forward="false" selection-start-line="4138" selection-start-column="0" selection-end-line="4138" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/Anaconda/Lib/site-packages/pandas/core/generic.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="63">
+          <caret line="3022" column="0" lean-forward="false" selection-start-line="3022" selection-start-column="0" selection-end-line="3022" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/Anaconda/Lib/site-packages/pandas/core/frame.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="63">
+          <caret line="2934" column="0" lean-forward="false" selection-start-line="2934" selection-start-column="0" selection-end-line="2934" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/Anaconda/Lib/site-packages/pandas/util/_decorators.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="71">
+          <caret line="126" column="0" lean-forward="false" selection-start-line="126" selection-start-column="0" selection-end-line="126" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/Anaconda/Lib/site-packages/pandas/core/groupby.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="63">
+          <caret line="804" column="0" lean-forward="false" selection-start-line="804" selection-start-column="0" selection-end-line="804" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/Anaconda/Lib/importlib/_bootstrap_external.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="106">
+          <caret line="425" column="0" lean-forward="false" selection-start-line="425" selection-start-column="0" selection-end-line="425" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/engine/test/test_backtest.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="394">
+          <caret line="41" column="13" lean-forward="false" selection-start-line="41" selection-start-column="13" selection-end-line="41" selection-end-column="13" />
           <folding>
-            <element signature="e#0#37#0" expanded="true" />
-            <element signature="e#1834#1868#0" expanded="false" />
-            <element signature="e#1907#1989#0" expanded="false" />
-            <element signature="e#2032#2100#0" expanded="false" />
-            <element signature="e#4972#5331#0" expanded="false" />
+            <element signature="e#0#42#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/engine/test/test_datafeed.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="307">
-          <caret line="73" column="41" lean-forward="true" selection-start-line="73" selection-start-column="41" selection-end-line="73" selection-end-column="41" />
+        <state relative-caret-position="34">
+          <caret line="29" column="21" lean-forward="true" selection-start-line="29" selection-start-column="21" selection-end-line="29" selection-end-column="21" />
           <folding>
             <element signature="e#0#15#0" expanded="true" />
-            <element signature="e#153#313#0" expanded="false" />
-            <element signature="e#542#895#0" expanded="false" />
-            <element signature="e#944#1645#0" expanded="false" />
-            <element signature="e#1690#1820#0" expanded="false" />
-            <element signature="e#1872#2084#0" expanded="false" />
+            <element signature="e#153#763#0" expanded="false" />
+            <element signature="e#1024#1184#0" expanded="false" />
+            <element signature="e#1415#1768#0" expanded="false" />
+            <element signature="e#1817#2518#0" expanded="false" />
+            <element signature="e#2563#2693#0" expanded="false" />
+            <element signature="e#2745#2957#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/engine/datafeed.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="318">
+          <caret line="241" column="17" lean-forward="true" selection-start-line="241" selection-start-column="17" selection-end-line="241" selection-end-column="17" />
+          <folding>
+            <element signature="e#0#37#0" expanded="true" />
+            <element signature="e#192#3792#0" expanded="false" />
+            <element signature="e#1834#1868#0" expanded="false" />
+            <element signature="e#1907#1989#0" expanded="false" />
+            <element signature="e#2032#2100#0" expanded="false" />
+            <element signature="e#4919#5425#0" expanded="false" />
+            <element signature="e#6616#6937#0" expanded="false" />
+            <element signature="e#7000#7277#0" expanded="false" />
           </folding>
         </state>
       </provider>

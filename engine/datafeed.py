@@ -168,47 +168,57 @@ class DataFeed(object):
         df['label'] = df['label'].apply(lambda x:int(x))
         return df
 
-    #加载所有instruments的数据
-    def load_datas(self,instruments,features, start_date, end_date, benchmark='000300_index'):
-        self.all_dfs = {}
-        self.all_dfs[benchmark] = self._load_data(benchmark,start_date,end_date)
+    #通过url,json方式从服务器获取数据,并做好排序等预处理
+    def fetch_data(self,url):
+        json_data = requests.get(url).json()
+        if json_data['err_code'] != 0:
+            print('fetch_data出错:{}-{}'.format(url,json_data['msg']))
+            return None
 
-        for instrument in instruments:
-            df = self._load_data(instrument,start_date,end_date)
-            df = self.calc_features(df,features)
-            df = self.auto_label(df)
-            self.all_dfs[instrument] = df
-        return self.all_dfs
+        data = json.loads(json_data['data'])
+        df = pd.DataFrame(data)
 
-    def _load_data(self,instrument,start_date,end_date):
-        #items = mongo.query_docs('astock_daily_quotes', {'code': instrument,
-        #                                                 'date': {'$gt': start_date, '$lt': end_date}},
-        #                         )
+        if 'date' in df.columns:
+            df.index = df['date']+ ' ' + df['code']
+            df.sort_index(inplace=True)
 
+        elif 'EndDate' in df.columns:
+            df.index = df['EndDate']
+            df.sort_index(inplace=True)
+        return df
+
+    def func_by_date(self,group):
+        group['rank_pe'] = group['pe'].rank()
+        return group
+
+
+    def func(self,group,args):
+        #计算收益率
+        group['return'] = group['close']/group['close'].shift(1) - 1
+        #把基本面数据eps,bps取回来，整合进去
+        code = group['code'][0]
+        df_data = self.fundamentals(code,args[0],args[1])
+        df_data = df_data.reindex(group.index,method='ffill')
+        group = group.join(df_data)
+
+        #计算pe/pb
+        group['pe']=group['close']/group['EPS']
+        group['pb'] = group['close']/group['NAPS']
+        return group
+
+    #加载所有instruments的数据,放在一个dataframe里
+    def load_datas(self,instruments,start_date, end_date,features=None, benchmark='000300_index'):
+        codes = ','.join(instruments)
         url = 'http://ailabx.com/kensho/quotes?code={}&start={}&end={}'.format(
-            instrument,
+            codes,
             start_date.strftime('%Y%m%d'),
             end_date.strftime('%Y%m%d')
         )
 
-        json_data = requests.get(url).json()
-        data = json.loads(json_data['data'])
-        df = pd.DataFrame(data)
-
-        df.index = df['date']
-        df.sort_index(inplace=True)
-        del df['date']
-
-        #基本面数据
-        fundamentals = self.fundamentals(instrument,start_date,end_date)
-        fundamentals = fundamentals.reindex(df.index,method='bfill',fill_value=0.0)
-
-        df = df.join(fundamentals)
-        df['pe'] = df['close'] / df['EPS']
-        df['pb'] = df['close'] / df['NAPS']
-
+        df = self.fetch_data(url)
+        df = df.groupby(df['code']).apply(self.func,[start_date,end_date])
+        df = df.groupby(df['date']).apply(self.func_by_date)
         return df
-
 
     def instruments(self,start_date,end_date):
         url = 'http://www.ailabx.com/kensho/instruments?&start={}&end={}'.format(
@@ -227,12 +237,8 @@ class DataFeed(object):
             start_date.strftime('%Y%m%d'),
             end_date.strftime('%Y%m%d')
         )
-
-        json_data = requests.get(url).json()
-        data = json.loads(json_data['data'])
-        df = pd.DataFrame(data)
-        df.index = df['EndDate']
-        del df['code']
+        df = self.fetch_data(url)
+        del df['code'],df['EndDate']
         return df
 
 
