@@ -33,7 +33,7 @@ class TestDataFeed(unittest.TestCase):
     def test_load_datas(self):
         start_date = datetime(2016, 7, 15)
         end_date = datetime(2016, 9, 1)
-        features = ['open_0/close_0','rank_return_1','rank_return_0','rank_return_0/rank_return_1']
+        features = ['open_0/close_0','cross(pe_0,pe_1)','rank(return_1/return_0)','rank(pe_0)']
         df = D.load_datas(['600519','600838','000002','000008'],start_date,end_date,features=features)
         print(df.head())
 

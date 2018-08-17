@@ -62,15 +62,17 @@ class DataFeed(object):
         return df
 
     def func_by_date(self,group):
+        print(group)
         if self.features:
-            group = self.calc.calc_func(group,self.features)
+            group = self.calc.calc_by_eval(group,self.features,self.calc.extra_basic_features(self.features),rank_flag=True)
         return group
 
     def func_by_code_after_rank(self,group):
-        group = self.calc.calc_operators(group,self.features)
+        group = self.calc.calc_by_eval(group,self.features,self.calc.extra_basic_features(self.features))
         return group
 
     def func_by_code(self,group,args):
+        #print(group)
         #这里按code分组了，直接使用date作为index，这样才可以reindex
         group.index = group['date']
         #考虑到停牌的情况，需要index reindex一样
@@ -83,6 +85,7 @@ class DataFeed(object):
         df_data = self.fundamentals(code,args[0],args[1])
         df_data = df_data.reindex(group.index,method='ffill')
         group = group.join(df_data)
+        #print('join之后',group)
 
         #计算pe/pb
         group['pe']=group['close']/group['EPS']
@@ -90,12 +93,13 @@ class DataFeed(object):
 
         # 计算其他特征，比如amount_5,close_10
         if self.features:
-            group = self.calc.calc_basic_features(group, self.calc.extra_basic_features(self.features))
+            group = self.calc.calc_basic_features(group,self.features)
 
         group = self.auto_label(group,hold_days=5)
 
         #各组的index要不同，所以加上code
-        group.index = group['date'] + ' ' + group['code']
+        #group.index = group['date'] + '_' + group['code']
+        #print(group)
         return group
 
     def load_benchmark(self,code,start_date, end_date):
@@ -125,9 +129,15 @@ class DataFeed(object):
         # todo :
         #这里可以分批——按code每次100支，即100*3年*252=7条左右获取，然后append在一起再运算
         #本地缓存，直接使用hdf5
+        df.reset_index(drop=True,inplace=True)
         df = df.groupby(df['code']).apply(self.func_by_code,[start_date,end_date])
-        df = df.groupby(df['date']).apply(self.func_by_date)
-        df = df.groupby(df['code']).apply(self.func_by_code_after_rank)
+        df.reset_index(drop=True,inplace=True)
+        df.index = df['date']+'_'+df['code']
+        print('groupby之后============》',df.index)
+
+        df.reset_index(drop=True, inplace=True)
+        df = df.groupby(df['date'],as_index=False).apply(self.func_by_date)
+        df = df.groupby(df['code'],as_index=False).apply(self.func_by_code_after_rank)
         df.index = df['date']
         df.sort_index(inplace=True)
         return df
