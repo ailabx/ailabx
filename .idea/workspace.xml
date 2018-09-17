@@ -2,11 +2,56 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e966dac8-e1c8-4be5-8017-00e400b3b447" name="Default" comment="">
+      <change beforePath="" afterPath="$PROJECT_DIR$/quant/engine/backtest.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/quant/engine/common/logging_utils.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/quant/engine/portfolio.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/quant/engine/test/test_backtest.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/quant/gui/frames/framebacktest.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/quant/gui/frames/frameresult.py" />
+      <change beforePath="$PROJECT_DIR$/.idea/ailabx.iml" afterPath="$PROJECT_DIR$/.idea/ailabx.iml" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/engine/datafeed.py" afterPath="$PROJECT_DIR$/engine/datafeed.py" />
-      <change beforePath="$PROJECT_DIR$/engine/feature_parser.py" afterPath="$PROJECT_DIR$/engine/feature_parser.py" />
-      <change beforePath="$PROJECT_DIR$/engine/test/test_datafeed.py" afterPath="$PROJECT_DIR$/engine/test/test_datafeed.py" />
-      <change beforePath="$PROJECT_DIR$/engine/test/test_feature_parser.py" afterPath="$PROJECT_DIR$/engine/test/test_feature_parser.py" />
+      <change beforePath="$PROJECT_DIR$/data/000001_index.csv" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data/000002.csv" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data/000300_index.csv" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/engine/__init__.py" afterPath="$PROJECT_DIR$/quant/engine/__init__.py" />
+      <change beforePath="$PROJECT_DIR$/engine/backtest.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/engine/common/__init__.py" afterPath="$PROJECT_DIR$/quant/engine/common/__init__.py" />
+      <change beforePath="$PROJECT_DIR$/engine/common/logging_utils.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/engine/common/mongo_utils.py" afterPath="$PROJECT_DIR$/quant/engine/common/mongo_utils.py" />
+      <change beforePath="$PROJECT_DIR$/engine/common/talib_utils.py" afterPath="$PROJECT_DIR$/quant/engine/common/talib_utils.py" />
+      <change beforePath="$PROJECT_DIR$/engine/common/tsutils.py" afterPath="$PROJECT_DIR$/quant/engine/common/tsutils.py" />
+      <change beforePath="$PROJECT_DIR$/engine/data/__init__.py" afterPath="$PROJECT_DIR$/quant/engine/data/__init__.py" />
+      <change beforePath="$PROJECT_DIR$/engine/data/data_features.py" afterPath="$PROJECT_DIR$/quant/engine/data/data_features.py" />
+      <change beforePath="$PROJECT_DIR$/engine/data/datafeed.py" afterPath="$PROJECT_DIR$/quant/engine/data/datafeed.py" />
+      <change beforePath="$PROJECT_DIR$/engine/data/models.py" afterPath="$PROJECT_DIR$/quant/engine/data/models.py" />
+      <change beforePath="$PROJECT_DIR$/engine/data/trading_env.py" afterPath="$PROJECT_DIR$/quant/engine/data/trading_env.py" />
+      <change beforePath="$PROJECT_DIR$/engine/datafeed.py" afterPath="$PROJECT_DIR$/quant/engine/datafeed.py" />
+      <change beforePath="$PROJECT_DIR$/engine/feature_parser.py" afterPath="$PROJECT_DIR$/quant/engine/feature_parser.py" />
+      <change beforePath="$PROJECT_DIR$/engine/portfolio.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/engine/test/.ipynb_checkpoints/pandas-checkpoint.ipynb" afterPath="$PROJECT_DIR$/quant/engine/test/.ipynb_checkpoints/pandas-checkpoint.ipynb" />
+      <change beforePath="$PROJECT_DIR$/engine/test/flask_utils.py" afterPath="$PROJECT_DIR$/quant/engine/test/flask_utils.py" />
+      <change beforePath="$PROJECT_DIR$/engine/test/pandas.ipynb" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/engine/test/templates/hello.html" afterPath="$PROJECT_DIR$/quant/engine/test/templates/hello.html" />
+      <change beforePath="$PROJECT_DIR$/engine/test/test_backtest.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/engine/test/test_datafeed.py" afterPath="$PROJECT_DIR$/quant/engine/test/test_datafeed.py" />
+      <change beforePath="$PROJECT_DIR$/engine/test/test_feature_parser.py" afterPath="$PROJECT_DIR$/quant/engine/test/test_feature_parser.py" />
+      <change beforePath="$PROJECT_DIR$/engine/test/test_portfolio.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/engine/utils/__init__.py" afterPath="$PROJECT_DIR$/quant/engine/utils/__init__.py" />
+      <change beforePath="$PROJECT_DIR$/engine/utils/build_astock_daily_quotes.py" afterPath="$PROJECT_DIR$/quant/engine/utils/build_astock_daily_quotes.py" />
+      <change beforePath="$PROJECT_DIR$/engine/utils/datasets.py" afterPath="$PROJECT_DIR$/quant/engine/utils/datasets.py" />
+      <change beforePath="$PROJECT_DIR$/gui/__init__.py" afterPath="$PROJECT_DIR$/quant/gui/__init__.py" />
+      <change beforePath="$PROJECT_DIR$/gui/consts.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/gui/forms/__init__.py" afterPath="$PROJECT_DIR$/quant/gui/forms/__init__.py" />
+      <change beforePath="$PROJECT_DIR$/gui/forms/formsetting.py" afterPath="$PROJECT_DIR$/quant/gui/forms/formsetting.py" />
+      <change beforePath="$PROJECT_DIR$/gui/frames/__init__.py" afterPath="$PROJECT_DIR$/quant/gui/frames/__init__.py" />
+      <change beforePath="$PROJECT_DIR$/gui/frames/framedata.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/gui/frames/framemain.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/gui/frames/frameresult.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/gui/mainwindow.py" afterPath="$PROJECT_DIR$/quant/gui/mainwindow.py" />
+      <change beforePath="$PROJECT_DIR$/gui/models/__init__.py" afterPath="$PROJECT_DIR$/quant/gui/models/__init__.py" />
+      <change beforePath="$PROJECT_DIR$/gui/models/table_models.py" afterPath="$PROJECT_DIR$/quant/gui/models/table_models.py" />
+      <change beforePath="$PROJECT_DIR$/main.py" afterPath="$PROJECT_DIR$/main.py" />
+      <change beforePath="$PROJECT_DIR$/test/test_trading_env.py" afterPath="" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -16,165 +61,179 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/ailabx$numpynn.coverage" NAME="numpy实现nn Coverage Results" MODIFIED="1529479945667" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/docs/book" />
-    <SUITE FILE_PATH="coverage/ailabx$Unittests_in_test_feature_parser_py.coverage" NAME="Unittests in test_feature_parser.py Coverage Results" MODIFIED="1534483484390" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/engine/test" />
-    <SUITE FILE_PATH="coverage/ailabx$cbow.coverage" NAME="cbow Coverage Results" MODIFIED="1530242095879" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/ainlp/models" />
     <SUITE FILE_PATH="coverage/ailabx$pandasutils.coverage" NAME="pandasutils Coverage Results" MODIFIED="1531188035204" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/docs/book" />
+    <SUITE FILE_PATH="coverage/ailabx$Unittests_in_test_cross_py.coverage" NAME="Unittests in test_cross.py Coverage Results" MODIFIED="1537155143239" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/quant/engine/test" />
     <SUITE FILE_PATH="coverage/ailabx$stats.coverage" NAME="stats Coverage Results" MODIFIED="1530502100432" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/docs/book/pandas" />
-    <SUITE FILE_PATH="coverage/ailabx$loss_fn.coverage" NAME="loss_fn Coverage Results" MODIFIED="1529814183368" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/docs/book/pytorch" />
     <SUITE FILE_PATH="coverage/ailabx$ordered_dict.coverage" NAME="ordered_dict Coverage Results" MODIFIED="1529974943396" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/docs/book/python" />
     <SUITE FILE_PATH="coverage/ailabx$scikit_learn.coverage" NAME="scikit_learn Coverage Results" MODIFIED="1529632243949" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/docs/book" />
     <SUITE FILE_PATH="coverage/ailabx$datafeed.coverage" NAME="datafeed Coverage Results" MODIFIED="1534481222020" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/engine" />
-    <SUITE FILE_PATH="coverage/ailabx$trading_env.coverage" NAME="trading_env Coverage Results" MODIFIED="1529634483016" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/engine" />
-    <SUITE FILE_PATH="coverage/ailabx$main.coverage" NAME="main Coverage Results" MODIFIED="1531809695792" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/ailabx$gui_logic.coverage" NAME="gui_logic Coverage Results" MODIFIED="1537155537203" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/quant/gui" />
     <SUITE FILE_PATH="coverage/ailabx$Unittests_in_test_utils_py.coverage" NAME="Unittests in test_utils.py Coverage Results" MODIFIED="1529027990373" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" />
+    <SUITE FILE_PATH="coverage/ailabx$flask_utils.coverage" NAME="flask_utils Coverage Results" MODIFIED="1533171060524" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/engine/test" />
+    <SUITE FILE_PATH="coverage/ailabx$tensor.coverage" NAME="tensor Coverage Results" MODIFIED="1530151342472" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/docs/book/pytorch" />
+    <SUITE FILE_PATH="coverage/ailabx$svm.coverage" NAME="svm Coverage Results" MODIFIED="1530670511921" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/docs/book/sklearn" />
+    <SUITE FILE_PATH="coverage/ailabx$main__2_.coverage" NAME="main (2) Coverage Results" MODIFIED="1528872651580" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/ailabx$Unittests_in_test_trading_env_py.coverage" NAME="Unittests in test_trading_env.py Coverage Results" MODIFIED="1529634475001" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" />
+    <SUITE FILE_PATH="coverage/ailabx$Unittests_in_test_portfolio_py.coverage" NAME="Unittests in test_portfolio.py Coverage Results" MODIFIED="1531275033033" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/engine/test" />
+    <SUITE FILE_PATH="coverage/ailabx$datahandler.coverage" NAME="datahandler Coverage Results" MODIFIED="1530241835505" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/ainlp/data" />
+    <SUITE FILE_PATH="coverage/ailabx$mainwindow.coverage" NAME="mainwindow Coverage Results" MODIFIED="1528874517760" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/gui" />
+    <SUITE FILE_PATH="coverage/ailabx$framedata.coverage" NAME="framedata Coverage Results" MODIFIED="1529461084177" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/gui/frames" />
+    <SUITE FILE_PATH="coverage/ailabx$Unittests_in_test_backtest_py.coverage" NAME="Unittests in test_backtest.py Coverage Results" MODIFIED="1536807982484" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/quant/engine/test" />
+    <SUITE FILE_PATH="coverage/ailabx$quandl__1_.coverage" NAME="quandl (1) Coverage Results" MODIFIED="1536401992087" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/engine/tools" />
+    <SUITE FILE_PATH="coverage/ailabx$conv.coverage" NAME="conv Coverage Results" MODIFIED="1529979888869" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/docs/book/pytorch" />
+    <SUITE FILE_PATH="coverage/ailabx$py_test_in_test_pandas_py.coverage" NAME="py.test in test_pandas.py Coverage Results" MODIFIED="1529027977390" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" />
+    <SUITE FILE_PATH="coverage/ailabx$statsmodels_utils.coverage" NAME="statsmodels_utils Coverage Results" MODIFIED="1531361631650" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/docs/book" />
+    <SUITE FILE_PATH="coverage/ailabx$logging_utils.coverage" NAME="logging_utils Coverage Results" MODIFIED="1536737661740" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/engine/common" />
+    <SUITE FILE_PATH="coverage/ailabx$main1.coverage" NAME="main1 Coverage Results" MODIFIED="1536734699204" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/gui" />
+    <SUITE FILE_PATH="coverage/ailabx$basic.coverage" NAME="basic Coverage Results" MODIFIED="1530066847572" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/docs/book/pytorch" />
+    <SUITE FILE_PATH="coverage/ailabx$n_gram.coverage" NAME="n-gram Coverage Results" MODIFIED="1530242991423" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/ainlp/models" />
+    <SUITE FILE_PATH="coverage/ailabx$Unittests_in_test_algos_py.coverage" NAME="Unittests in test_algos.py Coverage Results" MODIFIED="1536807951837" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/quant/engine/test" />
+    <SUITE FILE_PATH="coverage/ailabx$tsutils.coverage" NAME="tsutils Coverage Results" MODIFIED="1529292407710" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/engine/datafeed" />
+    <SUITE FILE_PATH="coverage/ailabx$gbdt.coverage" NAME="gbdt Coverage Results" MODIFIED="1530586893557" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/docs/book/sklearn" />
+    <SUITE FILE_PATH="coverage/ailabx$ailabx.coverage" NAME="ailabx Coverage Results" MODIFIED="1536722252218" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/ailabx$Unittests_in_test_gui_thread_py.coverage" NAME="Unittests in test_gui_thread.py Coverage Results" MODIFIED="1536502479046" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/gui/tests" />
+    <SUITE FILE_PATH="coverage/ailabx$Unittests_in_test_performance_py.coverage" NAME="Unittests in test_performance.py Coverage Results" MODIFIED="1536494179899" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/engine/test" />
+    <SUITE FILE_PATH="coverage/ailabx$numpynn.coverage" NAME="numpy实现nn Coverage Results" MODIFIED="1529479945667" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/docs/book" />
+    <SUITE FILE_PATH="coverage/ailabx$Unittests_in_test_feature_parser_py.coverage" NAME="Unittests in test_feature_parser.py Coverage Results" MODIFIED="1534483484390" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/engine/test" />
+    <SUITE FILE_PATH="coverage/ailabx$cbow.coverage" NAME="cbow Coverage Results" MODIFIED="1530242095879" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/ainlp/models" />
+    <SUITE FILE_PATH="coverage/ailabx$Unittests_in_test_results_py.coverage" NAME="Unittests in test_results.py Coverage Results" MODIFIED="1536805040959" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/gui/tests" />
+    <SUITE FILE_PATH="coverage/ailabx$loss_fn.coverage" NAME="loss_fn Coverage Results" MODIFIED="1529814183368" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/docs/book/pytorch" />
+    <SUITE FILE_PATH="coverage/ailabx$Unittests_in_test_quandl_py.coverage" NAME="Unittests in test_quandl.py Coverage Results" MODIFIED="1536649026431" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/engine/test" />
+    <SUITE FILE_PATH="coverage/ailabx$Unittests_in_test_logicmgr_py.coverage" NAME="Unittests in test_logicmgr.py Coverage Results" MODIFIED="1537155628629" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/quant/gui/tests" />
+    <SUITE FILE_PATH="coverage/ailabx$test_pyalgo.coverage" NAME="test_pyalgo Coverage Results" MODIFIED="1536111305789" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" />
+    <SUITE FILE_PATH="coverage/ailabx$trading_env.coverage" NAME="trading_env Coverage Results" MODIFIED="1529634483016" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/engine" />
+    <SUITE FILE_PATH="coverage/ailabx$main.coverage" NAME="main Coverage Results" MODIFIED="1537152747891" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/ailabx$mongo_utils.coverage" NAME="mongo_utils Coverage Results" MODIFIED="1530329486591" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/engine/datafeed" />
     <SUITE FILE_PATH="coverage/ailabx$build_astock_daily_quotes.coverage" NAME="build_astock_daily_quotes Coverage Results" MODIFIED="1530414893630" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/engine/utils" />
     <SUITE FILE_PATH="coverage/ailabx$py_test_in_test_trading_env_py.coverage" NAME="py.test in test_trading_env.py Coverage Results" MODIFIED="1529027357539" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/engine/test" />
     <SUITE FILE_PATH="coverage/ailabx$default_dict.coverage" NAME="default_dict Coverage Results" MODIFIED="1529725397409" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/docs/book/python" />
-    <SUITE FILE_PATH="coverage/ailabx$flask_utils.coverage" NAME="flask_utils Coverage Results" MODIFIED="1533171060524" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/engine/test" />
     <SUITE FILE_PATH="coverage/ailabx$sequential.coverage" NAME="sequential Coverage Results" MODIFIED="1529979186148" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/docs/book/pytorch" />
-    <SUITE FILE_PATH="coverage/ailabx$tensor.coverage" NAME="tensor Coverage Results" MODIFIED="1530151342472" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/docs/book/pytorch" />
-    <SUITE FILE_PATH="coverage/ailabx$svm.coverage" NAME="svm Coverage Results" MODIFIED="1530670511921" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/docs/book/sklearn" />
-    <SUITE FILE_PATH="coverage/ailabx$main__2_.coverage" NAME="main (2) Coverage Results" MODIFIED="1528872651580" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/ailabx$.coverage" NAME="线性回归 Coverage Results" MODIFIED="1529802388487" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/docs/book/pytorch" />
     <SUITE FILE_PATH="coverage/ailabx$Unittests_in_test_stock_trainer_py.coverage" NAME="Unittests in test_stock_trainer.py Coverage Results" MODIFIED="1530670974098" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/engine/test" />
-    <SUITE FILE_PATH="coverage/ailabx$Unittests_in_test_trading_env_py.coverage" NAME="Unittests in test_trading_env.py Coverage Results" MODIFIED="1529634475001" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" />
-    <SUITE FILE_PATH="coverage/ailabx$Unittests_in_test_portfolio_py.coverage" NAME="Unittests in test_portfolio.py Coverage Results" MODIFIED="1531275033033" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/engine/test" />
+    <SUITE FILE_PATH="coverage/ailabx$Unittests_in_test_broker_py.coverage" NAME="Unittests in test_broker.py Coverage Results" MODIFIED="1536718223805" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/engine/test" />
     <SUITE FILE_PATH="coverage/ailabx$pytorch_utils.coverage" NAME="pytorch_utils Coverage Results" MODIFIED="1530065303168" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/docs/book/pytorch" />
-    <SUITE FILE_PATH="coverage/ailabx$datahandler.coverage" NAME="datahandler Coverage Results" MODIFIED="1530241835505" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/ainlp/data" />
-    <SUITE FILE_PATH="coverage/ailabx$Unittests_in_test_datafeed_py.coverage" NAME="Unittests in test_datafeed.py Coverage Results" MODIFIED="1534483509076" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/ailabx$mainwindow.coverage" NAME="mainwindow Coverage Results" MODIFIED="1528874517760" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/gui" />
-    <SUITE FILE_PATH="coverage/ailabx$framedata.coverage" NAME="framedata Coverage Results" MODIFIED="1529461084177" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/gui/frames" />
-    <SUITE FILE_PATH="coverage/ailabx$Unittests_in_test_backtest_py.coverage" NAME="Unittests in test_backtest.py Coverage Results" MODIFIED="1534389967336" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/engine/test" />
+    <SUITE FILE_PATH="coverage/ailabx$Unittests_in_test_mainwindow_py.coverage" NAME="Unittests in test_mainwindow.py Coverage Results" MODIFIED="1537170111599" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/quant/gui/tests" />
+    <SUITE FILE_PATH="coverage/ailabx$guiutils.coverage" NAME="guiutils Coverage Results" MODIFIED="1536222927194" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/gui" />
+    <SUITE FILE_PATH="coverage/ailabx$Unittests_in_test_datafeed_py.coverage" NAME="Unittests in test_datafeed.py Coverage Results" MODIFIED="1534901267619" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/ailabx$backtest.coverage" NAME="backtest Coverage Results" MODIFIED="1536394320213" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/engine" />
+    <SUITE FILE_PATH="coverage/ailabx$framebacktest.coverage" NAME="framebacktest Coverage Results" MODIFIED="1536825449649" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/quant/gui/frames" />
     <SUITE FILE_PATH="coverage/ailabx$numpy_utils.coverage" NAME="numpy_utils Coverage Results" MODIFIED="1530930336814" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/docs/book/python" />
+    <SUITE FILE_PATH="coverage/ailabx$momentum.coverage" NAME="momentum Coverage Results" MODIFIED="1536112384953" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" />
     <SUITE FILE_PATH="coverage/ailabx$dequeue.coverage" NAME="dequeue Coverage Results" MODIFIED="1529724469418" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/docs/book/python" />
-    <SUITE FILE_PATH="coverage/ailabx$conv.coverage" NAME="conv Coverage Results" MODIFIED="1529979888869" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/docs/book/pytorch" />
     <SUITE FILE_PATH="coverage/ailabx$lstm.coverage" NAME="lstm Coverage Results" MODIFIED="1530148412197" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/docs/book/pytorch" />
-    <SUITE FILE_PATH="coverage/ailabx$py_test_in_test_pandas_py.coverage" NAME="py.test in test_pandas.py Coverage Results" MODIFIED="1529027977390" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" />
     <SUITE FILE_PATH="coverage/ailabx$squeeze.coverage" NAME="squeeze Coverage Results" MODIFIED="1530060317868" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/docs/book/pytorch" />
-    <SUITE FILE_PATH="coverage/ailabx$statsmodels_utils.coverage" NAME="statsmodels_utils Coverage Results" MODIFIED="1531361631650" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/docs/book" />
     <SUITE FILE_PATH="coverage/ailabx$data_features.coverage" NAME="data_features Coverage Results" MODIFIED="1530674218738" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/engine/datafeed" />
-    <SUITE FILE_PATH="coverage/ailabx$basic.coverage" NAME="basic Coverage Results" MODIFIED="1530066847572" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/docs/book/pytorch" />
-    <SUITE FILE_PATH="coverage/ailabx$n_gram.coverage" NAME="n-gram Coverage Results" MODIFIED="1530242991423" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/ainlp/models" />
+    <SUITE FILE_PATH="coverage/ailabx$quandl.coverage" NAME="quandl Coverage Results" MODIFIED="1536400078960" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/pyalgotrade/tools" />
+    <SUITE FILE_PATH="coverage/ailabx$Unittests_in_test_frame_backtest_py.coverage" NAME="Unittests in test_frame_backtest.py Coverage Results" MODIFIED="1537168071248" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/quant/gui/tests" />
+    <SUITE FILE_PATH="coverage/ailabx$pytester.coverage" NAME="pytester Coverage Results" MODIFIED="1536225206183" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" />
     <SUITE FILE_PATH="coverage/ailabx$main__1_.coverage" NAME="main (1) Coverage Results" MODIFIED="1528872527724" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" />
-    <SUITE FILE_PATH="coverage/ailabx$tsutils.coverage" NAME="tsutils Coverage Results" MODIFIED="1529292407710" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/engine/datafeed" />
-    <SUITE FILE_PATH="coverage/ailabx$gbdt.coverage" NAME="gbdt Coverage Results" MODIFIED="1530586893557" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/docs/book/sklearn" />
-    <SUITE FILE_PATH="coverage/ailabx$ailabx.coverage" NAME="ailabx Coverage Results" MODIFIED="1531790660984" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/ailabx$frameresult.coverage" NAME="frameresult Coverage Results" MODIFIED="1536734728987" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/gui/frames" />
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="test_datafeed.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/engine/test/test_datafeed.py">
+      <file leaf-file-name="frameresult.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/quant/gui/frames/frameresult.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="156">
-              <caret line="36" column="21" lean-forward="true" selection-start-line="36" selection-start-column="21" selection-end-line="36" selection-end-column="21" />
+            <state relative-caret-position="324">
+              <caret line="52" column="0" lean-forward="false" selection-start-line="52" selection-start-column="0" selection-end-line="52" selection-end-column="0" />
               <folding>
-                <element signature="e#0#15#0" expanded="true" />
-                <element signature="e#153#763#0" expanded="false" />
-                <element signature="e#810#972#0" expanded="false" />
-                <element signature="e#1561#1691#0" expanded="false" />
-                <element signature="e#1743#1955#0" expanded="false" />
+                <element signature="e#0#27#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="datafeed.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/engine/datafeed.py">
+      <file leaf-file-name="logging_utils.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/quant/engine/common/logging_utils.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="867">
-              <caret line="66" column="118" lean-forward="false" selection-start-line="66" selection-start-column="118" selection-end-line="66" selection-end-column="118" />
+            <state relative-caret-position="149">
+              <caret line="43" column="0" lean-forward="false" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="__init__.py" pinned="false" current-in-tab="false">
+        <entry file="file://C:/ProgramData/Anaconda3/Lib/logging/__init__.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="128">
+              <caret line="1514" column="0" lean-forward="false" selection-start-line="1514" selection-start-column="0" selection-end-line="1514" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="gui_logic.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/quant/gui/gui_logic.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="166">
+              <caret line="93" column="0" lean-forward="false" selection-start-line="93" selection-start-column="0" selection-end-line="93" selection-end-column="0" />
               <folding>
-                <element signature="e#0#37#0" expanded="true" />
-                <element signature="e#536#772#0" expanded="false" />
-                <element signature="e#3220#3507#0" expanded="false" />
-                <element signature="e#4746#5067#0" expanded="false" />
+                <element signature="e#0#27#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="_ta_lib.py" pinned="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/.PyCharm2017.3/system/python_stubs/-946255732/talib/_ta_lib.py">
+      <file leaf-file-name="test_mainwindow.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/quant/gui/tests/test_mainwindow.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="129">
-              <caret line="8504" column="8" lean-forward="false" selection-start-line="8504" selection-start-column="8" selection-end-line="8504" selection-end-column="8" />
+            <state relative-caret-position="85">
+              <caret line="8" column="19" lean-forward="false" selection-start-line="8" selection-start-column="19" selection-end-line="8" selection-end-column="19" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="generic.py" pinned="false" current-in-tab="false">
-        <entry file="file://C:/Anaconda/Lib/site-packages/pandas/core/generic.py">
+      <file leaf-file-name="test_frame_backtest.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/quant/gui/tests/test_frame_backtest.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="251">
-              <caret line="5127" column="50" lean-forward="true" selection-start-line="5127" selection-start-column="50" selection-end-line="5127" selection-end-column="50" />
+            <state relative-caret-position="85">
+              <caret line="9" column="21" lean-forward="false" selection-start-line="9" selection-start-column="21" selection-end-line="9" selection-end-column="21" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="groupby.py" pinned="false" current-in-tab="false">
-        <entry file="file://C:/Anaconda/Lib/site-packages/pandas/core/groupby.py">
+      <file leaf-file-name="framebacktest.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/quant/gui/frames/framebacktest.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="23">
-              <caret line="804" column="0" lean-forward="false" selection-start-line="804" selection-start-column="0" selection-end-line="804" selection-end-column="0" />
+            <state relative-caret-position="27">
+              <caret line="77" column="29" lean-forward="false" selection-start-line="77" selection-start-column="29" selection-end-line="77" selection-end-column="29" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="test_feature_parser.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/engine/test/test_feature_parser.py">
+      <file leaf-file-name="framestocks.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/quant/gui/frames/framestocks.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="66">
-              <caret line="32" column="71" lean-forward="false" selection-start-line="32" selection-start-column="67" selection-end-line="32" selection-end-column="71" />
+            <state relative-caret-position="153">
+              <caret line="12" column="26" lean-forward="false" selection-start-line="12" selection-start-column="26" selection-end-line="12" selection-end-column="26" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="frametrade.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/quant/gui/frames/frametrade.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-7">
+              <caret line="12" column="26" lean-forward="false" selection-start-line="12" selection-start-column="26" selection-end-line="12" selection-end-column="26" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="mainwindow.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/quant/gui/mainwindow.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-136">
+              <caret line="21" column="8" lean-forward="false" selection-start-line="21" selection-start-column="8" selection-end-line="21" selection-end-column="8" />
               <folding>
-                <element signature="e#0#15#0" expanded="true" />
+                <element signature="e#1857#2019#0" expanded="false" />
+                <element signature="e#2057#2338#0" expanded="false" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="case.py" pinned="false" current-in-tab="false">
-        <entry file="file://C:/Anaconda/Lib/unittest/case.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="227">
-              <caret line="621" column="0" lean-forward="false" selection-start-line="621" selection-start-column="0" selection-end-line="621" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="feature_parser.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/engine/feature_parser.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="361">
-              <caret line="127" column="0" lean-forward="true" selection-start-line="127" selection-start-column="0" selection-end-line="127" selection-end-column="0" />
-              <folding>
-                <element signature="e#0#9#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="sre_compile.py" pinned="false" current-in-tab="false">
-        <entry file="file://C:/Anaconda/Lib/sre_compile.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="93">
-              <caret line="561" column="0" lean-forward="false" selection-start-line="561" selection-start-column="0" selection-end-line="561" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="re.py" pinned="false" current-in-tab="false">
-        <entry file="file://C:/Anaconda/Lib/re.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="93">
-              <caret line="300" column="0" lean-forward="false" selection-start-line="300" selection-start-column="0" selection-end-line="300" selection-end-column="0" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -192,16 +251,36 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>to_df</find>
-      <find>rets</find>
-      <find>portfolio_returns</find>
-      <find>transform</find>
-      <find>forward</find>
-      <find>hello</find>
-      <find>fetch</find>
-      <find>print</find>
-      <find>eval</find>
-      <find>rank</find>
+      <find>traders</find>
+      <find>trader.lon</find>
+      <find>log</find>
+      <find>getLogger</find>
+      <find>storage</find>
+      <find>plot</find>
+      <find>cross</find>
+      <find>plot(</find>
+      <find>strategy</find>
+      <find>strategybase</find>
+      <find>weight</find>
+      <find>Algo(</find>
+      <find>algo</find>
+      <find>wei</find>
+      <find>selectall</find>
+      <find>runonce</find>
+      <find>rebalance(</find>
+      <find>aloc</find>
+      <find>reb</find>
+      <find>rebalance</find>
+      <find>update_cash_commission</find>
+      <find>执行</find>
+      <find>download_csv</find>
+      <find>run</find>
+      <find>prices</find>
+      <find>.prices</find>
+      <find>calc_perf_stats</find>
+      <find>sourceCode</find>
+      <find>selectwh</find>
+      <find>info</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -210,57 +289,57 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/docs/book/pytorch/loss_fn.py" />
-        <option value="$PROJECT_DIR$/docs/book/pytorch/.gitignore" />
-        <option value="$PROJECT_DIR$/docs/book/python/ordered_dict.py" />
-        <option value="$PROJECT_DIR$/docs/book/pytorch/sequential.py" />
-        <option value="$PROJECT_DIR$/docs/book/pytorch/conv.py" />
-        <option value="$PROJECT_DIR$/docs/book/pytorch/squeeze.py" />
-        <option value="$PROJECT_DIR$/docs/book/pytorch/pytorch_utils.py" />
-        <option value="$PROJECT_DIR$/docs/book/pytorch/basic.py" />
-        <option value="$PROJECT_DIR$/docs/book/pytorch/lstm.py" />
-        <option value="$PROJECT_DIR$/docs/book/pytorch/tensor.py" />
-        <option value="$PROJECT_DIR$/ainlp/data.py" />
-        <option value="$PROJECT_DIR$/ainlp/basemodel.py" />
-        <option value="$PROJECT_DIR$/ainlp/data/datahandler.py" />
-        <option value="$PROJECT_DIR$/ainlp/models/cbow.py" />
-        <option value="$PROJECT_DIR$/ainlp/models/n-gram.py" />
-        <option value="$PROJECT_DIR$/engine/datafeed/mongo_utils.py" />
-        <option value="$PROJECT_DIR$/engine/utils/build_astock_daily_quotes.py" />
-        <option value="$PROJECT_DIR$/docs/book/pandas/stats.py" />
-        <option value="$PROJECT_DIR$/docs/book/sklearn/gbdt.py" />
-        <option value="$PROJECT_DIR$/engine/datafeed/datasets.py" />
-        <option value="$PROJECT_DIR$/engine/test/test_stock_trainer.py" />
-        <option value="$PROJECT_DIR$/engine/models.py" />
-        <option value="$PROJECT_DIR$/engine/datafeed/talib_utils.py" />
-        <option value="$PROJECT_DIR$/engine/common/logging_utils.py" />
-        <option value="$PROJECT_DIR$/engine/datafeed/data_features.py" />
-        <option value="$PROJECT_DIR$/engine/data/data_features.py" />
-        <option value="$PROJECT_DIR$/docs/book/python/statsmodels_utils.py" />
-        <option value="$PROJECT_DIR$/docs/book/python/numpy_utils.py" />
-        <option value="$PROJECT_DIR$/docs/book/python常用数据类型与结构.ipynb" />
-        <option value="$PROJECT_DIR$/docs/sklearn.ipynb" />
-        <option value="$PROJECT_DIR$/docs/book/pandasutils.py" />
         <option value="$PROJECT_DIR$/engine/test/test_portfolio.py" />
-        <option value="$PROJECT_DIR$/docs/book/statsmodels_utils.py" />
-        <option value="$PROJECT_DIR$/docs/statsmodel.ipynb" />
-        <option value="$PROJECT_DIR$/docs/book/sklearn.ipynb" />
+        <option value="$PROJECT_DIR$/engine/test/test_quandl.py" />
+        <option value="$PROJECT_DIR$/engine/tools/quandl.py" />
+        <option value="$PROJECT_DIR$/abu-master/abupy_lecture/5-选股策略的开发(ABU量化使用文档).ipynb" />
+        <option value="$PROJECT_DIR$/engine/test/test_broker.py" />
+        <option value="$PROJECT_DIR$/engine/test/test_algos.py" />
+        <option value="$PROJECT_DIR$/engine/algos.py" />
+        <option value="$PROJECT_DIR$/engine/technical/cross.py" />
+        <option value="$PROJECT_DIR$/abu-master/abupy_ui/参数最优交叉验证.ipynb" />
+        <option value="$PROJECT_DIR$/abu-master/abupy_ui/数据下载界面操作.ipynb" />
+        <option value="$PROJECT_DIR$/gui/main1.py" />
+        <option value="$PROJECT_DIR$/engine/common/logging_utils.py" />
         <option value="$PROJECT_DIR$/engine/portfolio.py" />
-        <option value="$PROJECT_DIR$/requirements.txt" />
-        <option value="$PROJECT_DIR$/gui/mainwindow.py" />
-        <option value="$PROJECT_DIR$/gui/frames/framedata.py" />
-        <option value="$PROJECT_DIR$/engine/utils/datasets.py" />
-        <option value="$PROJECT_DIR$/engine/common/mongo_utils.py" />
-        <option value="$PROJECT_DIR$/engine/backtest.py" />
-        <option value="$PROJECT_DIR$/engine/test/flask.py" />
-        <option value="$PROJECT_DIR$/engine/test/flask_utils.py" />
-        <option value="$PROJECT_DIR$/engine/test/templates/hello.html" />
-        <option value="$PROJECT_DIR$/docs/pandas.ipynb" />
         <option value="$PROJECT_DIR$/engine/test/test_backtest.py" />
-        <option value="$PROJECT_DIR$/engine/test/test_feature_parser.py" />
-        <option value="$PROJECT_DIR$/engine/test/test_datafeed.py" />
-        <option value="$PROJECT_DIR$/engine/datafeed.py" />
-        <option value="$PROJECT_DIR$/engine/feature_parser.py" />
+        <option value="$PROJECT_DIR$/gui/consts.py" />
+        <option value="$PROJECT_DIR$/gui/frames/frameresult.py" />
+        <option value="$PROJECT_DIR$/gui/tests/test_results.py" />
+        <option value="$PROJECT_DIR$/gui/tests/test_mainwindow.py" />
+        <option value="$PROJECT_DIR$/gui/logutils.py" />
+        <option value="$PROJECT_DIR$/gui/mainwindow.py" />
+        <option value="$PROJECT_DIR$/gui/frames/framebacktest.py" />
+        <option value="$PROJECT_DIR$/gui/tests/test_frame_backtest.py" />
+        <option value="$PROJECT_DIR$/engine/consts.py" />
+        <option value="$PROJECT_DIR$/engine/backtest.py" />
+        <option value="$PROJECT_DIR$/gui/gui_logic.py" />
+        <option value="$PROJECT_DIR$/gui/tests/test_logicmgr.py" />
+        <option value="$PROJECT_DIR$/quant/engine/test/test_algos.py" />
+        <option value="$PROJECT_DIR$/quant/engine/test/test_backtest.py" />
+        <option value="$PROJECT_DIR$/quant/gui/tests/test_gui_thread.py" />
+        <option value="$PROJECT_DIR$/quant/gui/tests/test_frame_backtest.py" />
+        <option value="$PROJECT_DIR$/quant/gui/tests/test_results.py" />
+        <option value="$PROJECT_DIR$/quant/gui/tests/test_logicmgr.py" />
+        <option value="$PROJECT_DIR$/quant/engine/test/test_broker.py" />
+        <option value="$PROJECT_DIR$/quant/engine/test/test_feature_parser.py" />
+        <option value="$PROJECT_DIR$/quant/engine/test/test_performance.py" />
+        <option value="$PROJECT_DIR$/quant/engine/test/test_quandl.py" />
+        <option value="$PROJECT_DIR$/quant/engine/backtest.py" />
+        <option value="$PROJECT_DIR$/quant/gui/tests/test_mainwindow.py" />
+        <option value="$PROJECT_DIR$/quant/gui/consts.py" />
+        <option value="$PROJECT_DIR$/quant/engine/consts.py" />
+        <option value="$PROJECT_DIR$/quant/engine/common/logging_utils.py" />
+        <option value="$PROJECT_DIR$/quant/gui/mainwindow.py" />
+        <option value="$PROJECT_DIR$/quant/gui/frames/framestocks.py" />
+        <option value="$PROJECT_DIR$/quant/gui/frames/frametrade.py" />
+        <option value="$PROJECT_DIR$/main.py" />
+        <option value="$PROJECT_DIR$/quant/gui/ui/style.qss" />
+        <option value="$PROJECT_DIR$/quant/engine/technical/cross.py" />
+        <option value="$PROJECT_DIR$/quant/engine/test/test_cross.py" />
+        <option value="$PROJECT_DIR$/quant/gui/gui_logic.py" />
+        <option value="$PROJECT_DIR$/quant/gui/frames/framebacktest.py" />
+        <option value="$PROJECT_DIR$/quant/gui/frames/frameresult.py" />
       </list>
     </option>
   </component>
@@ -270,11 +349,11 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="1" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="2" />
     <option name="y" value="1" />
-    <option name="width" value="1364" />
-    <option name="height" value="726" />
+    <option name="width" value="798" />
+    <option name="height" value="558" />
   </component>
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="1" id="Add" />
@@ -301,17 +380,6 @@
               <item name="ailabx" type="b2602c69:ProjectViewProjectNode" />
               <item name="ailabx" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="ailabx" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ailabx" type="462c0819:PsiDirectoryNode" />
-              <item name="engine" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ailabx" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ailabx" type="462c0819:PsiDirectoryNode" />
-              <item name="engine" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -322,25 +390,25 @@
   </component>
   <component name="PropertiesComponent">
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
-    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyIntegratedToolsModulesConfigurable" />
+    <property name="settings.editor.selected.configurable" value="preferences.externalTools" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Downloads/AxisTradeCult-master/AxisTradeCult-master" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\devgit\ailabx\quant" />
+      <recent name="D:\devgit\ailabx\data" />
       <recent name="D:\devgit\ailabx\docs\book" />
       <recent name="D:\devgit\ailabx\engine\datafeed" />
       <recent name="D:\devgit\ailabx\engine\common" />
-      <recent name="D:\devgit\ailabx\docs\book\sklearn" />
-      <recent name="D:\devgit\ailabx" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\devgit\ailabx\engine\datafeed" />
-      <recent name="D:\devgit\ailabx\docs\book\sklearn" />
-      <recent name="D:\devgit\ailabx\docs\book\pytorch" />
+      <recent name="D:\devgit\ailabx\quant\gui\frames" />
+      <recent name="D:\devgit\ailabx\engine\technical" />
       <recent name="D:\devgit\ailabx" />
-      <recent name="D:\devgit\ailabx\gui\models" />
+      <recent name="D:\devgit\ailabx\test" />
+      <recent name="D:\devgit\ailabx\engine\datafeed" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -355,40 +423,21 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python tests.Unittests in test_datafeed.py">
-    <configuration name="datafeed" type="PythonConfigurationType" factoryName="Python" temporary="true">
+  <component name="RunManager" selected="Python tests.Unittests in test_mainwindow.py">
+    <configuration name="gui_logic" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/engine" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/quant/gui" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="ailabx" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/engine/datafeed.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-    </configuration>
-    <configuration name="flask_utils" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/engine/test" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="ailabx" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/engine/test/flask_utils.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/quant/gui/gui_logic.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -411,66 +460,81 @@
       <option name="ipnbHost" value="127.0.0.1" />
       <option name="ipnbPort" value="8888" />
     </configuration>
-    <configuration name="Unittests in test_backtest.py" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+    <configuration name="Unittests in test_cross.py" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs />
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/engine/test" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/quant/engine/test" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="ailabx" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;$PROJECT_DIR$/engine/test/test_backtest.py&quot;" />
+      <option name="_new_target" value="&quot;$PROJECT_DIR$/quant/engine/test/test_cross.py&quot;" />
       <option name="_new_targetType" value="&quot;PATH&quot;" />
     </configuration>
-    <configuration name="Unittests in test_datafeed.py" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+    <configuration name="Unittests in test_frame_backtest.py" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs />
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/quant/gui/tests" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="ailabx" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;$PROJECT_DIR$/engine/test/test_datafeed.py&quot;" />
+      <option name="_new_target" value="&quot;$PROJECT_DIR$/quant/gui/tests/test_frame_backtest.py&quot;" />
       <option name="_new_targetType" value="&quot;PATH&quot;" />
     </configuration>
-    <configuration name="Unittests in test_feature_parser.py" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+    <configuration name="Unittests in test_logicmgr.py" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs />
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/engine/test" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/quant/gui/tests" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="ailabx" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;$PROJECT_DIR$/engine/test/test_feature_parser.py&quot;" />
+      <option name="_new_target" value="&quot;$PROJECT_DIR$/quant/gui/tests/test_logicmgr.py&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+    </configuration>
+    <configuration name="Unittests in test_mainwindow.py" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/quant/gui/tests" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="ailabx" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;$PROJECT_DIR$/quant/gui/tests/test_mainwindow.py&quot;" />
       <option name="_new_targetType" value="&quot;PATH&quot;" />
     </configuration>
     <list size="6">
       <item index="0" class="java.lang.String" itemvalue="Jupyter Notebook.ailabx" />
-      <item index="1" class="java.lang.String" itemvalue="Python tests.Unittests in test_backtest.py" />
-      <item index="2" class="java.lang.String" itemvalue="Python tests.Unittests in test_datafeed.py" />
-      <item index="3" class="java.lang.String" itemvalue="Python.flask_utils" />
-      <item index="4" class="java.lang.String" itemvalue="Python tests.Unittests in test_feature_parser.py" />
-      <item index="5" class="java.lang.String" itemvalue="Python.datafeed" />
+      <item index="1" class="java.lang.String" itemvalue="Python tests.Unittests in test_logicmgr.py" />
+      <item index="2" class="java.lang.String" itemvalue="Python tests.Unittests in test_mainwindow.py" />
+      <item index="3" class="java.lang.String" itemvalue="Python tests.Unittests in test_cross.py" />
+      <item index="4" class="java.lang.String" itemvalue="Python.gui_logic" />
+      <item index="5" class="java.lang.String" itemvalue="Python tests.Unittests in test_frame_backtest.py" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python tests.Unittests in test_datafeed.py" />
-        <item index="1" class="java.lang.String" itemvalue="Python tests.Unittests in test_feature_parser.py" />
-        <item index="2" class="java.lang.String" itemvalue="Python.datafeed" />
-        <item index="3" class="java.lang.String" itemvalue="Python tests.Unittests in test_backtest.py" />
-        <item index="4" class="java.lang.String" itemvalue="Python.flask_utils" />
+        <item index="0" class="java.lang.String" itemvalue="Python tests.Unittests in test_mainwindow.py" />
+        <item index="1" class="java.lang.String" itemvalue="Python tests.Unittests in test_frame_backtest.py" />
+        <item index="2" class="java.lang.String" itemvalue="Python tests.Unittests in test_logicmgr.py" />
+        <item index="3" class="java.lang.String" itemvalue="Python.gui_logic" />
+        <item index="4" class="java.lang.String" itemvalue="Python tests.Unittests in test_cross.py" />
       </list>
     </recent_temporary>
   </component>
@@ -491,53 +555,53 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="Unittests_in_test_datafeed_py - 2018.08.17 at 13h 22m 05s.xml">
-      <configuration name="Unittests in test_datafeed.py" configurationId="tests" />
+    <history-entry file="Unittests_in_test_mainwindow_py - 2018.09.17 at 15h 21m 48s.xml">
+      <configuration name="Unittests in test_mainwindow.py" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_test_datafeed_py - 2018.08.17 at 13h 22m 20s.xml">
-      <configuration name="Unittests in test_datafeed.py" configurationId="tests" />
+    <history-entry file="Unittests_in_test_mainwindow_py - 2018.09.17 at 15h 23m 18s.xml">
+      <configuration name="Unittests in test_mainwindow.py" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_test_datafeed_py - 2018.08.17 at 13h 22m 31s.xml">
-      <configuration name="Unittests in test_datafeed.py" configurationId="tests" />
+    <history-entry file="Unittests_in_test_mainwindow_py - 2018.09.17 at 15h 24m 51s.xml">
+      <configuration name="Unittests in test_mainwindow.py" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_test_datafeed_py - 2018.08.17 at 13h 22m 50s.xml">
-      <configuration name="Unittests in test_datafeed.py" configurationId="tests" />
+    <history-entry file="Unittests_in_test_mainwindow_py - 2018.09.17 at 15h 25m 20s.xml">
+      <configuration name="Unittests in test_mainwindow.py" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_test_datafeed_py - 2018.08.17 at 13h 23m 10s.xml">
-      <configuration name="Unittests in test_datafeed.py" configurationId="tests" />
+    <history-entry file="Unittests_in_test_mainwindow_py - 2018.09.17 at 15h 26m 53s.xml">
+      <configuration name="Unittests in test_mainwindow.py" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_test_datafeed_py - 2018.08.17 at 13h 23m 40s.xml">
-      <configuration name="Unittests in test_datafeed.py" configurationId="tests" />
+    <history-entry file="Unittests_in_test_mainwindow_py - 2018.09.17 at 15h 27m 41s.xml">
+      <configuration name="Unittests in test_mainwindow.py" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_test_datafeed_py - 2018.08.17 at 13h 23m 54s.xml">
-      <configuration name="Unittests in test_datafeed.py" configurationId="tests" />
+    <history-entry file="Unittests_in_test_mainwindow_py - 2018.09.17 at 15h 28m 12s.xml">
+      <configuration name="Unittests in test_mainwindow.py" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_test_datafeed_py - 2018.08.17 at 13h 25m 12s.xml">
-      <configuration name="Unittests in test_datafeed.py" configurationId="tests" />
+    <history-entry file="Unittests_in_test_mainwindow_py - 2018.09.17 at 15h 32m 18s.xml">
+      <configuration name="Unittests in test_mainwindow.py" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_test_datafeed_py - 2018.08.17 at 13h 26m 06s.xml">
-      <configuration name="Unittests in test_datafeed.py" configurationId="tests" />
+    <history-entry file="Unittests_in_test_mainwindow_py - 2018.09.17 at 15h 50m 53s.xml">
+      <configuration name="Unittests in test_mainwindow.py" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_test_feature_parser_py - 2018.08.17 at 13h 24m 45s.xml">
-      <configuration name="Unittests in test_feature_parser.py" configurationId="tests" />
+    <history-entry file="Unittests_in_test_mainwindow_py - 2018.09.17 at 15h 57m 16s.xml">
+      <configuration name="Unittests in test_mainwindow.py" configurationId="tests" />
     </history-entry>
   </component>
   <component name="ToolWindowManager">
-    <frame x="1" y="1" width="1364" height="726" extended-state="0" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.18350169" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2908497" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.34640524" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21319018" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20953101" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="SciView" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.30904907" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="SciView" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.34795764" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.44949496" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.36928105" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -592,23 +656,38 @@
           <option name="timeStamp" value="26" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/engine/common/tsutils.py</url>
+          <url>file://$PROJECT_DIR$/quant/engine/common/tsutils.py</url>
           <option name="timeStamp" value="27" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/engine/portfolio.py</url>
-          <line>137</line>
-          <option name="timeStamp" value="30" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/engine/test/test_portfolio.py</url>
-          <line>11</line>
-          <option name="timeStamp" value="32" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/engine/test/test_feature_parser.py</url>
+          <url>file://$PROJECT_DIR$/quant/engine/test/test_feature_parser.py</url>
           <line>8</line>
           <option name="timeStamp" value="68" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/test/test_pyalgo.py</url>
+          <line>30</line>
+          <option name="timeStamp" value="81" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/quant/gui/guiutils.py</url>
+          <line>54</line>
+          <option name="timeStamp" value="84" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/pyalgotrade/technical/cross.py</url>
+          <line>51</line>
+          <option name="timeStamp" value="87" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://C:/ProgramData/Anaconda3/Lib/site-packages/empyrical/stats.py</url>
+          <line>513</line>
+          <option name="timeStamp" value="99" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/quant/gui/gui_logic.py</url>
+          <line>36</line>
+          <option name="timeStamp" value="130" />
         </line-breakpoint>
       </breakpoints>
       <default-breakpoints>
@@ -618,390 +697,409 @@
           </properties>
         </breakpoint>
       </default-breakpoints>
-      <option name="time" value="76" />
+      <option name="time" value="132" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="tests">
         <watch expression="end_date" />
+        <watch expression="out" />
       </configuration>
     </watches-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/gui/mainwindow.py">
+    <entry file="file://$PROJECT_DIR$/bt-master/bt/core.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="884">
-          <caret line="60" column="40" lean-forward="false" selection-start-line="60" selection-start-column="40" selection-end-line="60" selection-end-column="40" />
+        <state relative-caret-position="-10">
+          <caret line="675" column="8" lean-forward="false" selection-start-line="675" selection-start-column="8" selection-end-line="675" selection-end-column="8" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/gui/frames/framemain.py">
+    <entry file="file://$PROJECT_DIR$/bt-master/bt/algos.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="352">
+          <caret line="678" column="19" lean-forward="false" selection-start-line="642" selection-start-column="0" selection-end-line="678" selection-end-column="19" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/gui/frames/frameresult.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/docs/book/sklearn/gbdt.py">
+    <entry file="file://$PROJECT_DIR$/test/test_pyalgo.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
-          <caret line="20" column="32" lean-forward="false" selection-start-line="20" selection-start-column="6" selection-end-line="20" selection-end-column="32" />
+          <caret line="36" column="63" lean-forward="false" selection-start-line="36" selection-start-column="63" selection-end-line="36" selection-end-column="63" />
+          <folding>
+            <element signature="e#0#32#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/engine/data/datasets.py" />
-    <entry file="file://$PROJECT_DIR$/engine/data/models.py">
+    <entry file="file://$PROJECT_DIR$/pyalgotrade/technical/cross.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="27" column="35" lean-forward="false" selection-start-line="27" selection-start-column="15" selection-end-line="27" selection-end-column="35" />
+        <state relative-caret-position="1683">
+          <caret line="99" column="4" lean-forward="false" selection-start-line="99" selection-start-column="4" selection-end-line="99" selection-end-column="4" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/engine/data/train_modified.csv" />
-    <entry file="file://$PROJECT_DIR$/engine/data/trading_env.py">
+    <entry file="file://$PROJECT_DIR$/abu-master/界面操作视频教程/第一节界面操作视频教程.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1411">
-          <caret line="87" column="31" lean-forward="false" selection-start-line="87" selection-start-column="31" selection-end-line="87" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/engine/test/test_stock_trainer.py" />
-    <entry file="file://$PROJECT_DIR$/engine/data/datafeed.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="21" column="18" lean-forward="false" selection-start-line="21" selection-start-column="18" selection-end-line="21" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/engine/common/mongo_utils.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="26" column="56" lean-forward="false" selection-start-line="26" selection-start-column="56" selection-end-line="26" selection-end-column="56" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://C:/Anaconda/Lib/site-packages/sklearn/ensemble/gradient_boosting.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="24191">
-          <caret line="1462" column="0" lean-forward="false" selection-start-line="1462" selection-start-column="0" selection-end-line="1462" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/docs/book/sklearn/train_modified.csv">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
+        <state relative-caret-position="-1224">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/docs/book/sklearn/svm.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/engine/data/data_features.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="629">
-          <caret line="41" column="22" lean-forward="false" selection-start-line="41" selection-start-column="22" selection-end-line="41" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/engine/test/templates/hello.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="23" lean-forward="false" selection-start-line="7" selection-start-column="23" selection-end-line="7" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gui/forms/formsetting.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gui/frames/framedata.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1088">
-          <caret line="80" column="37" lean-forward="false" selection-start-line="80" selection-start-column="14" selection-end-line="80" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/engine/test/flask_utils.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="14" column="11" lean-forward="false" selection-start-line="14" selection-start-column="11" selection-end-line="14" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/docs/pandas.ipynb">
+    <entry file="file://$PROJECT_DIR$/abu-master/abupy_ui/参数最优交叉验证.ipynb">
       <provider selected="true" editor-type-id="ipnb-editor">
         <state>
-          <selected id="4" />
+          <selected id="1" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/docs/index.md">
+    <entry file="file://$PROJECT_DIR$/abu-master/abupy_ui/数据下载界面操作.ipynb">
+      <provider selected="true" editor-type-id="ipnb-editor">
+        <state>
+          <selected id="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/abu-master/abupy_ui/widget_quant_tool.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="663">
-          <caret line="39" column="3" lean-forward="false" selection-start-line="39" selection-start-column="3" selection-end-line="39" selection-end-column="3" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/ProgramData/Anaconda3/Lib/site-packages/PyQt5/uic/objcreator.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2533">
+          <caret line="151" column="0" lean-forward="false" selection-start-line="151" selection-start-column="0" selection-end-line="151" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/ProgramData/Anaconda3/Lib/unittest/case.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="10047">
+          <caret line="604" column="0" lean-forward="false" selection-start-line="604" selection-start-column="0" selection-end-line="604" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/quant/engine/common/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/quant/engine/portfolio.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="179">
+          <caret line="72" column="38" lean-forward="true" selection-start-line="72" selection-start-column="38" selection-end-line="72" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/WIKI-AAPL-2017-quandl.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="109">
+          <caret line="240" column="8" lean-forward="true" selection-start-line="240" selection-start-column="8" selection-end-line="240" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gui/logutils.py" />
+    <entry file="file://$PROJECT_DIR$/quant/engine/test/flask_utils.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/quant/engine/test/test_backtest.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="11" column="40" lean-forward="false" selection-start-line="11" selection-start-column="40" selection-end-line="11" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/quant/engine/test/test_broker.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="11" lean-forward="false" selection-start-line="5" selection-start-column="11" selection-end-line="5" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/quant/engine/test/test_datafeed.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/quant/engine/test/test_feature_parser.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="11" lean-forward="false" selection-start-line="1" selection-start-column="11" selection-end-line="1" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/quant/engine/test/test_performance.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="11" lean-forward="false" selection-start-line="2" selection-start-column="11" selection-end-line="2" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/quant/engine/test/test_quandl.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="0" lean-forward="true" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/quant/gui/tests/test_results.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="7" column="33" lean-forward="false" selection-start-line="7" selection-start-column="33" selection-end-line="7" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/quant/gui/consts.py" />
+    <entry file="file://$PROJECT_DIR$/quant/engine/datafeed.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="15" column="23" lean-forward="false" selection-start-line="15" selection-start-column="23" selection-end-line="15" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/quant/engine/consts.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="19" lean-forward="true" selection-start-line="4" selection-start-column="19" selection-end-line="4" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/quant/engine/common/mongo_utils.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/quant/engine/tools/quandl.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="140">
+          <caret line="62" column="4" lean-forward="false" selection-start-line="62" selection-start-column="4" selection-end-line="62" selection-end-column="4" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/test_trading_env.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://C:/Anaconda/Lib/site-packages/pandas/core/computation/eval.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4913">
-          <caret line="294" column="0" lean-forward="false" selection-start-line="294" selection-start-column="0" selection-end-line="294" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://C:/Anaconda/Lib/site-packages/pandas/core/computation/expr.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="12495">
-          <caret line="754" column="26" lean-forward="false" selection-start-line="754" selection-start-column="26" selection-end-line="754" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://C:/Anaconda/Lib/site-packages/pandas/core/indexes/base.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="49011">
-          <caret line="2943" column="0" lean-forward="false" selection-start-line="2943" selection-start-column="0" selection-end-line="2943" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://C:/Anaconda/Lib/site-packages/pandas/core/internals.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="69088">
-          <caret line="4138" column="0" lean-forward="false" selection-start-line="4138" selection-start-column="0" selection-end-line="4138" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://C:/Anaconda/Lib/site-packages/pandas/core/frame.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="48280">
-          <caret line="2934" column="0" lean-forward="false" selection-start-line="2934" selection-start-column="0" selection-end-line="2934" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://C:/Anaconda/Lib/site-packages/pandas/util/_decorators.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2040">
-          <caret line="126" column="0" lean-forward="false" selection-start-line="126" selection-start-column="0" selection-end-line="126" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://C:/Anaconda/Lib/importlib/_bootstrap_external.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="7225">
-          <caret line="425" column="0" lean-forward="false" selection-start-line="425" selection-start-column="0" selection-end-line="425" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data/000001_index.csv">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="30" lean-forward="false" selection-start-line="16" selection-start-column="30" selection-end-line="16" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ainlp/basemodel.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ainlp/data/datahandler.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="341">
-          <caret line="66" column="29" lean-forward="false" selection-start-line="66" selection-start-column="29" selection-end-line="66" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/engine/utils/build_astock_daily_quotes.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="28" column="26" lean-forward="false" selection-start-line="28" selection-start-column="26" selection-end-line="28" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/engine/utils/datasets.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/engine/test/test_portfolio.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="561">
-          <caret line="34" column="24" lean-forward="false" selection-start-line="34" selection-start-column="24" selection-end-line="34" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/engine/backtest.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1139">
-          <caret line="68" column="69" lean-forward="false" selection-start-line="68" selection-start-column="69" selection-end-line="68" selection-end-column="69" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/engine/test/test_backtest.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="371">
-          <caret line="40" column="35" lean-forward="false" selection-start-line="40" selection-start-column="35" selection-end-line="40" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/engine/portfolio.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="253">
-          <caret line="166" column="17" lean-forward="false" selection-start-line="166" selection-start-column="17" selection-end-line="166" selection-end-column="17" />
+        <state relative-caret-position="204">
+          <caret line="12" column="10" lean-forward="true" selection-start-line="12" selection-start-column="10" selection-end-line="12" selection-end-column="10" />
           <folding>
-            <element signature="e#566#807#0" expanded="false" />
-            <element signature="e#2569#2680#0" expanded="false" />
-            <element signature="e#3174#4371#0" expanded="false" />
-            <element signature="e#4417#5014#0" expanded="false" />
-            <element signature="e#5062#5201#0" expanded="false" />
+            <element signature="e#0#13#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/.PyCharm2017.3/system/python_stubs/-946255732/builtins.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="132" column="4" lean-forward="false" selection-start-line="132" selection-start-column="4" selection-end-line="132" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://C:/Anaconda/Lib/sre_parse.py">
+    <entry file="file://$PROJECT_DIR$/quant/gui/main1.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
-          <caret line="415" column="0" lean-forward="false" selection-start-line="415" selection-start-column="0" selection-end-line="415" selection-end-column="0" />
+          <caret line="9" column="8" lean-forward="false" selection-start-line="9" selection-start-column="8" selection-end-line="9" selection-end-column="8" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://C:/Anaconda/Lib/sre_compile.py">
+    <entry file="file://$PROJECT_DIR$/quant/gui/ui/style.qss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="93">
-          <caret line="561" column="0" lean-forward="false" selection-start-line="561" selection-start-column="0" selection-end-line="561" selection-end-column="0" />
+        <state relative-caret-position="204">
+          <caret line="12" column="0" lean-forward="true" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://C:/Anaconda/Lib/re.py">
+    <entry file="file://$PROJECT_DIR$/quant/engine/algos.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="93">
-          <caret line="300" column="0" lean-forward="false" selection-start-line="300" selection-start-column="0" selection-end-line="300" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://C:/Anaconda/Lib/site-packages/pandas/core/generic.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="251">
-          <caret line="5127" column="50" lean-forward="true" selection-start-line="5127" selection-start-column="50" selection-end-line="5127" selection-end-column="50" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/.PyCharm2017.3/system/python_stubs/-946255732/talib/_ta_lib.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="129">
-          <caret line="8504" column="8" lean-forward="false" selection-start-line="8504" selection-start-column="8" selection-end-line="8504" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://C:/Anaconda/Lib/site-packages/pandas/core/groupby.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="23">
-          <caret line="804" column="0" lean-forward="false" selection-start-line="804" selection-start-column="0" selection-end-line="804" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://C:/Anaconda/Lib/unittest/case.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="227">
-          <caret line="621" column="0" lean-forward="false" selection-start-line="621" selection-start-column="0" selection-end-line="621" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/engine/test/test_datafeed.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="156">
-          <caret line="36" column="21" lean-forward="true" selection-start-line="36" selection-start-column="21" selection-end-line="36" selection-end-column="21" />
+        <state relative-caret-position="465">
+          <caret line="109" column="0" lean-forward="false" selection-start-line="109" selection-start-column="0" selection-end-line="109" selection-end-column="0" />
           <folding>
-            <element signature="e#0#15#0" expanded="true" />
-            <element signature="e#153#763#0" expanded="false" />
-            <element signature="e#810#972#0" expanded="false" />
-            <element signature="e#1561#1691#0" expanded="false" />
-            <element signature="e#1743#1955#0" expanded="false" />
+            <element signature="e#394#1335#0" expanded="false" />
+            <element signature="e#1365#1463#0" expanded="false" />
+            <element signature="e#1490#1836#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/engine/test/test_feature_parser.py">
+    <entry file="file://$PROJECT_DIR$/quant/engine/test/test_algos.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="66">
-          <caret line="32" column="71" lean-forward="false" selection-start-line="32" selection-start-column="67" selection-end-line="32" selection-end-column="71" />
+        <state relative-caret-position="102">
+          <caret line="9" column="25" lean-forward="true" selection-start-line="7" selection-start-column="8" selection-end-line="9" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/quant/gui/guiutils.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-561">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/quant/engine/technical/cross.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="6" column="15" lean-forward="false" selection-start-line="6" selection-start-column="15" selection-end-line="6" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/quant/engine/test/test_cross.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="331">
+          <caret line="24" column="29" lean-forward="true" selection-start-line="24" selection-start-column="29" selection-end-line="24" selection-end-column="29" />
           <folding>
-            <element signature="e#0#15#0" expanded="true" />
+            <element signature="e#0#15#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/engine/datafeed.py">
+    <entry file="file://$APPLICATION_HOME_DIR$/helpers/pycharm/teamcity/common.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="867">
-          <caret line="66" column="118" lean-forward="false" selection-start-line="66" selection-start-column="118" selection-end-line="66" selection-end-column="118" />
+        <state relative-caret-position="131">
+          <caret line="48" column="0" lean-forward="false" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/ProgramData/Anaconda3/Lib/codecs.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="89">
+          <caret line="331" column="0" lean-forward="false" selection-start-line="331" selection-start-column="0" selection-end-line="331" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/quant/gui/tests/test_gui_thread.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="11" lean-forward="false" selection-start-line="1" selection-start-column="11" selection-end-line="1" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/quant/engine/backtest.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="106">
+          <caret line="123" column="0" lean-forward="false" selection-start-line="123" selection-start-column="0" selection-end-line="123" selection-end-column="0" />
           <folding>
-            <element signature="e#0#37#0" expanded="true" />
-            <element signature="e#536#772#0" expanded="false" />
-            <element signature="e#3220#3507#0" expanded="false" />
-            <element signature="e#4746#5067#0" expanded="false" />
+            <element signature="e#140#2712#0" expanded="false" />
+            <element signature="e#3060#3707#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/engine/feature_parser.py">
+    <entry file="file://$PROJECT_DIR$/quant/gui/tests/test_logicmgr.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="361">
-          <caret line="127" column="0" lean-forward="true" selection-start-line="127" selection-start-column="0" selection-end-line="127" selection-end-column="0" />
+        <state relative-caret-position="85">
+          <caret line="10" column="14" lean-forward="false" selection-start-line="10" selection-start-column="14" selection-end-line="10" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/quant/gui/frames/framemain.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/quant/gui/mainwindow.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-136">
+          <caret line="21" column="8" lean-forward="false" selection-start-line="21" selection-start-column="8" selection-end-line="21" selection-end-column="8" />
           <folding>
-            <element signature="e#0#9#0" expanded="true" />
+            <element signature="e#1857#2019#0" expanded="false" />
+            <element signature="e#2057#2338#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/quant/gui/frames/frametrade.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-7">
+          <caret line="12" column="26" lean-forward="false" selection-start-line="12" selection-start-column="26" selection-end-line="12" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/quant/gui/tests/test_frame_backtest.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="9" column="21" lean-forward="false" selection-start-line="9" selection-start-column="21" selection-end-line="9" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/quant/gui/frames/framebacktest.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="27">
+          <caret line="77" column="29" lean-forward="false" selection-start-line="77" selection-start-column="29" selection-end-line="77" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/quant/gui/frames/framestocks.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="12" column="26" lean-forward="false" selection-start-line="12" selection-start-column="26" selection-end-line="12" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/ProgramData/Anaconda3/Lib/logging/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="128">
+          <caret line="1514" column="0" lean-forward="false" selection-start-line="1514" selection-start-column="0" selection-end-line="1514" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/quant/gui/tests/test_mainwindow.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="8" column="19" lean-forward="false" selection-start-line="8" selection-start-column="19" selection-end-line="8" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/quant/engine/common/logging_utils.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="149">
+          <caret line="43" column="0" lean-forward="false" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/quant/gui/gui_logic.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="166">
+          <caret line="93" column="0" lean-forward="false" selection-start-line="93" selection-start-column="0" selection-end-line="93" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#27#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/quant/gui/frames/frameresult.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="324">
+          <caret line="52" column="0" lean-forward="false" selection-start-line="52" selection-start-column="0" selection-end-line="52" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#27#0" expanded="true" />
           </folding>
         </state>
       </provider>

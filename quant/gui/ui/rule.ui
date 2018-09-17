@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Form</class>
+ <widget class="QWidget" name="Form">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>350</width>
+    <height>250</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <layout class="QHBoxLayout" name="horizontalLayout">
+   <item>
+    <widget class="QTreeWidget" name="treeWidget">
+     <column>
+      <property name="text">
+       <string>指标</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>备注</string>
+      </property>
+     </column>
+     <item>
+      <property name="text">
+       <string>技术指标</string>
+      </property>
+      <property name="text">
+       <string>2</string>
+      </property>
+      <item>
+       <property name="text">
+        <string>EMA</string>
+       </property>
+       <property name="text">
+        <string>这是EMA</string>
+       </property>
+      </item>
+     </item>
+     <item>
+      <property name="text">
+       <string>财务指标</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <item>
+       <property name="text">
+        <string>资产负债表</string>
+       </property>
+       <item>
+        <property name="text">
+         <string>ROA</string>
+        </property>
+        <property name="text">
+         <string>ROA</string>
+        </property>
+       </item>
+      </item>
+     </item>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
