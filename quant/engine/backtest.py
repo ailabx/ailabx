@@ -164,24 +164,39 @@ class BacktestRunner(object):
             backtest.events = self.events
             backtest.run()
 
-        self.events.emit({'event_type':EventType.onfinished})
-
+        #收益率曲线
         returns = [b.get_returns() for b in backtests]
-        all = pd.concat(returns,axis=1)
-        logger.info('\n')
-        logger.info(all)
+        returns = pd.concat(returns,axis=1)
 
-        ret = Performance().calc_performance(all)
+
+        trades = {}
+        for b in backtests:
+            reports = b.get_reports()
+            reports.dropna(inplace=True)
+            trade = reports[reports['trade']!=0]
+            cols = list(trade.columns)
+            cols.insert(0,'date')
+            trade['date'] = trade.index
+            trade = trade[cols]
+            trade.sort_index(inplace=True)
+            trades[b.name] = trade
+
+
+        #回测结果指标
+        ret = Performance().calc_performance(returns)
+        ret['指标名称'] = ret.index
         logger.info(ret)
 
+        #equity曲线
         equities = [b.get_equity() for b in backtests]
         equity_df = pd.concat(equities,axis=1)
         equity_df.plot()
-        from pylab import mpl
+        self.events.emit({'event_type': EventType.onfinished,
+                          'data':equity_df,
+                          'performance':ret,
+                          'trades':trades,
+                          })
 
-        import matplotlib.pyplot as plt
-        mpl.rcParams['font.sans-serif'] = ['FangSong']  # 指定默认字体
-        mpl.rcParams['axes.unicode_minus'] = False  # 解决保存图像是负号'-'显示为方块的问题
-        plt.show()
+
 
 

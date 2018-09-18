@@ -53,7 +53,7 @@ class TestBacktest(unittest.TestCase):
 
     def test_run(self):
         path = os.path.abspath(os.path.join(os.getcwd(), "../../data"))
-        data = quandl.build_feed("WIKI", ['AAPL'], 2017, 2017, path)
+        data = quandl.build_feed("WIKI", ['AAPL','AMZN'], 2017, 2017, path)
         #data = pd.DataFrame(index=pd.date_range('2018-01-01', periods=10), columns=['AAPL', 'AMZN'])
         #data['AAPL'] = [1.1,1.3,1.15,0.9,1.22,1.1,1.3,1.15,0.9,1.22]
         #data['AMZN'] = [1.1, 1.3, 1.15, 0.9, 1.22, 1.1, 1.3, 1.15, 0.9, 1.22]
@@ -85,7 +85,5 @@ class TestBacktest(unittest.TestCase):
         engine2 = Backtest('价格突破10日均线信号突破', strategy=s2, data=data.copy())
 
         runner = BacktestRunner()
-        runner.events.reg_event(EventType.onbar, self.onbar)
-        runner.events.reg_event(EventType.onfinished, self.onfinished)
         runner.run_backtests([engine,engine2])
         #engine.startegy.plot()

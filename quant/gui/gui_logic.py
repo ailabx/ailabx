@@ -35,7 +35,7 @@ class LogicMgr(QThread):
     def run(self):
 
         params = {'start':'2017-03-01','end':'2018-01-31',
-                  'universe':['AAPL',],
+                  'universe':['AAPL','AMZN'],
                   'long':'cross_up(close,ma(close,15))',
                   'flat':'cross_down(close,ma(close,20))'
                   }

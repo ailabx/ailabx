@@ -3,9 +3,17 @@ from quant.gui.gui_logic import ThreadWorker
 from PyQt5 import QtWidgets
 import sys,traceback
 
-class TestGuiThread(unittest.TestCase):
-    def callback(self):
-        self.btn.setText('callback')
+
+class MyWidget(QtWidgets.QWidget):
+    def __init__(self):
+        super().__init__()
+
+        self.btn = QtWidgets.QPushButton('test',self)
+        self.btn.clicked.connect(self.clicked)
+
+        self.edit = QtWidgets.QTextEdit(self)
+        self.btn.move(10,10)
+        self.edit.move(30,50)
 
     def clicked(self):
         print('clicked')
@@ -15,15 +23,16 @@ class TestGuiThread(unittest.TestCase):
             self.thread.start()
         except:
             traceback.print_exc()
+    def callback(self):
+        self.btn.setText('callback')
+        self.edit.append('okok')
 
+
+class TestGuiThread(unittest.TestCase):
 
     def test_gui(self):
         app = QtWidgets.QApplication(sys.argv)
-        win = QtWidgets.QWidget()
-        self.btn = QtWidgets.QPushButton('test')
-        self.btn.clicked.connect(self.clicked)
-        layout = QtWidgets.QVBoxLayout()
-        win.setLayout(layout)
-        layout.addWidget(self.btn)
+        win = MyWidget()
+
         win.show()
         app.exec_()

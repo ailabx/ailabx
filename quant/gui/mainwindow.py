@@ -11,7 +11,6 @@ import os
 import pandas as pd
 
 from .models import table_models
-from .guiutils import run_strategy
 import traceback
 from qtpy.QtWebEngineWidgets import QWebEngineView
 from .gui_logic import LogicMgr

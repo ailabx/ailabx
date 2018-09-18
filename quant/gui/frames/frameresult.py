@@ -9,6 +9,8 @@ import matplotlib.pyplot as plt
 
 from ...engine.consts import EventType
 import traceback
+from ..models.table_models import DataFrameTableModel
+from ..models.ai_treeview import AiTreeView
 
 class FrameResult(QtWidgets.QWidget):
     def __init__(self,logic,parent=None):
@@ -24,6 +26,9 @@ class FrameResult(QtWidgets.QWidget):
         logic.signal.connect(self.on_events)
         self.init_visual()
 
+        self.tree = AiTreeView()
+        self.vl_trades.addWidget(self.tree)
+
     def init_visual(self):
         self.fig = Figure()
         self.ax = self.fig.add_subplot(111)
@@ -33,24 +38,31 @@ class FrameResult(QtWidgets.QWidget):
 
 
     def plot_data(self,data):
-        #df = pd.DataFrame(index=pd.date_range('2010-01-01', periods=5), columns=['aapl'], data=5)
         data.plot(ax=self.ax)
+        plt.rcParams['axes.unicode_minus'] = False  # 用来正常显示负号
+        plt.rcParams['font.sans-serif'] = ['SimHei']  # 用来正常显示中文标签
         plt.show()
 
 
     def on_events(self,data):
-        pass
+        #print(data)
         if data and 'event_type' in data.keys():
-            type = data['event_type']
-            if type ==  EventType.onmessage:
+            event_type = data['event_type']
+            if event_type ==  EventType.onmessage:
                 try:
-                    print(data['msg'])
-                    #self.edit_result.append(data['msg'])
+                    #print(data)
+                    #print(data['msg'])
+                    if data and 'msg' in data.keys():
+                    #   pass
+                        self.edit_result.append(data['msg'])
                 except:
                     traceback.print_exc()
-            #elif type == EventType.EventType_BacktestFinished:
-            #    self.plot_data()
-
+            elif event_type is EventType.onfinished:
+                performance = data['performance']
+                model = DataFrameTableModel(df=performance)
+                self.tv_results.setModel(model)
+                self.tree.show_data(data['trades'])
+                self.plot_data(data['data'])
 
 
 
