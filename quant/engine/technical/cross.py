@@ -1,10 +1,7 @@
 import numpy as np
 import pandas as pd
 
-def ma(se,n):
-    ma_n = se.rolling(n).mean()
-    print(ma_n)
-    return ma_n
+
 
 def cross(fast, slow):
     data = pd.DataFrame(index=fast.index)

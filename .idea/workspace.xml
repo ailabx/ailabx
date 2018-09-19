@@ -3,14 +3,12 @@
   <component name="ChangeListManager">
     <list default="true" id="e966dac8-e1c8-4be5-8017-00e400b3b447" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/quant/engine/backtest.py" afterPath="$PROJECT_DIR$/quant/engine/backtest.py" />
+      <change beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
+      <change beforePath="$PROJECT_DIR$/quant/engine/technical/cross.py" afterPath="$PROJECT_DIR$/quant/engine/technical/cross.py" />
       <change beforePath="$PROJECT_DIR$/quant/engine/test/test_backtest.py" afterPath="$PROJECT_DIR$/quant/engine/test/test_backtest.py" />
-      <change beforePath="$PROJECT_DIR$/quant/gui/frames/frameresult.py" afterPath="$PROJECT_DIR$/quant/gui/frames/frameresult.py" />
+      <change beforePath="$PROJECT_DIR$/quant/engine/test/test_quandl.py" afterPath="$PROJECT_DIR$/quant/engine/test/test_quandl.py" />
+      <change beforePath="$PROJECT_DIR$/quant/engine/tools/quandl.py" afterPath="$PROJECT_DIR$/quant/engine/tools/quandl.py" />
       <change beforePath="$PROJECT_DIR$/quant/gui/gui_logic.py" afterPath="$PROJECT_DIR$/quant/gui/gui_logic.py" />
-      <change beforePath="$PROJECT_DIR$/quant/gui/guiutils.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/quant/gui/mainwindow.py" afterPath="$PROJECT_DIR$/quant/gui/mainwindow.py" />
-      <change beforePath="$PROJECT_DIR$/quant/gui/tests/test_gui_thread.py" afterPath="$PROJECT_DIR$/quant/gui/tests/test_gui_thread.py" />
-      <change beforePath="$PROJECT_DIR$/quant/gui/ui/results.ui" afterPath="$PROJECT_DIR$/quant/gui/ui/results.ui" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -38,7 +36,7 @@
     <SUITE FILE_PATH="coverage/ailabx$datahandler.coverage" NAME="datahandler Coverage Results" MODIFIED="1530241835505" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/ainlp/data" />
     <SUITE FILE_PATH="coverage/ailabx$mainwindow.coverage" NAME="mainwindow Coverage Results" MODIFIED="1528874517760" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/gui" />
     <SUITE FILE_PATH="coverage/ailabx$framedata.coverage" NAME="framedata Coverage Results" MODIFIED="1529461084177" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/gui/frames" />
-    <SUITE FILE_PATH="coverage/ailabx$Unittests_in_test_backtest_py.coverage" NAME="Unittests in test_backtest.py Coverage Results" MODIFIED="1537240015996" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/quant/engine/test" />
+    <SUITE FILE_PATH="coverage/ailabx$Unittests_in_test_backtest_py.coverage" NAME="Unittests in test_backtest.py Coverage Results" MODIFIED="1537319974469" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/quant/engine/test" />
     <SUITE FILE_PATH="coverage/ailabx$quandl__1_.coverage" NAME="quandl (1) Coverage Results" MODIFIED="1536401992087" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/engine/tools" />
     <SUITE FILE_PATH="coverage/ailabx$conv.coverage" NAME="conv Coverage Results" MODIFIED="1529979888869" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/docs/book/pytorch" />
     <SUITE FILE_PATH="coverage/ailabx$py_test_in_test_pandas_py.coverage" NAME="py.test in test_pandas.py Coverage Results" MODIFIED="1529027977390" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" />
@@ -58,8 +56,8 @@
     <SUITE FILE_PATH="coverage/ailabx$cbow.coverage" NAME="cbow Coverage Results" MODIFIED="1530242095879" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/ainlp/models" />
     <SUITE FILE_PATH="coverage/ailabx$Unittests_in_test_results_py.coverage" NAME="Unittests in test_results.py Coverage Results" MODIFIED="1536805040959" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/gui/tests" />
     <SUITE FILE_PATH="coverage/ailabx$loss_fn.coverage" NAME="loss_fn Coverage Results" MODIFIED="1529814183368" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/docs/book/pytorch" />
-    <SUITE FILE_PATH="coverage/ailabx$Unittests_in_test_quandl_py.coverage" NAME="Unittests in test_quandl.py Coverage Results" MODIFIED="1536649026431" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/engine/test" />
     <SUITE FILE_PATH="coverage/ailabx$Unittests_in_test_logicmgr_py.coverage" NAME="Unittests in test_logicmgr.py Coverage Results" MODIFIED="1537155628629" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/quant/gui/tests" />
+    <SUITE FILE_PATH="coverage/ailabx$Unittests_in_test_quandl_py.coverage" NAME="Unittests in test_quandl.py Coverage Results" MODIFIED="1537319916402" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/quant/engine/test" />
     <SUITE FILE_PATH="coverage/ailabx$test_pyalgo.coverage" NAME="test_pyalgo Coverage Results" MODIFIED="1536111305789" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" />
     <SUITE FILE_PATH="coverage/ailabx$trading_env.coverage" NAME="trading_env Coverage Results" MODIFIED="1529634483016" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/engine" />
     <SUITE FILE_PATH="coverage/ailabx$main.coverage" NAME="main Coverage Results" MODIFIED="1537152747891" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
@@ -67,6 +65,7 @@
     <SUITE FILE_PATH="coverage/ailabx$build_astock_daily_quotes.coverage" NAME="build_astock_daily_quotes Coverage Results" MODIFIED="1530414893630" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/engine/utils" />
     <SUITE FILE_PATH="coverage/ailabx$py_test_in_test_trading_env_py.coverage" NAME="py.test in test_trading_env.py Coverage Results" MODIFIED="1529027357539" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/engine/test" />
     <SUITE FILE_PATH="coverage/ailabx$default_dict.coverage" NAME="default_dict Coverage Results" MODIFIED="1529725397409" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/docs/book/python" />
+    <SUITE FILE_PATH="coverage/ailabx$Unittests_in_test_indicators_py.coverage" NAME="Unittests in test_indicators.py Coverage Results" MODIFIED="1537325690898" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/quant" />
     <SUITE FILE_PATH="coverage/ailabx$sequential.coverage" NAME="sequential Coverage Results" MODIFIED="1529979186148" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/docs/book/pytorch" />
     <SUITE FILE_PATH="coverage/ailabx$.coverage" NAME="线性回归 Coverage Results" MODIFIED="1529802388487" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/docs/book/pytorch" />
     <SUITE FILE_PATH="coverage/ailabx$Unittests_in_test_stock_trainer_py.coverage" NAME="Unittests in test_stock_trainer.py Coverage Results" MODIFIED="1530670974098" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/engine/test" />
@@ -91,80 +90,56 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="frameresult.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/quant/gui/frames/frameresult.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="151">
-              <caret line="41" column="62" lean-forward="false" selection-start-line="41" selection-start-column="62" selection-end-line="41" selection-end-column="62" />
-              <folding>
-                <element signature="e#0#27#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="test_backtest.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/quant/engine/test/test_backtest.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="322">
-              <caret line="55" column="54" lean-forward="false" selection-start-line="55" selection-start-column="54" selection-end-line="55" selection-end-column="54" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="table_models.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/quant/gui/models/table_models.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="9" column="25" lean-forward="false" selection-start-line="9" selection-start-column="6" selection-end-line="9" selection-end-column="25" />
+            <state relative-caret-position="308">
+              <caret line="75" column="18" lean-forward="true" selection-start-line="75" selection-start-column="18" selection-end-line="75" selection-end-column="18" />
               <folding>
-                <element signature="e#0#51#0" expanded="true" />
+                <element signature="e#500#1209#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="framebacktest.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/quant/gui/frames/framebacktest.py">
+      <file leaf-file-name="indicators.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/quant/engine/technical/indicators.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="20" column="8" lean-forward="false" selection-start-line="20" selection-start-column="8" selection-end-line="20" selection-end-column="8" />
+            <state relative-caret-position="52">
+              <caret line="36" column="17" lean-forward="false" selection-start-line="36" selection-start-column="17" selection-end-line="36" selection-end-column="17" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ai_treeview.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/quant/gui/models/ai_treeview.py">
+      <file leaf-file-name="test_indicators.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/quant/engine/test/test_indicators.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="7" column="24" lean-forward="true" selection-start-line="7" selection-start-column="24" selection-end-line="7" selection-end-column="24" />
+            <state relative-caret-position="73">
+              <caret line="16" column="48" lean-forward="false" selection-start-line="16" selection-start-column="48" selection-end-line="16" selection-end-column="48" />
+              <folding>
+                <element signature="e#0#15#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="168">
+              <caret line="20" column="0" lean-forward="true" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="test_ai_treeview.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/quant/gui/tests/test_ai_treeview.py">
+      <file leaf-file-name="TsingTao.csv" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/quant/engine/test/TsingTao.csv">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="291">
-              <caret line="20" column="19" lean-forward="true" selection-start-line="20" selection-start-column="19" selection-end-line="20" selection-end-column="19" />
-              <folding>
-                <element signature="e#0#27#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="backtest.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/quant/engine/backtest.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="249">
-              <caret line="187" column="24" lean-forward="true" selection-start-line="187" selection-start-column="24" selection-end-line="187" selection-end-column="24" />
-              <folding>
-                <element signature="e#3060#3707#0" expanded="false" />
-              </folding>
+            <state relative-caret-position="0">
+              <caret line="0" column="45" lean-forward="false" selection-start-line="0" selection-start-column="39" selection-end-line="0" selection-end-column="45" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -173,7 +148,37 @@
         <entry file="file://$PROJECT_DIR$/quant/gui/tests/test_logicmgr.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="85">
-              <caret line="10" column="15" lean-forward="false" selection-start-line="10" selection-start-column="15" selection-end-line="10" selection-end-column="15" />
+              <caret line="10" column="13" lean-forward="true" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="gui_logic.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/quant/gui/gui_logic.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="291">
+              <caret line="47" column="44" lean-forward="true" selection-start-line="47" selection-start-column="44" selection-end-line="47" selection-end-column="44" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="test_gui_thread.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/quant/gui/tests/test_gui_thread.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="153">
+              <caret line="27" column="24" lean-forward="false" selection-start-line="27" selection-start-column="18" selection-end-line="27" selection-end-column="24" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="test_results.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/quant/gui/tests/test_results.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="85">
+              <caret line="7" column="33" lean-forward="false" selection-start-line="7" selection-start-column="33" selection-end-line="7" selection-end-column="33" />
               <folding />
             </state>
           </provider>
@@ -182,21 +187,9 @@
       <file leaf-file-name="test_algos.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/quant/engine/test/test_algos.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="15" column="34" lean-forward="true" selection-start-line="13" selection-start-column="8" selection-end-line="15" selection-end-column="34" />
+            <state relative-caret-position="-131">
+              <caret line="17" column="0" lean-forward="true" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="test_mainwindow.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/quant/gui/tests/test_mainwindow.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="10" column="19" lean-forward="true" selection-start-line="10" selection-start-column="19" selection-end-line="10" selection-end-column="19" />
-              <folding>
-                <element signature="e#0#15#0" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -252,10 +245,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/engine/test/test_broker.py" />
-        <option value="$PROJECT_DIR$/engine/test/test_algos.py" />
-        <option value="$PROJECT_DIR$/engine/algos.py" />
-        <option value="$PROJECT_DIR$/engine/technical/cross.py" />
         <option value="$PROJECT_DIR$/abu-master/abupy_ui/参数最优交叉验证.ipynb" />
         <option value="$PROJECT_DIR$/abu-master/abupy_ui/数据下载界面操作.ipynb" />
         <option value="$PROJECT_DIR$/gui/main1.py" />
@@ -281,7 +270,6 @@
         <option value="$PROJECT_DIR$/quant/engine/test/test_broker.py" />
         <option value="$PROJECT_DIR$/quant/engine/test/test_feature_parser.py" />
         <option value="$PROJECT_DIR$/quant/engine/test/test_performance.py" />
-        <option value="$PROJECT_DIR$/quant/engine/test/test_quandl.py" />
         <option value="$PROJECT_DIR$/quant/gui/tests/test_mainwindow.py" />
         <option value="$PROJECT_DIR$/quant/gui/consts.py" />
         <option value="$PROJECT_DIR$/quant/engine/consts.py" />
@@ -290,19 +278,24 @@
         <option value="$PROJECT_DIR$/quant/gui/frames/frametrade.py" />
         <option value="$PROJECT_DIR$/main.py" />
         <option value="$PROJECT_DIR$/quant/gui/ui/style.qss" />
-        <option value="$PROJECT_DIR$/quant/engine/technical/cross.py" />
         <option value="$PROJECT_DIR$/quant/engine/test/test_cross.py" />
         <option value="$PROJECT_DIR$/quant/gui/frames/framebacktest.py" />
         <option value="$PROJECT_DIR$/quant/gui/tests/test_gui_thread.py" />
         <option value="$PROJECT_DIR$/quant/gui/mainwindow.py" />
-        <option value="$PROJECT_DIR$/quant/gui/gui_logic.py" />
-        <option value="$PROJECT_DIR$/quant/engine/test/test_backtest.py" />
         <option value="$PROJECT_DIR$/quant/gui/tests/test_tree_model.py" />
         <option value="$PROJECT_DIR$/quant/gui/models/tree_model.py" />
         <option value="$PROJECT_DIR$/quant/gui/models/ai_treeview.py" />
         <option value="$PROJECT_DIR$/quant/gui/tests/test_ai_treeview.py" />
         <option value="$PROJECT_DIR$/quant/gui/frames/frameresult.py" />
         <option value="$PROJECT_DIR$/quant/engine/backtest.py" />
+        <option value="$PROJECT_DIR$/quant/engine/test/test_quandl.py" />
+        <option value="$PROJECT_DIR$/quant/engine/tools/quandl.py" />
+        <option value="$PROJECT_DIR$/quant/engine/technical/cross.py" />
+        <option value="$PROJECT_DIR$/quant/engine/test/test_backtest.py" />
+        <option value="$PROJECT_DIR$/quant/gui/gui_logic.py" />
+        <option value="$PROJECT_DIR$/quant/engine/technical/indicators.py" />
+        <option value="$PROJECT_DIR$/quant/engine/test/test_indicators.py" />
+        <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
   </component>
@@ -336,6 +329,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -343,43 +338,10 @@
               <item name="ailabx" type="b2602c69:ProjectViewProjectNode" />
               <item name="ailabx" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="ailabx" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ailabx" type="462c0819:PsiDirectoryNode" />
-              <item name="quant" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ailabx" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ailabx" type="462c0819:PsiDirectoryNode" />
-              <item name="quant" type="462c0819:PsiDirectoryNode" />
-              <item name="engine" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ailabx" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ailabx" type="462c0819:PsiDirectoryNode" />
-              <item name="quant" type="462c0819:PsiDirectoryNode" />
-              <item name="gui" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ailabx" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ailabx" type="462c0819:PsiDirectoryNode" />
-              <item name="quant" type="462c0819:PsiDirectoryNode" />
-              <item name="gui" type="462c0819:PsiDirectoryNode" />
-              <item name="frames" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ailabx" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ailabx" type="462c0819:PsiDirectoryNode" />
-              <item name="quant" type="462c0819:PsiDirectoryNode" />
-              <item name="gui" type="462c0819:PsiDirectoryNode" />
-              <item name="tests" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scratches" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -390,19 +352,19 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\devgit\ailabx\quant\engine\test" />
+      <recent name="D:\devgit\ailabx\quant\gui\frames" />
+      <recent name="D:\devgit\ailabx\engine\technical" />
+      <recent name="D:\devgit\ailabx" />
+      <recent name="D:\devgit\ailabx\test" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\devgit\ailabx\quant" />
       <recent name="D:\devgit\ailabx\data" />
       <recent name="D:\devgit\ailabx\docs\book" />
       <recent name="D:\devgit\ailabx\engine\datafeed" />
       <recent name="D:\devgit\ailabx\engine\common" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\devgit\ailabx\quant\gui\frames" />
-      <recent name="D:\devgit\ailabx\engine\technical" />
-      <recent name="D:\devgit\ailabx" />
-      <recent name="D:\devgit\ailabx\test" />
-      <recent name="D:\devgit\ailabx\engine\datafeed" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -417,7 +379,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python tests.Unittests in test_mainwindow.py">
+  <component name="RunManager" selected="Python tests.Unittests in test_indicators.py">
     <configuration name="ailabx" type="Python.Ipnb" factoryName="Jupyter Notebook">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -450,21 +412,6 @@
       <option name="_new_target" value="&quot;$PROJECT_DIR$/quant/gui/tests/test_ai_treeview.py&quot;" />
       <option name="_new_targetType" value="&quot;PATH&quot;" />
     </configuration>
-    <configuration name="Unittests in test_algos.py" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/quant/engine/test" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="ailabx" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;$PROJECT_DIR$/quant/engine/test/test_algos.py&quot;" />
-      <option name="_new_targetType" value="&quot;PATH&quot;" />
-    </configuration>
     <configuration name="Unittests in test_backtest.py" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -480,19 +427,19 @@
       <option name="_new_target" value="&quot;$PROJECT_DIR$/quant/engine/test/test_backtest.py&quot;" />
       <option name="_new_targetType" value="&quot;PATH&quot;" />
     </configuration>
-    <configuration name="Unittests in test_gui_thread.py" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+    <configuration name="Unittests in test_indicators.py" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs />
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/quant/gui/tests" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/quant" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="ailabx" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;$PROJECT_DIR$/quant/gui/tests/test_gui_thread.py&quot;" />
+      <option name="_new_target" value="&quot;$PROJECT_DIR$/quant/engine/test/test_indicators.py&quot;" />
       <option name="_new_targetType" value="&quot;PATH&quot;" />
     </configuration>
     <configuration name="Unittests in test_mainwindow.py" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
@@ -510,21 +457,36 @@
       <option name="_new_target" value="&quot;$PROJECT_DIR$/quant/gui/tests/test_mainwindow.py&quot;" />
       <option name="_new_targetType" value="&quot;PATH&quot;" />
     </configuration>
+    <configuration name="Unittests in test_quandl.py" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/quant/engine/test" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="ailabx" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;$PROJECT_DIR$/quant/engine/test/test_quandl.py&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+    </configuration>
     <list size="6">
       <item index="0" class="java.lang.String" itemvalue="Jupyter Notebook.ailabx" />
       <item index="1" class="java.lang.String" itemvalue="Python tests.Unittests in test_mainwindow.py" />
-      <item index="2" class="java.lang.String" itemvalue="Python tests.Unittests in test_gui_thread.py" />
-      <item index="3" class="java.lang.String" itemvalue="Python tests.Unittests in test_backtest.py" />
-      <item index="4" class="java.lang.String" itemvalue="Python tests.Unittests in test_ai_treeview.py" />
-      <item index="5" class="java.lang.String" itemvalue="Python tests.Unittests in test_algos.py" />
+      <item index="2" class="java.lang.String" itemvalue="Python tests.Unittests in test_backtest.py" />
+      <item index="3" class="java.lang.String" itemvalue="Python tests.Unittests in test_ai_treeview.py" />
+      <item index="4" class="java.lang.String" itemvalue="Python tests.Unittests in test_quandl.py" />
+      <item index="5" class="java.lang.String" itemvalue="Python tests.Unittests in test_indicators.py" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python tests.Unittests in test_mainwindow.py" />
+        <item index="0" class="java.lang.String" itemvalue="Python tests.Unittests in test_indicators.py" />
         <item index="1" class="java.lang.String" itemvalue="Python tests.Unittests in test_backtest.py" />
-        <item index="2" class="java.lang.String" itemvalue="Python tests.Unittests in test_ai_treeview.py" />
-        <item index="3" class="java.lang.String" itemvalue="Python tests.Unittests in test_algos.py" />
-        <item index="4" class="java.lang.String" itemvalue="Python tests.Unittests in test_gui_thread.py" />
+        <item index="2" class="java.lang.String" itemvalue="Python tests.Unittests in test_quandl.py" />
+        <item index="3" class="java.lang.String" itemvalue="Python tests.Unittests in test_mainwindow.py" />
+        <item index="4" class="java.lang.String" itemvalue="Python tests.Unittests in test_ai_treeview.py" />
       </list>
     </recent_temporary>
   </component>
@@ -545,35 +507,35 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="Unittests_in_test_ai_treeview_py - 2018.09.18 at 11h 03m 37s.xml">
-      <configuration name="Unittests in test_ai_treeview.py" configurationId="tests" />
+    <history-entry file="Unittests_in_test_indicators_py - 2018.09.19 at 10h 09m 32s.xml">
+      <configuration name="Unittests in test_indicators.py" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_test_ai_treeview_py - 2018.09.18 at 11h 04m 01s.xml">
-      <configuration name="Unittests in test_ai_treeview.py" configurationId="tests" />
+    <history-entry file="Unittests_in_test_indicators_py - 2018.09.19 at 10h 13m 04s.xml">
+      <configuration name="Unittests in test_indicators.py" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_test_ai_treeview_py - 2018.09.18 at 11h 04m 21s.xml">
-      <configuration name="Unittests in test_ai_treeview.py" configurationId="tests" />
+    <history-entry file="Unittests_in_test_indicators_py - 2018.09.19 at 10h 13m 22s.xml">
+      <configuration name="Unittests in test_indicators.py" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_test_ai_treeview_py - 2018.09.18 at 11h 04m 54s.xml">
-      <configuration name="Unittests in test_ai_treeview.py" configurationId="tests" />
+    <history-entry file="Unittests_in_test_indicators_py - 2018.09.19 at 10h 14m 29s.xml">
+      <configuration name="Unittests in test_indicators.py" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_test_backtest_py - 2018.09.18 at 11h 07m 03s.xml">
-      <configuration name="Unittests in test_backtest.py" configurationId="tests" />
+    <history-entry file="Unittests_in_test_indicators_py - 2018.09.19 at 10h 18m 54s.xml">
+      <configuration name="Unittests in test_indicators.py" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_test_mainwindow_py - 2018.09.18 at 11h 07m 49s.xml">
-      <configuration name="Unittests in test_mainwindow.py" configurationId="tests" />
+    <history-entry file="Unittests_in_test_indicators_py - 2018.09.19 at 10h 19m 07s.xml">
+      <configuration name="Unittests in test_indicators.py" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_test_mainwindow_py - 2018.09.18 at 11h 10m 07s.xml">
-      <configuration name="Unittests in test_mainwindow.py" configurationId="tests" />
+    <history-entry file="Unittests_in_test_indicators_py - 2018.09.19 at 10h 19m 23s.xml">
+      <configuration name="Unittests in test_indicators.py" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_test_mainwindow_py - 2018.09.18 at 11h 13m 41s.xml">
-      <configuration name="Unittests in test_mainwindow.py" configurationId="tests" />
+    <history-entry file="Unittests_in_test_indicators_py - 2018.09.19 at 10h 51m 44s.xml">
+      <configuration name="Unittests in test_indicators.py" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_test_mainwindow_py - 2018.09.18 at 11h 14m 43s.xml">
-      <configuration name="Unittests in test_mainwindow.py" configurationId="tests" />
+    <history-entry file="Unittests_in_test_indicators_py - 2018.09.19 at 10h 54m 21s.xml">
+      <configuration name="Unittests in test_indicators.py" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_test_mainwindow_py - 2018.09.18 at 11h 19m 05s.xml">
-      <configuration name="Unittests in test_mainwindow.py" configurationId="tests" />
+    <history-entry file="Unittests_in_test_indicators_py - 2018.09.19 at 10h 54m 53s.xml">
+      <configuration name="Unittests in test_indicators.py" configurationId="tests" />
     </history-entry>
   </component>
   <component name="ToolWindowManager">
@@ -583,12 +545,12 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2908497" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.42647058" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.5718954" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24810892" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25189108" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="SciView" active="true" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22239032" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="SciView" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.12859304" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.36928105" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -687,10 +649,6 @@
     </watches-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/pyalgotrade/technical/cross.py" />
-    <entry file="file://$PROJECT_DIR$/abu-master/界面操作视频教程/第一节界面操作视频教程.md" />
-    <entry file="file://$PROJECT_DIR$/abu-master/abupy_ui/参数最优交叉验证.ipynb" />
-    <entry file="file://$PROJECT_DIR$/abu-master/abupy_ui/数据下载界面操作.ipynb" />
     <entry file="file://$PROJECT_DIR$/abu-master/abupy_ui/widget_quant_tool.py" />
     <entry file="file://C:/ProgramData/Anaconda3/Lib/site-packages/PyQt5/uic/objcreator.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -758,20 +716,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/quant/engine/test/test_quandl.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="0" lean-forward="true" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/quant/gui/tests/test_results.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="7" column="33" lean-forward="false" selection-start-line="7" selection-start-column="33" selection-end-line="7" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/quant/gui/consts.py" />
     <entry file="file://$PROJECT_DIR$/quant/engine/datafeed.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -792,14 +736,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/quant/engine/tools/quandl.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="62" column="4" lean-forward="false" selection-start-line="62" selection-start-column="4" selection-end-line="62" selection-end-column="4" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -830,14 +766,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/quant/engine/technical/cross.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="6" column="15" lean-forward="false" selection-start-line="6" selection-start-column="15" selection-end-line="6" selection-end-column="15" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/quant/engine/test/test_cross.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="331">
@@ -864,7 +792,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-7">
           <caret line="12" column="26" lean-forward="false" selection-start-line="12" selection-start-column="26" selection-end-line="12" selection-end-column="26" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -872,7 +799,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
           <caret line="12" column="26" lean-forward="false" selection-start-line="12" selection-start-column="26" selection-end-line="12" selection-end-column="26" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -880,7 +806,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="128">
           <caret line="1514" column="0" lean-forward="false" selection-start-line="1514" selection-start-column="0" selection-end-line="1514" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -897,21 +822,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-310">
           <caret line="20" column="8" lean-forward="false" selection-start-line="20" selection-start-column="8" selection-end-line="20" selection-end-column="8" />
-          <folding>
-            <element signature="e#0#27#0" expanded="false" />
-            <element signature="e#1822#1984#0" expanded="false" />
-            <element signature="e#2022#2303#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/quant/gui/tests/test_gui_thread.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="27" column="24" lean-forward="false" selection-start-line="27" selection-start-column="18" selection-end-line="27" selection-end-column="24" />
-          <folding>
-            <element signature="e#0#15#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -919,7 +829,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
           <caret line="9" column="37" lean-forward="true" selection-start-line="9" selection-start-column="37" selection-end-line="9" selection-end-column="37" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -931,45 +840,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/quant/gui/gui_logic.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-21">
-          <caret line="34" column="8" lean-forward="false" selection-start-line="34" selection-start-column="8" selection-end-line="34" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/quant/engine/test/test_backtest.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="322">
-          <caret line="55" column="54" lean-forward="false" selection-start-line="55" selection-start-column="54" selection-end-line="55" selection-end-column="54" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/quant/gui/models/table_models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
+        <state relative-caret-position="34">
           <caret line="9" column="25" lean-forward="false" selection-start-line="9" selection-start-column="6" selection-end-line="9" selection-end-column="25" />
           <folding>
-            <element signature="e#0#51#0" expanded="true" />
+            <element signature="e#0#51#0" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/quant/gui/tests/test_logicmgr.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="10" column="15" lean-forward="false" selection-start-line="10" selection-start-column="15" selection-end-line="10" selection-end-column="15" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/quant/engine/test/test_algos.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="15" column="34" lean-forward="true" selection-start-line="13" selection-start-column="8" selection-end-line="15" selection-end-column="34" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -983,10 +860,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/quant/gui/tests/test_mainwindow.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="19" lean-forward="true" selection-start-line="10" selection-start-column="19" selection-end-line="10" selection-end-column="19" />
+        <state relative-caret-position="119">
+          <caret line="10" column="19" lean-forward="false" selection-start-line="10" selection-start-column="19" selection-end-line="10" selection-end-column="19" />
           <folding>
-            <element signature="e#0#15#0" expanded="true" />
+            <element signature="e#0#15#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -994,38 +871,150 @@
     <entry file="file://$PROJECT_DIR$/quant/gui/models/ai_treeview.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
-          <caret line="7" column="24" lean-forward="true" selection-start-line="7" selection-start-column="24" selection-end-line="7" selection-end-column="24" />
+          <caret line="7" column="24" lean-forward="false" selection-start-line="7" selection-start-column="24" selection-end-line="7" selection-end-column="24" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/quant/gui/tests/test_ai_treeview.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="291">
-          <caret line="20" column="19" lean-forward="true" selection-start-line="20" selection-start-column="19" selection-end-line="20" selection-end-column="19" />
+        <state relative-caret-position="272">
+          <caret line="20" column="19" lean-forward="false" selection-start-line="20" selection-start-column="19" selection-end-line="20" selection-end-column="19" />
           <folding>
-            <element signature="e#0#27#0" expanded="true" />
+            <element signature="e#0#27#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/quant/gui/frames/frameresult.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="151">
+        <state relative-caret-position="493">
           <caret line="41" column="62" lean-forward="false" selection-start-line="41" selection-start-column="62" selection-end-line="41" selection-end-column="62" />
           <folding>
-            <element signature="e#0#27#0" expanded="true" />
+            <element signature="e#0#27#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/quant/engine/backtest.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="249">
-          <caret line="187" column="24" lean-forward="true" selection-start-line="187" selection-start-column="24" selection-end-line="187" selection-end-column="24" />
+        <state relative-caret-position="504">
+          <caret line="184" column="15" lean-forward="false" selection-start-line="184" selection-start-column="15" selection-end-line="184" selection-end-column="15" />
           <folding>
             <element signature="e#3060#3707#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/quant/engine/tools/quandl.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="201">
+          <caret line="146" column="42" lean-forward="false" selection-start-line="146" selection-start-column="42" selection-end-line="146" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/quant/engine/test/test_quandl.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="101">
+          <caret line="6" column="27" lean-forward="false" selection-start-line="6" selection-start-column="27" selection-end-line="6" selection-end-column="27" />
+          <folding>
+            <element signature="e#0#15#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/quant/engine/technical/cross.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="50">
+          <caret line="3" column="0" lean-forward="true" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/quant/engine/test/TsingTao.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="45" lean-forward="false" selection-start-line="0" selection-start-column="39" selection-end-line="0" selection-end-column="45" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/quant/engine/test/test_backtest.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="308">
+          <caret line="75" column="18" lean-forward="true" selection-start-line="75" selection-start-column="18" selection-end-line="75" selection-end-column="18" />
+          <folding>
+            <element signature="e#500#1209#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/quant/engine/test/test_algos.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-131">
+          <caret line="17" column="0" lean-forward="true" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/quant/gui/tests/test_gui_thread.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="27" column="24" lean-forward="false" selection-start-line="27" selection-start-column="18" selection-end-line="27" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/quant/gui/tests/test_results.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="7" column="33" lean-forward="false" selection-start-line="7" selection-start-column="33" selection-end-line="7" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/quant/gui/tests/test_logicmgr.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="10" column="13" lean-forward="true" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/quant/gui/gui_logic.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="291">
+          <caret line="47" column="44" lean-forward="true" selection-start-line="47" selection-start-column="44" selection-end-line="47" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/quant/engine/technical/indicators.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="52">
+          <caret line="36" column="17" lean-forward="false" selection-start-line="36" selection-start-column="17" selection-end-line="36" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/quant/engine/test/test_indicators.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="73">
+          <caret line="16" column="48" lean-forward="false" selection-start-line="16" selection-start-column="48" selection-end-line="16" selection-end-column="48" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="20" column="0" lean-forward="true" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>

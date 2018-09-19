@@ -53,7 +53,8 @@ class TestBacktest(unittest.TestCase):
 
     def test_run(self):
         path = os.path.abspath(os.path.join(os.getcwd(), "../../data"))
-        data = quandl.build_feed("WIKI", ['AAPL','AMZN'], 2017, 2017, path)
+        feed = quandl.build_feed("WIKI", ['AAPL','AMZN'], 2017, 2017, path)
+        data = quandl.get_close_from_feed(feed)
         #data = pd.DataFrame(index=pd.date_range('2018-01-01', periods=10), columns=['AAPL', 'AMZN'])
         #data['AAPL'] = [1.1,1.3,1.15,0.9,1.22,1.1,1.3,1.15,0.9,1.22]
         #data['AMZN'] = [1.1, 1.3, 1.15, 0.9, 1.22, 1.1, 1.3, 1.15, 0.9, 1.22]
@@ -68,9 +69,9 @@ class TestBacktest(unittest.TestCase):
         sig = pd.DataFrame(index=data.index,columns=data.columns)
 
         for symbol in list(data.columns):
-            sma5 = data[symbol].rolling(10).mean()
-            print('sma====',sma5)
-            sig[symbol] = cross.cross(data[symbol],sma5)
+            max_high = max(feed[symbol]['High'],20)
+            #print('sma====',sma5)
+            sig[symbol] = cross.cross_up(feed[symbol]['High'],max_high)
 
         print(sig)
 
@@ -82,7 +83,7 @@ class TestBacktest(unittest.TestCase):
         ])
 
         engine = Backtest('买入并持有AAPL,AMZN',strategy=s,data=data.copy())
-        engine2 = Backtest('价格突破10日均线信号突破', strategy=s2, data=data.copy())
+        engine2 = Backtest('海龟策略', strategy=s2, data=data.copy())
 
         runner = BacktestRunner()
         runner.run_backtests([engine,engine2])

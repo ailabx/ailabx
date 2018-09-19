@@ -112,7 +112,7 @@ def build_feed(sourceCode, tableCodes, fromYear, toYear, storage, frequency='DAY
     if not os.path.exists(storage):
         logger.info("Creating %s directory" % (storage))
         os.mkdir(storage)
-    all = []
+    all = {}
     for tableCode in tableCodes:
 
         all_code = []
@@ -136,20 +136,31 @@ def build_feed(sourceCode, tableCodes, fromYear, toYear, storage, frequency='DAY
             df = pd.read_csv(fileName).copy()
             #print(df.head())
             df.index = df['Date']
-            df.sort_index(inplace=True)
-            item = df['Adj. Close']
-            item.name = tableCode
+            #df.sort_index(inplace=True)
+            #item = df['Adj. Close']
+            #item.name = tableCode
             #print(item.head())
 
-            all_code.append(item)
+            all_code.append(df)
 
         df_code = pd.concat(all_code,axis=0)
-        all.append(df_code)
+        all[tableCode]=df_code.sort_index()
 
-    for data in all:
-        logger.info('序列长度：'+str(len(data)))
-    all_df = pd.concat(all,axis=1)
+    #for data in all:
+    #    logger.info('序列长度：'+str(len(data)))
+    #all_df = pd.concat(all,axis=1)
 
     #ret.addBarsFromCSV(tableCode, fileName, skipMalformedBars=skipMalformedBars)
-    return all_df
+    return all
+
+
+def get_close_from_feed(feed):
+    all_close = []
+    for code in feed.keys():
+        se = feed[code]['Adj. Close']
+        se.name = code
+        all_close.append(se)
+
+    all = pd.concat(all_close,axis=1)
+    return all
 

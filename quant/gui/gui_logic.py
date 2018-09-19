@@ -52,7 +52,8 @@ class LogicMgr(QThread):
         father_path = os.path.abspath(os.path.dirname(father_path) + os.path.sep + ".")
 
         path = os.path.abspath(father_path+"/data")
-        data = quandl.build_feed("WIKI", params['universe'], years[0], years[-1], path)
+        feed = quandl.build_feed("WIKI", params['universe'], years[0], years[-1], path)
+        data = quandl.get_close_from_feed(feed)
 
         data = data.loc[params['start']:params['end']]
 
