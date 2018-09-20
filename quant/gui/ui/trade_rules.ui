@@ -100,8 +100,8 @@
     <rect>
      <x>270</x>
      <y>10</y>
-     <width>276</width>
-     <height>224</height>
+     <width>261</width>
+     <height>81</height>
     </rect>
    </property>
    <property name="title">
@@ -116,10 +116,10 @@
   <widget class="QGroupBox" name="groupBox_3">
    <property name="geometry">
     <rect>
-     <x>560</x>
-     <y>10</y>
-     <width>276</width>
-     <height>224</height>
+     <x>270</x>
+     <y>100</y>
+     <width>261</width>
+     <height>101</height>
     </rect>
    </property>
    <property name="title">

@@ -33,7 +33,7 @@ class FrameBacktest(QtWidgets.QWidget):
         #combo = self.combo_strats
         #combo.addItems(['买入并持有','随机买卖','海龟交易原则','深度强化学习'])
 
-        self.btn_backtest.clicked.connect(self.bkt_clicked)
+        #self.btn_backtest.clicked.connect(self.bkt_clicked)
         self.show_data()
 
     def show_data(self):

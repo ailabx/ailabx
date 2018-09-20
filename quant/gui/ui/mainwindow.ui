@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1079</width>
+    <width>666</width>
     <height>600</height>
    </rect>
   </property>
@@ -92,67 +92,19 @@
        </attribute>
        <layout class="QVBoxLayout" name="verticalLayout_2">
         <item>
-         <widget class="QTabWidget" name="tabWidget">
-          <property name="tabPosition">
-           <enum>QTabWidget::South</enum>
-          </property>
-          <property name="tabShape">
-           <enum>QTabWidget::Triangular</enum>
-          </property>
-          <property name="currentIndex">
-           <number>0</number>
-          </property>
-          <widget class="QWidget" name="tab_2">
-           <attribute name="title">
-            <string>股票池</string>
-           </attribute>
-           <layout class="QHBoxLayout" name="horizontalLayout_4">
-            <item>
-             <layout class="QVBoxLayout" name="vl_stocks"/>
-            </item>
-           </layout>
-          </widget>
-          <widget class="QWidget" name="tab_5">
-           <attribute name="title">
-            <string>交易配置</string>
-           </attribute>
-           <layout class="QHBoxLayout" name="horizontalLayout_5">
-            <item>
-             <layout class="QVBoxLayout" name="vl_trade"/>
-            </item>
-           </layout>
-          </widget>
-          <widget class="QWidget" name="tab_6">
-           <attribute name="title">
-            <string>风控模型</string>
-           </attribute>
-          </widget>
-          <widget class="QWidget" name="tab">
-           <attribute name="title">
-            <string>回测配置</string>
-           </attribute>
-           <layout class="QVBoxLayout" name="verticalLayout_4">
-            <item>
-             <layout class="QVBoxLayout" name="vl_basic"/>
-            </item>
-           </layout>
-          </widget>
-         </widget>
-        </item>
-        <item>
          <widget class="QWidget" name="widget_2" native="true">
-          <property name="minimumSize">
-           <size>
-            <width>0</width>
-            <height>200</height>
-           </size>
-          </property>
           <layout class="QHBoxLayout" name="horizontalLayout_2">
            <item>
-            <layout class="QVBoxLayout" name="vl_results"/>
+            <layout class="QVBoxLayout" name="vl_top_left" stretch=""/>
+           </item>
+           <item>
+            <layout class="QVBoxLayout" name="vl_top_right"/>
            </item>
           </layout>
          </widget>
+        </item>
+        <item>
+         <layout class="QVBoxLayout" name="vl_results"/>
         </item>
        </layout>
       </widget>
@@ -165,7 +117,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>1079</width>
+     <width>666</width>
      <height>23</height>
     </rect>
    </property>

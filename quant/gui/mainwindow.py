@@ -5,7 +5,7 @@ from PyQt5.uic import loadUi
 from .forms.formsetting import FormSetting
 from .frames.frameresult import FrameResult
 from .frames.framebacktest import FrameBacktest
-from .frames.framestocks import FrameStocks
+from .frames.framestrategies import FrameStrategies
 from .frames.frametrade import FrameTrade
 import os
 import pandas as pd
@@ -30,7 +30,7 @@ class MainWindow(QtWidgets.QMainWindow):
         self.init_base_info()
         #self.init_menu()
         self.init_toolbar()
-        self.init_frames()
+        #self.init_frames()
 
 
 
@@ -42,16 +42,24 @@ class MainWindow(QtWidgets.QMainWindow):
         self.view.setEnabled(True)
         self.view.setUrl(QtCore.QUrl("http://www.ailabx.com"))
 
-    def init_frames(self):
-        frame_bkt = FrameBacktest(logic=self.mgr)
-        self.vl_basic.addWidget(frame_bkt)
 
 
         frame = FrameResult(logic=self.mgr)
         self.vl_results.addWidget(frame)
 
-        frame_stocks = FrameStocks(logic=self.mgr)
-        self.vl_stocks.addWidget(frame_stocks)
+        frame_bkt = FrameBacktest(logic=self.mgr)
+        self.vl_top_left.addWidget(frame_bkt)
+
+        frame_stras = FrameStrategies(logic=self.mgr)
+        self.vl_top_right.addWidget(frame_stras)
+
+    def init_frames(self):
+
+
+
+
+
+
 
         frame_trade = FrameTrade(logic=self.mgr)
         self.vl_trade.addWidget(frame_trade)

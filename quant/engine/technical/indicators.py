@@ -5,7 +5,7 @@ def rolling_max(se,n):
     return max_n
 
 def rolling_min(se,n):
-    min_n = se.rolling(n).min
+    min_n = se.rolling(n).min()
     return min_n
 
 def ma(se,n):
