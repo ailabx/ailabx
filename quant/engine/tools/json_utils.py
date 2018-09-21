@@ -12,20 +12,32 @@ params = [
      }
 ]
 
+
+
+json_str = json.dumps(params[0], sort_keys=True,ensure_ascii=False, indent=4, separators=(',', ':'))
+print('json_str:=========',json_str)
+
+
+str2 = '''
+{
+    "job_id":"AAAAA-ZZZZZ",
+    "name":"人生何其短",
+    "rules":[
+        "rule1",
+        "rule2"
+    ]
+}
+'''
+ret = json.loads(str2)
+print(type(ret),ret)
+
 with open('strategies.json', 'w') as f:
     '''写入json文件'''
     json.dump(params, f)
 
-    print("写入json文件：", params)
-
-with open('yaml.config','w') as f:
-    yaml.dump(params,f)
 
 with open('strategies.json') as f:
     '''读取json文件'''
-    numbers = json.load(f)  # 返回列表数据，也支持字典
-    print("读取json文件：", numbers)
+    datas = json.load(f)  # 返回列表数据，也支持字典
+    print("读取json文件：", type(datas),datas)
 
-with open('yaml.config') as f:
-    params = yaml.load(f)
-    print(params)

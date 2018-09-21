@@ -12,12 +12,28 @@ from ..engine.backtest import Backtest,BacktestRunner
 from ..engine.consts import ShowTypes
 from datetime import datetime
 import traceback
+import yaml
 
 from ..engine.consts import *
 
 class JobMgr(object):
-    def __init__(self):
-        self.stras = self.get_stras()
+    def __init__(self,logic):
+        self.logic = logic
+
+        self.file = os.path.dirname(os.path.abspath(__file__)) + '/config/stras.yaml'
+        if os.path.exists(self.file):
+            with open(self.file) as f:
+                self.stras = yaml.load(f)
+        else:
+            self.stras = self.get_raw_stras()
+            self.dump_to_file(self.stras)
+
+        self.logic.signal.emit({'event_type':EventType.on_stras_changed})
+
+    def dump_to_file(self,stras):
+        with open(self.file,'w') as f:
+            yaml.dump(stras,f)
+        self.logic.signal.emit({'event_type': EventType.on_stras_changed})
 
     def get_stra_by_id(self,id):
         for stra in self.stras:
@@ -25,12 +41,26 @@ class JobMgr(object):
                 return stra
         return None
 
-    def get_stras(self):
+    def remove_stra(self,id):
+        stra = self.get_stra_by_id(id)
+        if stra:
+            self.stras.remove(stra)
+        self.dump_to_file(self.stras)
+
+    def update_sert_stra(self,stra):
+        if self.get_stra_by_id(stra['job_id']) is not None:
+            self.remove_stra(stra['job_id'])
+        self.stras.append(stra)
+        self.dump_to_file(self.stras)
+        return True
+
+    def get_raw_stras(self):
         self.stras = [{
             'job_id': '1',
             'name': '海龟策略',
             'desc': '海龟策略',
             'pick_symbols': {
+                'market':ShowTypes.market_us,
                 'type': ShowTypes.pick_symbol_fixed,
                 'universe': ['AAPL', 'AMZN']
             },
@@ -46,6 +76,7 @@ class JobMgr(object):
                 'name': '均线突破',
                 'desc': '均线突破',
                 'pick_symbols': {
+                    'market':ShowTypes.market_btc,
                     'type': ShowTypes.pick_symbol_fixed,
                     'universe': ['AAPL', 'AMZN']
                 },
@@ -65,7 +96,7 @@ class LogicMgr(QThread):
 
     def __init__(self):
         super().__init__()
-        self.jobmgr = JobMgr()
+        self.jobmgr = JobMgr(self)
 
     def __prepare_data(self,params):
         start_dt = datetime.strptime(params['start'], '%Y-%m-%d')

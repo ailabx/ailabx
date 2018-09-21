@@ -4,6 +4,7 @@ from PyQt5.QtCore import Qt
 import os
 from PyQt5.uic import loadUi
 from ...engine.common.logging_utils import logger
+from ...engine.consts import EventType
 import traceback
 
 class FrameStrategies(QtWidgets.QWidget):
@@ -22,13 +23,52 @@ class FrameStrategies(QtWidgets.QWidget):
 
         #初始化数据
 
-        stras = logic.jobmgr.get_stras()
-        for stra in stras:
-            item = QtWidgets.QListWidgetItem(stra['name'])
-            item.setData(Qt.UserRole,stras)
-            self.lv_stras.addItem(item)
+
 
         self.btn_backtest.clicked.connect(self.backtest)
+        self.btn_remove.clicked.connect(self.remove)
+        self.btn_modify.clicked.connect(self.modify)
+
+        self.load_stras()
+
+    def modify(self):
+        pass
+
+    def load_stras(self):
+        self.lv_stras.clear()
+        #self.lv_stras.items.clear()
+        #count = self.lv_stras.count()
+        #for i in range(0,count):
+        #    item = self.lv_stras.takeItem(i)
+        #    del item
+
+        stras = self.mgr.jobmgr.stras
+        for stra in stras:
+            item = QtWidgets.QListWidgetItem(stra['name'])
+            item.setData(Qt.UserRole, stra)
+            self.lv_stras.addItem(item)
+
+    def remove(self):
+        items = self.lv_stras.selectedItems()
+        if len(items) == 0:
+            reply = QMessageBox.information(self,  # 使用infomation信息框
+                                            "提示",
+                                            '请至少选择一个策略！')
+            return
+        else:
+            reply = QMessageBox.information(self,  # 使用infomation信息框
+                                            "提示",
+                                            '确认要删除{}个策略！'.format(len(items)),QMessageBox.Yes|QMessageBox.No)
+
+            if reply == QMessageBox.No:
+                return
+
+        for item in items:
+            try:
+                stra = item.data(Qt.UserRole)
+                self.mgr.jobmgr.remove_stra(stra['job_id'])
+            except:
+                traceback.print_exc()
 
     def backtest(self):
         items = self.lv_stras.selectedItems()
@@ -63,4 +103,7 @@ class FrameStrategies(QtWidgets.QWidget):
         logger.info(symbols)
 
     def on_events(self,data):
-        pass
+        if data:
+            event = data['event_type']
+            if event == EventType.on_stras_changed:
+                self.load_stras()

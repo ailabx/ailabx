@@ -54,7 +54,7 @@
           <string>新增策略</string>
          </property>
         </widget>
-        <widget class="QPushButton" name="pushButton_2">
+        <widget class="QPushButton" name="btn_remove">
          <property name="geometry">
           <rect>
            <x>0</x>
@@ -67,7 +67,7 @@
           <string>删除策略</string>
          </property>
         </widget>
-        <widget class="QPushButton" name="pushButton_3">
+        <widget class="QPushButton" name="btn_modify">
          <property name="geometry">
           <rect>
            <x>0</x>
