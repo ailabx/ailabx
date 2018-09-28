@@ -43,8 +43,8 @@ if __name__ == '__main__':
     run_in_thread(rpc_run)
 
     print('starting flask')
-    #run_flask()
-    run_webui()
+    run_flask()
+    #run_webui()
 
 
 '''

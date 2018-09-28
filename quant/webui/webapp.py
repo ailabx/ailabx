@@ -7,21 +7,19 @@ import xmlrpc
 from tornado.wsgi import WSGIContainer
 from tornado.httpserver import HTTPServer
 from tornado.ioloop import IOLoop
-
+from flask import render_template
 
 app = Flask(__name__)
 #这一句是为了jsonify显示中文
 app.config['JSON_AS_ASCII'] = False
+#app.config['static_url_path']=''
 
 #解决cors问题一行代码
 CORS(app, supports_credentials=True)
 
 @app.route('/')
 def hello_world():
-    proxy = xmlrpc.client.ServerProxy('http://localhost:9000')
-    items = proxy.list('c:/')
-    str = '.'.join(items)
-    return 'Hello Flask 界面,会自动加载吗!，会，但要浏览器刷新，不要'+str
+    return render_template('index.html')
 
 @app.route('/echo/<message>')
 def echo(message):
