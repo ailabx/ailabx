@@ -12,19 +12,19 @@ class Algo(object):
         raise NotImplementedError("%s not implemented!" % self.name)
 
 from .common.logging_utils import logger
-class AlgoStack(Algo):
+class Strategy(object):
 
     def __init__(self, *algos):
-        super(AlgoStack, self).__init__()
+        super(Strategy, self).__init__()
         self.algos = algos
         self.check_run_always = any(hasattr(x, 'run_always')
                                     for x in self.algos)
 
-    def __call__(self, target):
+    def __call__(self, env):
         # normal runing mode
         if not self.check_run_always:
             for algo in self.algos:
-                if not algo(target):
+                if not algo(env):
                     return False
             return True
         # run mode when at least one algo has a run_always attribute
@@ -35,11 +35,11 @@ class AlgoStack(Algo):
             res = True
             for algo in self.algos:
                 if res:
-                    res = algo(target)
+                    res = algo(env)
                 elif hasattr(algo, 'run_always'):
                     if algo.run_always:
-                        algo(target)
-            return res
+                        algo(env)
+            return env['actions']
 
 class PrintDate(Algo):
 

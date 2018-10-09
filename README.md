@@ -17,5 +17,5 @@ AI量化实验室，专注将前沿人工智能技术(深度学习/强化学习/
 有任何问题或者建议，欢迎加入QQ群讨论：8430159，
 也可以关注微信公众号：ailabx。
 扫码进微信群：
-![image](https://note.youdao.com/yws/public/resource/067274b445e630e44bd81a0b6dd3b9cc/xmlnote/8919A3067D64473C8F0FAACB4D5F6A44/12736)
+![image](https://note.youdao.com/yws/public/resource/067274b445e630e44bd81a0b6dd3b9cc/xmlnote/4BE974FEF5D74F75963B90B8B3419C63/12816)
 

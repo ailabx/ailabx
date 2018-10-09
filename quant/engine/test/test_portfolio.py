@@ -2,38 +2,44 @@ import unittest
 import pandas as pd
 import datetime
 
-from quant.engine.portfolio import Broker,Strategy
+from quant.engine.portfolio import SymbolBroker,Portfolio
 from quant.engine.algos import PrintDate
 
-class TestBroker(unittest.TestCase):
-    def test_broker(self):
+class TestPortfolio(unittest.TestCase):
+    def __test_broker(self):
 
         data = pd.DataFrame(index=pd.date_range('2018-01-01',periods=10),columns=['AAPL','AMZN'],data=10)
-        broker = Broker(name='AAPL',prices=data['AAPL'])
+        broker = SymbolBroker(code='AAPL',prices=data['AAPL'])
 
         #测试初始化
-        #print(broker.df)
+        print(broker.df)
         self.assertEqual(len(broker.df['price']),10)
-        self.assertEqual(broker.name,'AAPL')
+        self.assertEqual(broker.code,'AAPL')
 
         #测试onbar
         broker.onbar()
         self.assertEqual(broker.now,datetime.datetime(2018,1,1))
-        broker.adjust(100)
+        cash,commission = broker.adjust_to_target_shares(10)
         self.assertEqual(broker.idx,0)
+        self.assertEqual(cash,-100)
+        self.assertEqual(commission,100*0.0008)
         self.assertEqual(broker.get_item('position'),10)
 
         #print(broker.df)
         broker.onbar()
-        broker.adjust(1000)
+        cash, commission = broker.adjust_to_target_shares(100)
         self.assertEqual(broker.idx,1)
+        self.assertEqual(cash, -900)
+        self.assertEqual(commission, 900 * 0.0008)
         self.assertEqual(broker.now, datetime.datetime(2018, 1, 2))
         self.assertEqual(broker.get_item('position'), 100)
         print(broker.df)
 
         broker.onbar()
-        broker.flat()
+        cash, commission = broker.flat()
         self.assertEqual(broker.get_item('position'), 0)
+        self.assertEqual(cash, 1000)
+        self.assertEqual(commission, 1000 * 0.0008)
         self.assertEqual(broker.get_item('commission'), 100*broker.get_item('price')*0.0008)
         print(broker.df)
 
@@ -41,18 +47,22 @@ class TestBroker(unittest.TestCase):
         broker.df['trade'] = broker.df['position'] - broker.df['position'].shift(1).fillna(0)
         print(broker.df)
 
-    def test_brokers(self):
+    def test_portfolio(self):
         data = pd.DataFrame(index=pd.date_range('2018-01-01', periods=10), columns=['AAPL', 'AMZN'], data=10)
-        s = Strategy(data=data,algos=[PrintDate()])
+        s = Portfolio(data=data)
         self.assertEqual(len(s.brokers),2)
 
-        s.onbar()
-        s.onbar()
-        s.rebalance({'AAPL':0.5,'AMZN':0.5})
-        s.onbar()
-        #print(s.df)
-        #for symbol,broker in s.brokers.items():
-            #print(broker.df)
+        s.step()
+        s.step()
+        s.step({'AAPL':10,'AMZN':10})
+        s.step()
+        done = False
+        while not done:
+            done = s.step()
+
+        df,all = s.statistics()
+        print(df)
+        print(all)
 
     def __test_calc_returns(self):
         data = pd.DataFrame(index=pd.date_range('2018-01-01', periods=5), columns=['AAPL', 'AMZN'], data=10)
