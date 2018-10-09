@@ -2,12 +2,42 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e966dac8-e1c8-4be5-8017-00e400b3b447" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
-      <change beforePath="$PROJECT_DIR$/quant/engine/algos.py" afterPath="$PROJECT_DIR$/quant/engine/algos.py" />
-      <change beforePath="$PROJECT_DIR$/quant/engine/portfolio.py" afterPath="$PROJECT_DIR$/quant/engine/portfolio.py" />
-      <change beforePath="$PROJECT_DIR$/quant/engine/test/TsingTao.csv" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/quant/engine/test/test_broker.py" afterPath="$PROJECT_DIR$/quant/engine/test/test_portfolio.py" />
+      <change beforePath="$PROJECT_DIR$/quant/gui/__init__.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/quant/gui/config/stras.yaml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/quant/gui/forms/__init__.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/quant/gui/forms/formsetting.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/quant/gui/frames/__init__.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/quant/gui/frames/frame_stra_config.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/quant/gui/frames/framebacktest.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/quant/gui/frames/frameresult.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/quant/gui/frames/framestocks.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/quant/gui/frames/framestrategies.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/quant/gui/frames/frametrade.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/quant/gui/gui_logic.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/quant/gui/mainwindow.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/quant/gui/models/__init__.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/quant/gui/models/ai_treeview.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/quant/gui/models/table_models.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/quant/gui/tests/__init__.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/quant/gui/tests/test_ai_treeview.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/quant/gui/tests/test_frame_backtest.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/quant/gui/tests/test_frame_strategies.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/quant/gui/tests/test_frame_trade.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/quant/gui/tests/test_gui_thread.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/quant/gui/tests/test_jobmgr.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/quant/gui/tests/test_logicmgr.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/quant/gui/tests/test_mainwindow.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/quant/gui/tests/test_results.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/quant/gui/ui/backtest_config.ui" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/quant/gui/ui/mainwindow.ui" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/quant/gui/ui/results.ui" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/quant/gui/ui/rule.ui" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/quant/gui/ui/rules.ui" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/quant/gui/ui/stocks.ui" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/quant/gui/ui/stra.ui" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/quant/gui/ui/strategies.ui" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/quant/gui/ui/style.qss" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/quant/gui/ui/trade_rules.ui" afterPath="" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -101,7 +131,7 @@
       <file leaf-file-name="backtest.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/quant/engine/backtest.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2006">
+            <state relative-caret-position="0">
               <caret line="286" column="17" lean-forward="false" selection-start-line="286" selection-start-column="17" selection-end-line="286" selection-end-column="17" />
               <folding>
                 <element signature="e#0#27#0" expanded="true" />
@@ -117,7 +147,7 @@
         <entry file="file://$PROJECT_DIR$/quant/engine/portfolio.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="353">
-              <caret line="171" column="0" lean-forward="true" selection-start-line="171" selection-start-column="0" selection-end-line="171" selection-end-column="0" />
+              <caret line="171" column="0" lean-forward="false" selection-start-line="171" selection-start-column="0" selection-end-line="171" selection-end-column="0" />
               <folding>
                 <element signature="e#199#218#0" expanded="true" />
                 <element signature="e#334#1138#0" expanded="false" />
@@ -135,7 +165,7 @@
         <entry file="file://$PROJECT_DIR$/quant/engine/test/test_backtest.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="289">
-              <caret line="63" column="0" lean-forward="true" selection-start-line="63" selection-start-column="0" selection-end-line="63" selection-end-column="0" />
+              <caret line="63" column="0" lean-forward="false" selection-start-line="63" selection-start-column="0" selection-end-line="63" selection-end-column="0" />
               <folding>
                 <element signature="e#786#2133#0" expanded="false" />
               </folding>
@@ -159,7 +189,7 @@
         <entry file="file://$PROJECT_DIR$/quant/engine/trading_env.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="145">
-              <caret line="23" column="36" lean-forward="true" selection-start-line="23" selection-start-column="36" selection-end-line="23" selection-end-column="36" />
+              <caret line="23" column="36" lean-forward="false" selection-start-line="23" selection-start-column="36" selection-end-line="23" selection-end-column="36" />
               <folding />
             </state>
           </provider>
@@ -173,16 +203,6 @@
               <folding>
                 <element signature="e#0#15#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="mainwindow.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/quant/gui/mainwindow.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="578">
-              <caret line="50" column="25" lean-forward="false" selection-start-line="50" selection-start-column="25" selection-end-line="50" selection-end-column="25" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -207,11 +227,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="algos.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="algos.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/quant/engine/algos.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="298">
-              <caret line="118" column="41" lean-forward="true" selection-start-line="118" selection-start-column="41" selection-end-line="118" selection-end-column="41" />
+            <state relative-caret-position="179">
+              <caret line="111" column="0" lean-forward="false" selection-start-line="111" selection-start-column="0" selection-end-line="111" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="requirements.txt" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/requirements.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="68">
+              <caret line="4" column="0" lean-forward="true" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -328,7 +358,7 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="2" />
     <option name="y" value="1" />
     <option name="width" value="798" />
@@ -363,20 +393,7 @@
             <path>
               <item name="ailabx" type="b2602c69:ProjectViewProjectNode" />
               <item name="ailabx" type="462c0819:PsiDirectoryNode" />
-              <item name="quant" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ailabx" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ailabx" type="462c0819:PsiDirectoryNode" />
-              <item name="quant" type="462c0819:PsiDirectoryNode" />
-              <item name="engine" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ailabx" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ailabx" type="462c0819:PsiDirectoryNode" />
-              <item name="quant" type="462c0819:PsiDirectoryNode" />
-              <item name="engine" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="ainlp" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -574,7 +591,7 @@
     </history-entry>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -730,13 +747,6 @@
     </watches-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/ainlp/data/datahandler.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ainlp/data/solrmgr.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
@@ -976,13 +986,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/requirements.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="0" lean-forward="true" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
@@ -1026,7 +1029,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/quant/engine/backtest.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2006">
+        <state relative-caret-position="0">
           <caret line="286" column="17" lean-forward="false" selection-start-line="286" selection-start-column="17" selection-end-line="286" selection-end-column="17" />
           <folding>
             <element signature="e#0#27#0" expanded="true" />
@@ -1050,7 +1053,7 @@
     <entry file="file://$PROJECT_DIR$/quant/engine/test/test_backtest.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
-          <caret line="63" column="0" lean-forward="true" selection-start-line="63" selection-start-column="0" selection-end-line="63" selection-end-column="0" />
+          <caret line="63" column="0" lean-forward="false" selection-start-line="63" selection-start-column="0" selection-end-line="63" selection-end-column="0" />
           <folding>
             <element signature="e#786#2133#0" expanded="false" />
           </folding>
@@ -1070,7 +1073,7 @@
     <entry file="file://$PROJECT_DIR$/quant/engine/portfolio.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="353">
-          <caret line="171" column="0" lean-forward="true" selection-start-line="171" selection-start-column="0" selection-end-line="171" selection-end-column="0" />
+          <caret line="171" column="0" lean-forward="false" selection-start-line="171" selection-start-column="0" selection-end-line="171" selection-end-column="0" />
           <folding>
             <element signature="e#199#218#0" expanded="true" />
             <element signature="e#334#1138#0" expanded="false" />
@@ -1086,15 +1089,31 @@
     <entry file="file://$PROJECT_DIR$/quant/engine/trading_env.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="145">
-          <caret line="23" column="36" lean-forward="true" selection-start-line="23" selection-start-column="36" selection-end-line="23" selection-end-column="36" />
+          <caret line="23" column="36" lean-forward="false" selection-start-line="23" selection-start-column="36" selection-end-line="23" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/quant/gui/forms/formsetting.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/quant/engine/algos.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="298">
-          <caret line="118" column="41" lean-forward="true" selection-start-line="118" selection-start-column="41" selection-end-line="118" selection-end-column="41" />
+        <state relative-caret-position="179">
+          <caret line="111" column="0" lean-forward="false" selection-start-line="111" selection-start-column="0" selection-end-line="111" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/requirements.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="0" lean-forward="true" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
           <folding />
         </state>
       </provider>
