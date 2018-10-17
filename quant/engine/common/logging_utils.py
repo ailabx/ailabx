@@ -1,6 +1,6 @@
 import logging,sys
 from logging import Handler
-from ..consts import EventType
+
 class LogHandler(Handler):
     def __init__(self, func = None):
         Handler.__init__(self)
@@ -41,7 +41,8 @@ class LoggerUtils(object):
 
     def onmsg(self,msg):
         if self.signal:
-            self.signal.emit({'event_type':EventType.onmessage,'msg':msg})
+            pass
+            #self.signal.emit({'event_type':EventType.onmessage,'msg':msg})
 
 logger_utils = LoggerUtils()
 logger = logger_utils.logger

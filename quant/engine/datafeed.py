@@ -1,193 +1,87 @@
-from .common.mongo_utils import mongo
-import pandas as pd
-import re
-import talib
-import numpy as np
-import requests
-import json
-from datetime import datetime
-from .feature_parser import FeatureCalc
-import datetime as dt
+'''
+@author: 魏佳斌
+@license: (C) Copyright 2018-2025, ailabx.com.
 
+@contact: 86820609@qq.com
+@file: datafeed.py
+@time: 2018-10-17 10:50
+@desc: 实现交易数据获取，这里考虑最简化用户环境，暂不使用数据库，直接按年保存至本地csv。
+
+'''
 from .common.logging_utils import logger
+import os
+import pandas as pd
+import datetime
+from .common import csv_utils
+
+def download_csv(sourceCode, tableCode, begin, end, frequency, authToken):
+    url = "http://www.quandl.com/api/v1/datasets/%s/%s.csv" % (sourceCode, tableCode)
+    params = {
+        "trim_start": begin.strftime("%Y-%m-%d"),
+        "trim_end": end.strftime("%Y-%m-%d"),
+        "collapse": frequency
+    }
+    if authToken is not None:
+        params["auth_token"] = authToken
+
+    return csv_utils.download_csv(url, params)
+
+def download_daily_bars(sourceCode, tableCode, year, csvFile, authToken=None):
+    """Download daily bars from Quandl for a given year.
+
+    :param sourceCode: The dataset's source code.
+    :type sourceCode: string.
+    :param tableCode: The dataset's table code.
+    :type tableCode: string.
+    :param year: The year.
+    :type year: int.
+    :param csvFile: The path to the CSV file to write.
+    :type csvFile: string.
+    :param authToken: Optional. An authentication token needed if you're doing more than 50 calls per day.
+    :type authToken: string.
+    """
+
+    bars = download_csv(sourceCode, tableCode, datetime.date(year, 1, 1), datetime.date(year, 12, 31), "daily", authToken)
+    f = open(csvFile, "w")
+    f.write(bars)
+    f.close()
+
 
 
 
 class DataFeed(object):
-    def __init__(self):
-        self.idx = 0
-        self.calc = FeatureCalc()
+    def __init__(self,data_path,source='quandl'):
+        self.data_path = data_path
+        self.source = source
 
-    def get_benchmark_index(self):
-        return self.df_benchmark.index
+    def __fetch_data(self,code,year):
+        fileName = os.path.join(self.data_path, "%s-%d-quandl.csv" % (code, year))
+        if not os.path.exists(fileName):
+            logger.info("Downloading %d to %s" % (year, fileName))
+            if self.source == 'quandl':
+                self.__fetch_from_quanl(code,year,fileName)
 
-    def get_benchmark_return(self):
-        return self.df_benchmark['return']
-
-    #往前走一步，如果超过范围返回done
-    def step(self):
-
-        #==================
-        bars = {}
-        for instrument in self.all_dfs.keys():
-            bars[instrument] = self.all_dfs[instrument].iloc[self.idx]
-        self.idx += 1
-        done = self.idx >= len(self.all_dfs[self.benchmark])
-        return bars, done
-
-    def auto_label_actions(self,df,expr):
-        df['action'] = 1
+        df = pd.read_csv(fileName).copy()
+        df.index = df['Date']
         return df
 
-    def auto_label(self,df,hold_days=5):
-        return_hold = 'return_hold'
-        df[return_hold] = (df['close'].shift(-hold_days) / df['close'] - 1)
+    def __fetch_from_quanl(self,code,year,file_name,authToken=None):
+        download_daily_bars('WIKI', code, year, file_name, authToken)
 
-        label_name = return_hold
-        df = df.dropna(axis=0, how='any', thresh=None)
-        df['label'] = df[return_hold]*100 + 10 #[0,20]
-        df['label'] = df['label'].apply(lambda x:int(x))
-        return df
+    def download_or_get_data(self,codes,from_year,to_year,authToken=None):
+        #目录是否存在，如果不存在，则创建
+        if not os.path.exists(self.data_path):
+            logger.info("Creating %s directory" % (self.data_path))
+            os.mkdir(self.data_path)
 
-    def get_bars_by_date(self,date,code=None):
-        if code is not None:
-            df = self.groups_by_date[date]
-            return df[df['code']==code]
-        else:
-            return self.groups_by_date[date]
+        all = {}
+        for code in codes:
 
-    def get_bars_by_code(self,code):
-        return self.all_df[self.all_df['code'] == code]
+            all_code = []
+            for year in range(from_year, to_year + 1):
+                all_code.append(self.__fetch_data(code,year))
 
-    #通过url,json方式从服务器获取数据,并做好排序等预处理
-    def fetch_data(self,url):
-        json_data = requests.get(url).json()
-        if json_data['err_code'] != 0:
-            print('fetch_data出错:{}-{}'.format(url,json_data['msg']))
-            return None
+            df_code = pd.concat(all_code, axis=0)
+            all[code] = df_code.sort_index()
 
-        data = json.loads(json_data['data'])
-        df = pd.DataFrame(data)
-
-        if 'date' in df.columns:
-            df.index = df['date']
-            df.sort_index(inplace=True)
-
-        elif 'EndDate' in df.columns:
-            df.index = df['EndDate']
-            df.sort_index(inplace=True)
-        return df
-
-    def func_by_date(self,group):
-        #print(group)
-        if self.features:
-            group = self.calc.calc_by_eval(group,self.features,self.calc.extra_basic_features(self.features),rank_flag=True)
-        return group
-
-    def func_by_code_after_rank(self,group):
-        group = self.calc.calc_by_eval(group,self.features,self.calc.extra_basic_features(self.features))
-        return group
-
-    def func_by_code(self,group,args):
-        #print(group)
-        #这里按code分组了，直接使用date作为index，这样才可以reindex
-        group.index = group['date']
-        #考虑到停牌的情况，需要index reindex一样
-        if len(group) < len(self.df_benchmark):
-            print('有停牌数据...')
-            group = group.reindex(self.df_benchmark['date'],method='ffill')
-
-        #把基本面数据eps,bps取回来，整合进去
-        code = group['code'][0]
-        df_data = self.fundamentals(code,args[0],args[1])
-        df_data = df_data.reindex(group.index,method='ffill')
-        group = group.join(df_data)
-        #print('join之后',group)
-
-        #计算pe/pb
-        group['pe']=group['close']/group['EPS']
-        group['pb'] = group['close']/group['NAPS']
-
-        # 计算其他特征，比如amount_5,close_10
-        if self.features:
-            group = self.calc.calc_basic_features(group,self.features)
-
-        #group = self.auto_label(group,hold_days=5)
-
-        #各组的index要不同，所以加上code
-        group.index = group['date'] + '_' + group['code']
-        #print(group)
-        return group
-
-    def load_benchmark(self,code,start_date, end_date):
-        # 加载benchmark
-        url = 'http://ailabx.com/kensho/quotes?code={}&start={}&end={}&index=true'.format(
-            code,
-            start_date.strftime('%Y%m%d'),
-            end_date.strftime('%Y%m%d')
-        )
-        df_benchmark = self.fetch_data(url)
-        df_benchmark['return'] = df_benchmark['close']/df_benchmark['close'].shift(1) - 1
-        return df_benchmark
-
-    #加载所有instruments的数据,放在一个dataframe里
-    def load_datas(self,symbols,start_date, end_date,features=None, benchmark='000300'):
-        logger.info('加载数据:symbols:{},features:{},起始时间:{}-结束时间：{},benchmark:{}'.format(symbols,features,start_date.strftime('%Y%m%d'),end_date.strftime('%Y%m%d'),benchmark))
-        self.features = features
-        self.symbols = symbols
-
-        logger.info('开始加载benchmark数据:{}'.format(benchmark))
-        self.df_benchmark = self.load_benchmark(benchmark,start_date,end_date)
-        logger.info('完成加载benchmark数据')
-
-        codes = ','.join(symbols)
-        url = 'http://ailabx.com/kensho/quotes?code={}&start={}&end={}'.format(
-            codes,
-            start_date.strftime('%Y%m%d'),
-            end_date.strftime('%Y%m%d')
-        )
-
-        df = self.fetch_data(url)
-        # todo :
-        #这里可以分批——按code每次100支，即100*3年*252=7条左右获取，然后append在一起再运算
-        #本地缓存，直接使用hdf5
-        df.reset_index(drop=True,inplace=True)
-        df = df.groupby(df['code']).apply(self.func_by_code,[start_date,end_date])
-        df.reset_index(drop=True,inplace=True)
-        df.index = df['date']+'_'+df['code']
-
-        df.reset_index(drop=True, inplace=True)
-        df = df.groupby(df['date'],as_index=False).apply(self.func_by_date)
-        df = df.groupby(df['code'],as_index=False).apply(self.func_by_code_after_rank)
-        df.index = df['date']
-        df.sort_index(inplace=True)
-
-        self.all_df = df
-        self.groups_by_date = dict(list(df.groupby(df['date'])))
-        self.groups_by_code = dict(list(df.groupby(df['code'])))
-        logger.info('数据加载完成。')
-        return df
-
-    def instruments(self,start_date,end_date):
-        url = 'http://www.ailabx.com/kensho/instruments?&start={}&end={}'.format(
-            start_date.strftime('%Y%m%d'),
-            end_date.strftime('%Y%m%d')
-        )
-
-        json_data = requests.get(url).json()
-        data = json.loads(json_data['data'])
-        df = pd.DataFrame(data)
-        return list(df['code'])
-
-    def fundamentals(self,code,start_date,end_date):
-        start_date -= dt.timedelta(days=90)
-        url = 'http://www.ailabx.com/kensho/maindata?code={}&start={}&end={}'.format(
-            code,
-            start_date.strftime('%Y%m%d'),
-            end_date.strftime('%Y%m%d')
-        )
-        df = self.fetch_data(url)
-        del df['code'],df['EndDate']
-        return df
-
-D = DataFeed()
+        return all

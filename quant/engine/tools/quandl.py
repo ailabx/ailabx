@@ -4,38 +4,7 @@ import datetime,os
 import pandas as pd
 from ..common.logging_utils import logger
 # http://www.quandl.com/help/api
-
-def download_csv(sourceCode, tableCode, begin, end, frequency, authToken):
-    url = "http://www.quandl.com/api/v1/datasets/%s/%s.csv" % (sourceCode, tableCode)
-    params = {
-        "trim_start": begin.strftime("%Y-%m-%d"),
-        "trim_end": end.strftime("%Y-%m-%d"),
-        "collapse": frequency
-    }
-    if authToken is not None:
-        params["auth_token"] = authToken
-
-    return csv_utils.download_csv(url, params)
-
-def download_daily_bars(sourceCode, tableCode, year, csvFile, authToken=None):
-    """Download daily bars from Quandl for a given year.
-
-    :param sourceCode: The dataset's source code.
-    :type sourceCode: string.
-    :param tableCode: The dataset's table code.
-    :type tableCode: string.
-    :param year: The year.
-    :type year: int.
-    :param csvFile: The path to the CSV file to write.
-    :type csvFile: string.
-    :param authToken: Optional. An authentication token needed if you're doing more than 50 calls per day.
-    :type authToken: string.
-    """
-
-    bars = download_csv(sourceCode, tableCode, datetime.date(year, 1, 1), datetime.date(year, 12, 31), "daily", authToken)
-    f = open(csvFile, "w")
-    f.write(bars)
-    f.close()
+from ..common import csv_utils
 
 
 def download_weekly_bars(sourceCode, tableCode, year, csvFile, authToken=None):

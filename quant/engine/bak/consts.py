@@ -31,10 +31,9 @@ pick_symbol_types = {
 }
 
 alloc_funds_types = {
-    ShowTypes.alloc_funds_cash_equally:'可用资金平均分配'
-}
+    ShowTypes.alloc_funds_cash_equally:'可用资金平均分配',
 
-market_types={
+
     ShowTypes.market_us:'美股',
     ShowTypes.market_cn:'A股',
     ShowTypes.market_btc:'比特币'

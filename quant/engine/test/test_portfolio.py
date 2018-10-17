@@ -48,13 +48,14 @@ class TestPortfolio(unittest.TestCase):
         print(broker.df)
 
     def test_portfolio(self):
-        data = pd.DataFrame(index=pd.date_range('2018-01-01', periods=10), columns=['AAPL', 'AMZN'], data=10)
+        data = pd.DataFrame(index=pd.date_range('2018-01-01', periods=10),
+                            columns=['AAPL', 'AMZN'], data=10)
         s = Portfolio(data=data)
         self.assertEqual(len(s.brokers),2)
 
-        s.step()
-        s.step()
         s.step({'AAPL':10,'AMZN':10})
+        s.step()
+        s.step()
         s.step()
         done = False
         while not done:
@@ -63,23 +64,6 @@ class TestPortfolio(unittest.TestCase):
         df,all = s.statistics()
         print(df)
         print(all)
-
-    def __test_calc_returns(self):
-        data = pd.DataFrame(index=pd.date_range('2018-01-01', periods=5), columns=['AAPL', 'AMZN'], data=10)
-        s = Strategy(data=data, algos=[PrintDate()])
-        s.df['total'] = [10.1,11.3,12.7,13.6,15.8]
-
-        returns = s.get_returns()
-        print(returns)
-        self.assertEqual(15.8/13.6-1,returns[-1])
-
-    def __test_get_reports(self):
-        data = pd.DataFrame(index=pd.date_range('2018-01-01', periods=5), columns=['AAPL', 'AMZN'], data=10)
-        s = Strategy(data=data, algos=[PrintDate()])
-        s.df['total'] = [10.1, 11.3, 12.7, 13.6, 15.8]
-
-        reports = s.get_reports()
-        print(reports)
 
 
 
