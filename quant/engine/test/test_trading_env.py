@@ -8,8 +8,21 @@
 @desc:
 
 '''
-import unittest
+import unittest,os
 from quant.engine.trading_env import TradingEnv
+from quant.engine.datafeed import DataFeed
+from quant.engine.algos import *
+
 class TestTradingEnv(unittest.TestCase):
     def test_run_step(self):
-        env = TradingEnv()
+        path = os.path.abspath(os.path.join(os.getcwd(), "../../data"))
+        feed = DataFeed(data_path=path)
+        feed.download_or_get_data(['AAPL', 'AMZN'], 2006, 2006)
+        env = TradingEnv(feed)
+        buy_and_hold = Strategy([
+            RunOnce(),
+            PrintBar(),
+            SelectAll(),
+            WeighEqually(),
+        ])
+        env.run_strategy(strategy=buy_and_hold)

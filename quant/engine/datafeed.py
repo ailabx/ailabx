@@ -48,7 +48,6 @@ def download_daily_bars(sourceCode, tableCode, year, csvFile, authToken=None):
 
 
 
-
 class DataFeed(object):
     def __init__(self,data_path,source='quandl'):
         self.data_path = data_path
@@ -84,4 +83,15 @@ class DataFeed(object):
             df_code = pd.concat(all_code, axis=0)
             all[code] = df_code.sort_index()
 
+        self.data = all
+        return all
+
+    def get_close_from_feed(self):
+        all_close = []
+        for code in self.data.keys():
+            se = self.data[code]['Adj. Close']
+            se.name = code
+            all_close.append(se)
+
+        all = pd.concat(all_close, axis=1)
         return all

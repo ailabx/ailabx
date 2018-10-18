@@ -1,3 +1,9 @@
+from .common.logging_utils import logger
+
+'''
+算法基类，是一个可以复用的功能单元。
+代码很简单，只一个name属性，以及一个需要子类实现的功能__call__。
+'''
 class Algo(object):
     def __init__(self, name=None):
         self._name = name
@@ -9,13 +15,11 @@ class Algo(object):
         return self._name
 
     def __call__(self, target):
-        raise NotImplementedError("%s not implemented!" % self.name)
+        raise NotImplementedError("%s 没有实现!" % self.name)
 
-from .common.logging_utils import logger
 class Strategy(object):
 
-    def __init__(self, *algos):
-        super(Strategy, self).__init__()
+    def __init__(self, algos):
         self.algos = algos
         self.check_run_always = any(hasattr(x, 'run_always')
                                     for x in self.algos)
@@ -39,12 +43,10 @@ class Strategy(object):
                 elif hasattr(algo, 'run_always'):
                     if algo.run_always:
                         algo(env)
-            return env['actions']
 
-class PrintDate(Algo):
-
-    def __call__(self, target):
-        logger.info('当前idx:{}'.format(target.idx))
+class PrintBar(Algo):
+    def __call__(self, env):
+        logger.info('当前索引：{}，当前日期:{}'.format(env.context['idx'],env.context['now']))
         return True
 
 class RunOnce(Algo):
@@ -64,12 +66,11 @@ class RunOnce(Algo):
 
 
 class SelectAll(Algo):
-    def __init__(self, include_no_data=False):
+    def __init__(self):
         super(SelectAll, self).__init__()
-        self.include_no_data = include_no_data
 
-    def __call__(self, target,direction='LONG'):
-        target.context[direction] = target.context['universe']
+    def __call__(self, env,direction='LONG'):
+        env.context[direction] = env.context['universe']
         return True
 
 class SelectWhere(Algo):

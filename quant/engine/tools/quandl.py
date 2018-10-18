@@ -123,13 +123,5 @@ def build_feed(sourceCode, tableCodes, fromYear, toYear, storage, frequency='DAY
     return all
 
 
-def get_close_from_feed(feed):
-    all_close = []
-    for code in feed.keys():
-        se = feed[code]['Adj. Close']
-        se.name = code
-        all_close.append(se)
 
-    all = pd.concat(all_close,axis=1)
-    return all
 

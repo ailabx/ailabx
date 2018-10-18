@@ -24,8 +24,12 @@ class BrokerBase(object):
         if self.idx is None:
             self.idx = 0
         else:
+            if self.idx >= (len(self.df) - 1):
+                return True
             self.idx += 1
+
         self.now = list(self.df.index)[self.idx]
+        return False
 
     def get_item(self,column,idx=None):
         '''
@@ -84,15 +88,26 @@ class SymbolBroker(BrokerBase):
     def flat(self):
         return self.adjust_to_target_shares(target_shares=0)
 
-    def adjust_to_target_shares(self,target_shares):
-        if target_shares < 0:
+
+    def long_cash(self,cash):
+        if cash <= 0:
+            logger.info('long_cash的现金需要>0')
+            return
+        price = self.get_item('price')
+        delta_pos = int(cash / price)
+        target_share = delta_pos + self.get_item('position')
+        return self.adjust_to_target_share(target_share=target_share)
+
+
+    def adjust_to_target_share(self,target_share):
+        if target_share < 0:
             return
 
         price = self.get_item('price')
-        delta_pos = target_shares - self.get_item('position')
+        delta_pos = target_share - self.get_item('position')
         commission = price * abs(delta_pos) * self.commission_rate
 
-        self.set_item('position',target_shares)
+        self.set_item('position',target_share)
         self.set_item('commission',commission)
 
         action = '买入' if delta_pos else '卖出'
@@ -132,22 +147,37 @@ class Portfolio(BrokerBase):
             self.set_item('cash', self.get_item('cash',idx=self.idx - 1))
             self.set_item('total', self.__calc_current_total())
 
-    def step(self,target_shares={}):
-        self.update_idx()
+    def update(self):
+        done = self.update_idx()
         for symbol, broker in self.brokers.items():
             broker.onbar()
         self.__update_datas()
-
-        self.__rebalance(target_shares)
-
-        #idx是先移动，所以要减1
-        done = self.idx >= (len(self.data) - 1)
         return done
 
-    def __rebalance(self,target_shares):
-        for symbol,share in target_shares.items():
+    def step(self,context):
+        # 先处理FLAT
+        if "FLAT" in context.keys():
+            flats = context['FLAT']
+            del context['FLAT']#处理完成要清掉，否则下次循环这个还在，strategy是没有变化
+            target_shares = {flat:0 for flat in flats}
+            if len(target_shares):
+                self.__handle_orders(target_shares,type_of_func='target_share')
+
+
+        if 'weights' in context.keys():
+            weights = context['weights']
+            del context['weights'] #处理完成要清掉，否则下次循环这个还在，strategy是没有变化
+            cash = self.get_item('cash') * 0.98
+            moneys = {symbol:cash*weight for symbol,weight in weights.items()}
+            self.__handle_orders(moneys,type_of_func='cash')
+
+    def __handle_orders(self,symbol_dict,type_of_func='target_share'):
+        for symbol,value in symbol_dict.items():
             if symbol in self.brokers.keys():
-                delta_cash, commission = self.brokers[symbol].adjust_to_target_shares(share)
+                func = self.brokers[symbol].adjust_to_target_share
+                if type_of_func == 'cash':
+                    func = self.brokers[symbol].long_cash
+                delta_cash, commission = func(value)
                 self.__update_cash_commission(delta_cash,commission)
 
     def __update_cash_commission(self,delta_cash,delta_commission):
