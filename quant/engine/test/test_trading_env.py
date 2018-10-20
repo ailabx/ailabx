@@ -13,16 +13,33 @@ from quant.engine.trading_env import TradingEnv
 from quant.engine.datafeed import DataFeed
 from quant.engine.algos import *
 
+
 class TestTradingEnv(unittest.TestCase):
     def test_run_step(self):
         path = os.path.abspath(os.path.join(os.getcwd(), "../../data"))
         feed = DataFeed(data_path=path)
-        feed.download_or_get_data(['AAPL', 'AMZN'], 2006, 2006)
-        env = TradingEnv(feed)
+        feed.download_or_get_data(['AAPL',], 2006, 2006)
+
         buy_and_hold = Strategy([
             RunOnce(),
             PrintBar(),
             SelectAll(),
             WeighEqually(),
         ])
-        env.run_strategy(strategy=buy_and_hold)
+
+        long_expr = 'cross_up(ma(close,5),ma(close,10))'
+        flat_expr = 'cross_down(ma(close,5),ma(close,10))'
+        ma_cross = Strategy([
+            SelectByExpr(long_expr=long_expr,flat_expr=flat_expr),
+            WeighEqually(),
+        ])
+
+        env_benchmark = TradingEnv(strategy=buy_and_hold,feed=feed)
+        env_benchmark.run_strategy()
+
+        print('回测结果：')
+        ret = env_benchmark.get_statistics()
+        print('收益率:{},年化收益率:{}'.format(ret['period_returns'],ret['annual_returns']))
+
+        env_benchmark.plot()
+

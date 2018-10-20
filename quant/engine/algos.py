@@ -1,4 +1,7 @@
 from .common.logging_utils import logger
+import pandas as pd
+from .technical.cross import *
+from .technical.indicators import *
 
 '''
 算法基类，是一个可以复用的功能单元。
@@ -14,7 +17,7 @@ class Algo(object):
             self._name = self.__class__.__name__
         return self._name
 
-    def __call__(self, target):
+    def __call__(self, context):
         raise NotImplementedError("%s 没有实现!" % self.name)
 
 class Strategy(object):
@@ -24,11 +27,11 @@ class Strategy(object):
         self.check_run_always = any(hasattr(x, 'run_always')
                                     for x in self.algos)
 
-    def __call__(self, env):
+    def __call__(self, context):
         # normal runing mode
         if not self.check_run_always:
             for algo in self.algos:
-                if not algo(env):
+                if not algo(context):
                     return False
             return True
         # run mode when at least one algo has a run_always attribute
@@ -39,14 +42,15 @@ class Strategy(object):
             res = True
             for algo in self.algos:
                 if res:
-                    res = algo(env)
+                    res = algo(context)
                 elif hasattr(algo, 'run_always'):
                     if algo.run_always:
-                        algo(env)
+                        algo(context)
 
 class PrintBar(Algo):
-    def __call__(self, env):
-        logger.info('当前索引：{}，当前日期:{}'.format(env.context['idx'],env.context['now']))
+    def __call__(self, context):
+        logger.info('当前索引：{}，当前日期:{}'.format(context['idx'],context['now']))
+        #print(env.context['bar'])
         return True
 
 class RunOnce(Algo):
@@ -54,7 +58,7 @@ class RunOnce(Algo):
         super(RunOnce, self).__init__()
         self.has_run = False
 
-    def __call__(self, target):
+    def __call__(self, context):
         # if it hasn't run then we will
         # run it and set flag
         if not self.has_run:
@@ -69,36 +73,48 @@ class SelectAll(Algo):
     def __init__(self):
         super(SelectAll, self).__init__()
 
-    def __call__(self, env,direction='LONG'):
-        env.context[direction] = env.context['universe']
+    def __call__(self,context,direction='LONG'):
+        context[direction] = context['universe']
+        return True
+
+class SelectByExpr(Algo):
+    def __init__(self,long_expr,flat_expr):
+        self.long_expr = long_expr
+        self.flat_expr = flat_expr
+        self.run_once = RunOnce()
+
+    def __call__(self, context):
+        if self.run_once(context) is True: #运行过了，会访问False表示不用继续，本算法返回True,continue
+            codes = context['universe']
+            all_close = context['all_close']
+            all_data = context['all_data']
+            # price_keys= ['open','high','low','close']
+            sig = pd.DataFrame(index=all_close.index, columns=all_close.columns)
+            for symbol in codes:
+                df = all_data[symbol]
+                close = df['Close']
+                high = df['High']
+                low = df['Low']
+                open = df['Open']
+
+                long_sig = eval(self.long_expr)  # eval('cross_up(ma(close,5),ma(close,10')
+                flat_sig = eval(self.flat_expr)  # eval('cross_down(ma(close,5),ma(close,10)')
+                sig[symbol] = long_sig + flat_sig
+                context['sig'] = sig
+            print(sig[sig>0])
+            return True
+
+        SelectWhere(signal=context['sig'])(context)
         return True
 
 class SelectWhere(Algo):
-
-    """
-    Selects securities based on an indicator DataFrame.
-
-    Selects securities where the value is True on the current date
-    (target.now) only if current date is present in signal DataFrame.
-
-    For example, this could be the result of a pandas boolean comparison such
-    as data > 100.
-
-    Args:
-        * signal (DataFrame): Boolean DataFrame containing selection logic.
-
-    Sets:
-        * selected
-
-    """
-
     def __init__(self, signal):
         self.signal = signal #df:['AAPL':[1,0,-1],'AMZN':[...]]
 
-    def __call__(self, target):
+    def __call__(self, context):
 
         #这里得到某一天的信号，是一个Series, index = ['AAPL'...]
-        day_signal = self.signal.loc[target.now]
+        day_signal = self.signal.loc[context['now']]
 
         #LONG or FLAT
         day_signal_long = day_signal[day_signal==1]
@@ -106,8 +122,8 @@ class SelectWhere(Algo):
 
         #按方向过滤完信号后，取索引就是证券代码列表
         selected = day_signal.index
-        target.context['LONG'] = list(day_signal_long.index)
-        target.context['FLAT'] = list(day_signal_flat.index)
+        context['LONG'] = list(day_signal_long.index)
+        context['FLAT'] = list(day_signal_flat.index)
 
         return True
 
@@ -115,47 +131,16 @@ class WeighEqually(Algo):
     def __init__(self):
         super(WeighEqually, self).__init__()
 
-    def __call__(self, target):
+    def __call__(self, context):
         #FLAT不用权重，这个列表里的都平仓，rebalance会自动处理
-        selected = target.context['LONG']
-        n = len(selected)
+        if 'LONG' in context.keys():
+            selected = context['LONG']
+            n = len(selected)
 
-        if n == 0:
-            target.context['weights'] = {}
-        else:
-            w = 1.0 / n
-            target.context['weights'] = {x: w for x in selected}
+            if n == 0:
+                context['weights'] = {}
+            else:
+                w = 1.0 / n
+                context['weights'] = {x: w for x in selected}
 
-        return True
-
-class Rebalance(Algo):
-
-    """
-    Rebalances capital based on temp['weights']
-
-    Rebalances capital based on temp['weights']. Also closes
-    positions if open but not in target_weights. This is typically
-    the last Algo called once the target weights have been set.
-
-    Requires:
-        * weights
-        * cash (optional): You can set a 'cash' value on temp. This should be a
-            number between 0-1 and determines the amount of cash to set aside.
-            For example, if cash=0.3, the strategy will allocate 70% of its
-            value to the provided weights, and the remaining 30% will be kept
-            in cash. If this value is not provided (default), the full value
-            of the strategy is allocated to securities.
-
-    """
-
-    def __init__(self):
-        super(Rebalance, self).__init__()
-
-    def __call__(self, target):
-        if 'weights' not in target.context:
-            return True
-
-        weights = target.context['weights']
-
-        target.rebalance(weights)
         return True

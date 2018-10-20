@@ -8,9 +8,20 @@ AI量化实验室，专注将前沿人工智能技术(深度学习/强化学习/
 自动化只是量化的初级阶段，基于机器学习、深度学习、强化学习等人工智能前沿工具，机器自动发现数据中的模式，并优化相应的策略，
 是这个我们这个平台的核心目标。
 
-![image](https://note.youdao.com/yws/public/resource/067274b445e630e44bd81a0b6dd3b9cc/xmlnote/0A4101FC497B40CC8CBBF87773835080/12693)
+### 开发环境
+anaconda python3.6
 
-![image](https://note.youdao.com/yws/public/resource/067274b445e630e44bd81a0b6dd3b9cc/xmlnote/EF56F8C164224FB59FAC682456D28177/12694)
+### “积木式”实现策略
+
+buy_and_hold = Strategy([
+    RunOnce(),
+    PrintBar(),
+    SelectAll(),
+    WeighEqually(),
+])
+
+![image](https://note.youdao.com/yws/public/resource/624f4972c4f89ff3aaa41a5251b17d9c/xmlnote/A0F19587F7E9460B99BE62D3833E1457/12848)
+
 
 ### 联系我们
 

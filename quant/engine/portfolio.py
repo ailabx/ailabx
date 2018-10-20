@@ -110,8 +110,11 @@ class SymbolBroker(BrokerBase):
         self.set_item('position',target_share)
         self.set_item('commission',commission)
 
-        action = '买入' if delta_pos else '卖出'
-        logger.info('{} - 以{}的价格，{}{}：{}股'.format(self.now,price, action,self.code, abs(delta_pos)))
+        if delta_pos == 0:
+            logger.info('有交易信号，仓位无变化')
+        else:
+            action = '买入' if delta_pos > 0 else '卖出'
+            logger.info('{} - 以{}的价格，{}{}：{}股'.format(self.now,price, action,self.code, abs(delta_pos)))
 
         # 这里有一个问题，就是cash可能不够，这就需要在Portfolio计算买入份额时检查。
         return -delta_pos*price,commission
