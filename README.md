@@ -27,6 +27,5 @@ buy_and_hold = Strategy([
 
 有任何问题或者建议，欢迎加入QQ群讨论：8430159，
 也可以关注微信公众号：ailabx。
-扫码进微信群：
-![image](https://note.youdao.com/yws/public/resource/067274b445e630e44bd81a0b6dd3b9cc/xmlnote/4BE974FEF5D74F75963B90B8B3419C63/12816)
-
+扫码进QQ群：
+![image](https://note.youdao.com/yws/public/resource/624f4972c4f89ff3aaa41a5251b17d9c/xmlnote/380B3A9148694EEC92510DF75B7AE23E/12854)
