@@ -49,7 +49,7 @@ anaconda python3.6
 
 
 也可以关注微信公众号：ailabx。
-![image](https://note.youdao.com/yws/public/resource/624f4972c4f89ff3aaa41a5251b17d9c/xmlnote/DB4760A822254E7D86872865DFF75119/12864)
+![image](https://note.youdao.com/yws/public/resource/624f4972c4f89ff3aaa41a5251b17d9c/xmlnote/E21A03876FCA476F8ED330062407C379/12867)
 有任何问题或者建议，欢迎加入QQ群讨论：8430159，
 扫码进QQ群：
 ![image](https://note.youdao.com/yws/public/resource/624f4972c4f89ff3aaa41a5251b17d9c/xmlnote/D05091011E854FACA0ADB25D03F61101/12859)
