@@ -22,7 +22,8 @@ class Algo(object):
 
 class Strategy(object):
 
-    def __init__(self, algos):
+    def __init__(self, algos,name=''):
+        self.name = name
         self.algos = algos
         self.check_run_always = any(hasattr(x, 'run_always')
                                     for x in self.algos)
@@ -101,7 +102,7 @@ class SelectByExpr(Algo):
                 flat_sig = eval(self.flat_expr)  # eval('cross_down(ma(close,5),ma(close,10)')
                 sig[symbol] = long_sig + flat_sig
                 context['sig'] = sig
-            print(sig[sig>0])
+            #print(sig[sig>0])
             return True
 
         SelectWhere(signal=context['sig'])(context)

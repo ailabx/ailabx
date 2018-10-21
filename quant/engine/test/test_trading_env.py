@@ -25,21 +25,28 @@ class TestTradingEnv(unittest.TestCase):
             PrintBar(),
             SelectAll(),
             WeighEqually(),
-        ])
+        ],name='买入并持有-基准策略')
 
         long_expr = 'cross_up(ma(close,5),ma(close,10))'
         flat_expr = 'cross_down(ma(close,5),ma(close,10))'
         ma_cross = Strategy([
             SelectByExpr(long_expr=long_expr,flat_expr=flat_expr),
             WeighEqually(),
-        ])
+        ],name='均线交叉策略')
 
         env_benchmark = TradingEnv(strategy=buy_and_hold,feed=feed)
         env_benchmark.run_strategy()
 
-        print('回测结果：')
-        ret = env_benchmark.get_statistics()
-        print('收益率:{},年化收益率:{}'.format(ret['period_returns'],ret['annual_returns']))
+        env = TradingEnv(strategy=ma_cross,feed=feed)
+        env.run_strategy()
 
-        env_benchmark.plot()
+        bench_stats = env_benchmark.get_statistics()
+        stra_stats = env.get_statistics()
+
+        stats = [bench_stats,stra_stats]
+
+        from quant.engine.trading_env import EnvUtils
+
+        utils =EnvUtils(stats=stats)
+        utils.show_stats()
 

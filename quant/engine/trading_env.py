@@ -12,6 +12,7 @@
 
 from .portfolio import Portfolio
 from .common.logging_utils import logger
+import pandas as pd
 
 class TradingEnv(object):
     def __init__(self,strategy,feed,init_cash=100000.0):
@@ -29,11 +30,29 @@ class TradingEnv(object):
         period_returns = df['equity'][-1] - 1
         num_years = self.context['len'] / 252
         annual_returns = (1 + period_returns) ** (1 / num_years) - 1
+
+        from empyrical import stats
+
+        returns = df['returns']
+        volatility = returns.std() * (252 ** 0.5)
+        sharpe = (returns.mean() / returns.std()) * (252 ** 0.5)
+
+        # 夏普比率
+        returns = returns.dropna()
+        #print(returns)
+        #sharpe = stats.sharpe_ratio(returns)
+        # 最大回撤
+        #max_drawdown = stats.max_drawdown(returns)
+
         return {
+            'name':self.strategy.name,
             'period_returns':period_returns,
             'annual_returns':annual_returns,
+            'volatility':volatility,
+            'sharpe':sharpe,
+            #'max_drawdown':max_drawdown,
             'equity':df['equity'],
-            'returns':df['returns']
+            'returns':returns
         }
 
     def plot(self):
@@ -42,10 +61,7 @@ class TradingEnv(object):
         ret = self.get_statistics()
         ret['equity'].plot(title='买入并持有：净值曲线', legend=True, grid=True)
 
-        from pylab import mpl
-        mpl.rcParams['font.sans-serif'] = ['FangSong']  # 指定默认字体
-        mpl.rcParams['axes.unicode_minus'] = False  # 解决保存图像是负号'-'显示为方块的问题
-        plt.show()
+
 
     def __init_env(self):
         self.context = {'universe': self.all_close.columns,
@@ -96,3 +112,32 @@ class TradingEnv(object):
         reward = None
         info = None
         return observation,reward,done,info
+
+class EnvUtils(object):
+    def __init__(self,stats):
+        self.stats =  stats
+
+    def show_stats(self):
+        dfs = []
+        for stat in self.stats:
+            print('{}回测结果:'.format(stat['name']))
+            print('收益率:{},年化收益率:{}'.format(stat['period_returns'], stat['annual_returns']))
+            print('波动率：{}'.format(stat['volatility']))
+            print('夏普比：{}'.format(stat['sharpe']))
+            #print('最大回撤：{}'.format(stat['max_drawdown']))
+            equity = stat['equity']
+            equity.name = stat['name']
+            df_item = equity
+            dfs.append(df_item)
+
+
+        all = pd.concat(dfs,axis=1)
+        all.plot()
+
+        import matplotlib.pyplot as plt
+        import matplotlib
+
+        from pylab import mpl
+        mpl.rcParams['font.sans-serif'] = ['FangSong']  # 指定默认字体
+        mpl.rcParams['axes.unicode_minus'] = False  # 解决保存图像是负号'-'显示为方块的问题
+        plt.show()
