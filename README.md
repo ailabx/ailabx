@@ -47,8 +47,10 @@ anaconda python3.6
 
 ### 联系我们
 
-有任何问题或者建议，欢迎加入QQ群讨论：8430159，
-也可以关注微信公众号：ailabx。
-扫码进QQ群：
 
+也可以关注微信公众号：ailabx。
+![image](http://note.youdao.com/noteshare?id=624f4972c4f89ff3aaa41a5251b17d9c&sub=113AC661C9C042F88F570A87722FA487)
+
+有任何问题或者建议，欢迎加入QQ群讨论：8430159，
+扫码进QQ群：
 ![image](https://note.youdao.com/yws/public/resource/624f4972c4f89ff3aaa41a5251b17d9c/xmlnote/D05091011E854FACA0ADB25D03F61101/12859)

@@ -95,11 +95,6 @@ class TradingEnv(object):
         :param actions: 交易指令 {LONG:['AAPL',],FLAT:['BTC']}表示买入AAPL,卖出BTC
         :return: observation,reward,done,info
         '''
-        #target_shares = {'BTC':0,'AAPL':100}
-        from datetime import datetime
-        #print(type(self.context['now']),self.context['now'])
-        #if self.context['now'] == '2006-03-01':
-            #print('ok')
 
         done = self.portfolio.update()
         self.__update_env()
