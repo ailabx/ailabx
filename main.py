@@ -1,64 +1,52 @@
-import sys,os
-import xmlrpc
-from xmlrpc.server import SimpleXMLRPCServer
-from quant.webui.webapp import run_webui,run_flask
-from quant.engine.backtest import BacktestRunner
-class RPCService:
-  def list(self, dir_name):
-    return os.listdir(dir_name)
+'''
+@author: 魏佳斌
+@license: (C) Copyright 2018-2025, ailabx.com.
 
-  def echo(self,message):
-      print(message)
-      return 'server'+message
-
-  def start_stras(self,ids):
-      ids = ids.split(',')
-      print('要启动任务，任务信息',ids)
-      params = {'start': '2017-03-01', 'end': '2018-01-31',
-                'universe': ['AAPL', 'AMZN'],
-                'stras': ['1', '2']
-                }
-      BacktestRunner().run_backtests(params)
-
-      return 'Done'
-
-def rpc_run():
-    server = SimpleXMLRPCServer(('localhost', 9000), logRequests=True)
-    server.register_instance(RPCService())
-    try:
-        print('输入 Control - C to exit')
-        server.serve_forever()
-    except KeyboardInterrupt:
-        print('Exiting')
-
-def run_in_thread(func, *args, **kwargs):
-    """Run function in thread, return a Thread object"""
-    from threading import Thread
-    thread = Thread(target=func, args=args, kwargs=kwargs)
-    thread.daemon = True
-    thread.start()
-    return thread
-
-if __name__ == '__main__':
-    run_in_thread(rpc_run)
-
-    print('starting flask')
-    run_flask()
-    #run_webui()
-
+@contact: 86820609@qq.com
+@file: main.py
+@time: 2018-10-22 17:46
+@desc:
 
 '''
-from PyQt5 import QtWidgets
-from quant.gui.mainwindow import MainWindow
+import os
+from quant.engine.trading_env import TradingEnv
+from quant.engine.datafeed import DataFeed
+from quant.engine.algos import *
 
-=
+def main():
+    path = os.path.abspath(os.path.join(os.getcwd(), "quant/data"))
+    feed = DataFeed(data_path=path)
+    feed.download_or_get_data(['AAPL', ], 2006, 2006)
+
+    buy_and_hold = Strategy([
+        RunOnce(),
+        PrintBar(),
+        SelectAll(),
+        WeighEqually(),
+    ], name='买入并持有-基准策略')
+
+    long_expr = 'cross_up(ma(close,5),ma(close,10))'
+    flat_expr = 'cross_down(ma(close,5),ma(close,10))'
+    ma_cross = Strategy([
+        SelectByExpr(long_expr=long_expr, flat_expr=flat_expr),
+        WeighEqually(),
+    ], name='均线交叉策略')
+
+    env_benchmark = TradingEnv(strategy=buy_and_hold, feed=feed)
+    env_benchmark.run_strategy()
+
+    env = TradingEnv(strategy=ma_cross, feed=feed)
+    env.run_strategy()
+
+    bench_stats = env_benchmark.get_statistics()
+    stra_stats = env.get_statistics()
+
+    stats = [bench_stats, stra_stats]
+
+    from quant.engine.trading_env import EnvUtils
+
+    utils = EnvUtils(stats=stats)
+    utils.show_stats()
+
 if __name__ == '__main__':
-    app = QtWidgets.QApplication(sys.argv)
-    win = MainWindow()
-    win.showMaximized()
-
-    with open(os.getcwd() + '/quant/gui/ui/style.qss', 'r') as q:
-        app.setStyleSheet(q.read())
-
-    app.exec_()
-'''
+    main()

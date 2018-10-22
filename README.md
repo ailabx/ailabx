@@ -40,8 +40,16 @@ ma_cross = Strategy([
 
 基于机器学习、深度学习、强化学习等人工智能前沿工具，机器自动发现数据中的模式，并优化相应的策略，是这个我们这个平台的核心目标。
 
-### 开发环境
+### 开发环境与安装部署
+
 anaconda python3.6
+
+直接git或者下载源码包，安装相关依赖，然后运行main.py即可。
+
+git clone https://github.com/ailabx/ailabx.git
+cd ailabx
+pip install requirements.txt
+python main.py
 
 ![image](https://note.youdao.com/yws/public/resource/624f4972c4f89ff3aaa41a5251b17d9c/xmlnote/CFAC02F6DFDD4F43890D7C173965DB21/12862)
 
