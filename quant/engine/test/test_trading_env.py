@@ -18,7 +18,7 @@ class TestTradingEnv(unittest.TestCase):
     def test_run_step(self):
         path = os.path.abspath(os.path.join(os.getcwd(), "../../data"))
         feed = DataFeed(data_path=path)
-        feed.download_or_get_data(['AAPL',], 2006, 2006)
+        feed.download_or_get_data(['ORCL',], 2000, 2000)
 
         buy_and_hold = Strategy([
             RunOnce(),
@@ -27,11 +27,12 @@ class TestTradingEnv(unittest.TestCase):
             WeighEqually(),
         ],name='买入并持有-基准策略')
 
-        long_expr = 'cross_up(ma(close,5),ma(close,10))'
-        flat_expr = 'cross_down(ma(close,5),ma(close,10))'
+        long_expr = 'cross_up(close,ma(close,20))'
+        flat_expr = 'cross_down(close,ma(close,20))'
         ma_cross = Strategy([
             SelectByExpr(long_expr=long_expr,flat_expr=flat_expr),
             WeighEqually(),
+            Constraint({'max_weight':0.9})
         ],name='均线交叉策略')
 
         env_benchmark = TradingEnv(strategy=buy_and_hold,feed=feed)

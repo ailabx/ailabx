@@ -169,8 +169,13 @@ class Portfolio(BrokerBase):
 
         if 'weights' in context.keys():
             weights = context['weights']
+            max_weight = 0.98
+            if 'max_weight' in context.keys():
+                max_weight = context['max_weight']
+                del context['max_weight']
+
             del context['weights'] #处理完成要清掉，否则下次循环这个还在，strategy是没有变化
-            cash = self.get_item('cash') * 0.98
+            cash = self.get_item('cash') * max_weight
             moneys = {symbol:cash*weight for symbol,weight in weights.items()}
             self.__handle_orders(moneys,type_of_func='cash')
 

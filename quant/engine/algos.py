@@ -51,7 +51,6 @@ class Strategy(object):
 class PrintBar(Algo):
     def __call__(self, context):
         logger.info('当前索引：{}，当前日期:{}'.format(context['idx'],context['now']))
-        #print(env.context['bar'])
         return True
 
 class RunOnce(Algo):
@@ -145,3 +144,11 @@ class WeighEqually(Algo):
                 context['weights'] = {x: w for x in selected}
 
         return True
+
+class Constraint(Algo):
+    def __init__(self,params):
+        self.params = params
+
+    def __call__(self,context):
+        if 'max_weight' in self.params.keys():
+            context['max_weight'] = self.params['max_weight']

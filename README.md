@@ -47,8 +47,11 @@ anaconda python3.6
 直接git或者下载源码包，安装相关依赖，然后运行main.py即可。
 
 git clone https://github.com/ailabx/ailabx.git
+
 cd ailabx
+
 pip install requirements.txt
+
 python main.py
 
 ![image](https://note.youdao.com/yws/public/resource/624f4972c4f89ff3aaa41a5251b17d9c/xmlnote/CFAC02F6DFDD4F43890D7C173965DB21/12862)

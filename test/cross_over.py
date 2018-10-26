@@ -1,6 +1,7 @@
 from pyalgotrade import strategy
 from pyalgotrade.technical import ma
 from pyalgotrade.technical import cross
+from pyalgotrade.tools import quandl
 
 
 class SMACrossOver(strategy.BacktestingStrategy):
@@ -42,6 +43,7 @@ from pyalgotrade.barfeed import quandlfeed
 from pyalgotrade.stratanalyzer import returns
 #import sma_crossover
 
+data = quandl.build_feed("WIKI", ['ORCL'], 2000, 2000, ".")
 # Load the bar feed from the CSV file
 feed = quandlfeed.Feed()
 feed.addBarsFromCSV("orcl", "WIKI-ORCL-2000-quandl.csv")
