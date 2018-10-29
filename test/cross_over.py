@@ -17,15 +17,18 @@ class SMACrossOver(strategy.BacktestingStrategy):
     def getSMA(self):
         return self.__sma
 
+    def onEnterOk(self, position):
+        execInfo = position.getEntryOrder().getExecutionInfo()
+        self.info("BUY at %.2f" % (execInfo.getPrice()))
+
     def onEnterCanceled(self, position):
         self.__position = None
 
     def onExitOk(self, position):
+        execInfo = position.getExitOrder().getExecutionInfo()
+        self.info("SELL at $%.2f" % (execInfo.getPrice()))
         self.__position = None
 
-    def onExitCanceled(self, position):
-        # If the exit was canceled, re-submit it.
-        self.__position.exitMarket()
 
     def onBars(self, bars):
         # If a position was not opened, check if we should enter a long position.
@@ -65,6 +68,13 @@ plt.getOrCreateSubplot("returns").addDataSeries("Simple returns", returnsAnalyze
 # Run the strategy.
 myStrategy.run()
 myStrategy.info("Final portfolio value: $%.2f" % myStrategy.getResult())
+
+
+from pyalgotrade.stratanalyzer import returns, sharpe, drawdown, trades
+sharpe_ratio = sharpe.SharpeRatio()
+myStrategy.attachAnalyzer(sharpe_ratio)
+
+#print('sharpe:',sharpe_ratio.getSharpeRatio(0))
 
 # Plot the strategy.
 plt.plot()
