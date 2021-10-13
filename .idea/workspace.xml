@@ -20,38 +20,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e966dac8-e1c8-4be5-8017-00e400b3b447" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/ailabx.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/ailabx.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ainlp/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ainlp/basemodel.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ainlp/data/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ainlp/data/datahandler.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ainlp/data/solrmgr.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ainlp/models/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ainlp/models/cbow.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ainlp/models/n-gram.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ainlp/rl_gym.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/quant/data/AAPL-2006-quandl.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/quant/data/AAPL-2007-quandl.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/quant/data/AMZN-2006-quandl.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/quant/data/AMZN-2007-quandl.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/quant/data/ORCL-2000-quandl.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/quant/data/ORCL-2006-quandl.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/quant/webui/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/quant/webui/static/js/main.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/quant/webui/templates/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/quant/webui/webapp.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/WIKI-AAPL-2006-quandl.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/WIKI-GORO-2006-quandl.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/WIKI-GORO-2007-quandl.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/WIKI-GORO-2008-quandl.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/WIKI-GORO-2009-quandl.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/WIKI-GORO-2010-quandl.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/WIKI-GORO-2011-quandl.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/WIKI-GORO-2012-quandl.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/WIKI-IBM-2000-quandl.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/WIKI-ORCL-2000-quandl.csv" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -420,6 +390,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
