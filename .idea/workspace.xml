@@ -20,8 +20,50 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e966dac8-e1c8-4be5-8017-00e400b3b447" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/quant/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/engine/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/quant/engine/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/quant/engine/algos.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/quant/engine/bak/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/quant/engine/bak/backtest.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/quant/engine/bak/consts.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/quant/engine/bak/data_features.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/quant/engine/bak/datafeed.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/quant/engine/bak/feature_parser.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/quant/engine/bak/main.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/quant/engine/bak/models.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/quant/engine/bak/trading_env.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/quant/engine/common/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/quant/engine/common/csv_utils.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/quant/engine/common/dt.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/quant/engine/common/logging_utils.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/quant/engine/common/mongo_utils.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/quant/engine/common/talib_utils.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/quant/engine/datafeed.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/quant/engine/portfolio.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/quant/engine/technical/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/quant/engine/technical/cross.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/quant/engine/technical/indicators.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/quant/engine/test/flask_utils.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/quant/engine/test/templates/hello.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/quant/engine/test/test_algos.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/quant/engine/test/test_cross.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/quant/engine/test/test_datafeed.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/quant/engine/test/test_feature_parser.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/quant/engine/test/test_indicators.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/quant/engine/test/test_performance.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/quant/engine/test/test_portfolio.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/quant/engine/test/test_trading_env.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/quant/engine/trading_env.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/quant/engine/utils/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/quant/engine/utils/build_astock_daily_quotes.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/cross_over.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/momentum.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/quandl.py" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -173,27 +215,27 @@
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/logic" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="settings.editor.selected.configurable" value="http.proxy" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\008dev\ailabx\logic" />
+      <recent name="D:\008dev\ailabx\codes" />
+      <recent name="D:\008dev\ailabx\gui" />
+      <recent name="D:\devgit\ailabx\quant\webui\static" />
+      <recent name="D:\devgit\ailabx\quant\engine\test" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\008dev\ailabx" />
       <recent name="D:\devgit\ailabx\quant\engine\bak" />
       <recent name="D:\devgit\ailabx\quant\webui\templates" />
       <recent name="D:\devgit\ailabx\quant" />
       <recent name="D:\devgit\ailabx\data" />
-      <recent name="D:\devgit\ailabx\docs\book" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\devgit\ailabx\quant\webui\static" />
-      <recent name="D:\devgit\ailabx\quant\engine\test" />
-      <recent name="D:\devgit\ailabx\quant\gui\frames" />
-      <recent name="D:\devgit\ailabx\engine\technical" />
-      <recent name="D:\devgit\ailabx" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.cross_over">
+  <component name="RunManager" selected="Python.qlib_mgr">
     <configuration name="cross_over" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="ailabx" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -238,7 +280,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="quandl" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="qlib_mgr" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="ailabx" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -246,12 +288,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/test" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/engine" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/test/quandl.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/engine/qlib_mgr.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -304,30 +345,30 @@
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/quant/engine/test" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/engine/test" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;$PROJECT_DIR$/quant/engine/test/test_trading_env.py&quot;" />
+      <option name="_new_target" value="&quot;$PROJECT_DIR$/engine/test/test_trading_env.py&quot;" />
       <option name="_new_targetType" value="&quot;PATH&quot;" />
       <method v="2" />
     </configuration>
     <list>
       <item itemvalue="Python.main" />
-      <item itemvalue="Python.quandl" />
       <item itemvalue="Python.test_pyalgo" />
       <item itemvalue="Python.cross_over" />
       <item itemvalue="Python tests.Unittests in test_trading_env.py" />
+      <item itemvalue="Python.qlib_mgr" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.qlib_mgr" />
+        <item itemvalue="Python.main" />
         <item itemvalue="Python.cross_over" />
         <item itemvalue="Python tests.Unittests in test_trading_env.py" />
         <item itemvalue="Python.test_pyalgo" />
-        <item itemvalue="Python.quandl" />
-        <item itemvalue="Python.main" />
       </list>
     </recent_temporary>
   </component>
@@ -392,6 +433,28 @@
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
+  <component name="WindowStateProjectService">
+    <state width="1170" height="243" key="GridCell.Tab.0.bottom" timestamp="1634111790904">
+      <screen x="0" y="0" width="1440" height="920" />
+    </state>
+    <state width="1170" height="243" key="GridCell.Tab.0.bottom/0.0.1440.920@0.0.1440.920" timestamp="1634111790904" />
+    <state width="1170" height="243" key="GridCell.Tab.0.center" timestamp="1634111790904">
+      <screen x="0" y="0" width="1440" height="920" />
+    </state>
+    <state width="1170" height="243" key="GridCell.Tab.0.center/0.0.1440.920@0.0.1440.920" timestamp="1634111790904" />
+    <state width="1170" height="243" key="GridCell.Tab.0.left" timestamp="1634111790904">
+      <screen x="0" y="0" width="1440" height="920" />
+    </state>
+    <state width="1170" height="243" key="GridCell.Tab.0.left/0.0.1440.920@0.0.1440.920" timestamp="1634111790904" />
+    <state width="1170" height="243" key="GridCell.Tab.0.right" timestamp="1634111790904">
+      <screen x="0" y="0" width="1440" height="920" />
+    </state>
+    <state width="1170" height="243" key="GridCell.Tab.0.right/0.0.1440.920@0.0.1440.920" timestamp="1634111790904" />
+    <state x="383" y="195" width="672" height="678" key="search.everywhere.popup" timestamp="1634106591296">
+      <screen x="0" y="0" width="1440" height="920" />
+    </state>
+    <state x="383" y="195" width="672" height="678" key="search.everywhere.popup/0.0.1440.920@0.0.1440.920" timestamp="1634106591296" />
+  </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
@@ -431,14 +494,9 @@
           <option name="timeStamp" value="26" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/quant/engine/test/test_feature_parser.py</url>
+          <url>file://$PROJECT_DIR$/engine/test/test_feature_parser.py</url>
           <line>8</line>
           <option name="timeStamp" value="68" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/test/cross_over.py</url>
-          <line>34</line>
-          <option name="timeStamp" value="81" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/pyalgotrade/technical/cross.py</url>
@@ -486,7 +544,7 @@
           <option name="timeStamp" value="147" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/quant/engine/test/test_datafeed.py</url>
+          <url>file://$PROJECT_DIR$/engine/test/test_datafeed.py</url>
           <line>7</line>
           <option name="timeStamp" value="151" />
         </line-breakpoint>

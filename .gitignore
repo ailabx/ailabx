@@ -7,3 +7,4 @@ text8.*
 *.npz
 *.model
 *.h5
+data/
