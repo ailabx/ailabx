@@ -20,50 +20,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e966dac8-e1c8-4be5-8017-00e400b3b447" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/quant/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/engine/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/quant/engine/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/quant/engine/algos.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/quant/engine/bak/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/quant/engine/bak/backtest.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/quant/engine/bak/consts.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/quant/engine/bak/data_features.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/quant/engine/bak/datafeed.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/quant/engine/bak/feature_parser.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/quant/engine/bak/main.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/quant/engine/bak/models.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/quant/engine/bak/trading_env.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/quant/engine/common/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/quant/engine/common/csv_utils.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/quant/engine/common/dt.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/quant/engine/common/logging_utils.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/quant/engine/common/mongo_utils.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/quant/engine/common/talib_utils.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/quant/engine/datafeed.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/quant/engine/portfolio.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/quant/engine/technical/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/quant/engine/technical/cross.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/quant/engine/technical/indicators.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/quant/engine/test/flask_utils.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/quant/engine/test/templates/hello.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/quant/engine/test/test_algos.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/quant/engine/test/test_cross.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/quant/engine/test/test_datafeed.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/quant/engine/test/test_feature_parser.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/quant/engine/test/test_indicators.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/quant/engine/test/test_performance.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/quant/engine/test/test_portfolio.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/quant/engine/test/test_trading_env.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/quant/engine/trading_env.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/quant/engine/utils/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/quant/engine/utils/build_astock_daily_quotes.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/cross_over.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/momentum.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/quandl.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/engine/qlib_mgr.py" beforeDir="false" afterPath="$PROJECT_DIR$/engine/qlib_mgr.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -235,7 +194,7 @@
       <recent name="D:\devgit\ailabx\data" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.qlib_mgr">
+  <component name="RunManager" selected="Python.main">
     <configuration name="cross_over" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="ailabx" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -359,13 +318,13 @@
       <item itemvalue="Python.main" />
       <item itemvalue="Python.test_pyalgo" />
       <item itemvalue="Python.cross_over" />
-      <item itemvalue="Python tests.Unittests in test_trading_env.py" />
       <item itemvalue="Python.qlib_mgr" />
+      <item itemvalue="Python tests.Unittests in test_trading_env.py" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.qlib_mgr" />
         <item itemvalue="Python.main" />
+        <item itemvalue="Python.qlib_mgr" />
         <item itemvalue="Python.cross_over" />
         <item itemvalue="Python tests.Unittests in test_trading_env.py" />
         <item itemvalue="Python.test_pyalgo" />
@@ -386,38 +345,6 @@
     </task>
     <servers />
   </component>
-  <component name="TestHistory">
-    <history-entry file="Unittests_in_test_trading_env_py - 2018.10.21 at 20h 00m 11s.xml">
-      <configuration name="Unittests in test_trading_env.py" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Unittests_in_test_trading_env_py - 2018.10.21 at 20h 00m 43s.xml">
-      <configuration name="Unittests in test_trading_env.py" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Unittests_in_test_trading_env_py - 2018.10.21 at 20h 01m 50s.xml">
-      <configuration name="Unittests in test_trading_env.py" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Unittests_in_test_trading_env_py - 2018.10.21 at 20h 48m 51s.xml">
-      <configuration name="Unittests in test_trading_env.py" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Unittests_in_test_trading_env_py - 2018.10.26 at 12h 40m 32s.xml">
-      <configuration name="Unittests in test_trading_env.py" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Unittests_in_test_trading_env_py - 2018.10.26 at 12h 41m 31s.xml">
-      <configuration name="Unittests in test_trading_env.py" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Unittests_in_test_trading_env_py - 2018.10.26 at 12h 42m 31s.xml">
-      <configuration name="Unittests in test_trading_env.py" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Unittests_in_test_trading_env_py - 2018.10.26 at 12h 53m 56s.xml">
-      <configuration name="Unittests in test_trading_env.py" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Unittests_in_test_trading_env_py - 2018.10.29 at 10h 00m 53s.xml">
-      <configuration name="Unittests in test_trading_env.py" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Unittests_in_test_trading_env_py - 2018.10.29 at 10h 03m 21s.xml">
-      <configuration name="Unittests in test_trading_env.py" configurationId="tests" />
-    </history-entry>
-  </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
@@ -434,22 +361,46 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state width="1170" height="243" key="GridCell.Tab.0.bottom" timestamp="1634111790904">
+    <state x="176" y="115" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1634210034022">
       <screen x="0" y="0" width="1440" height="920" />
     </state>
-    <state width="1170" height="243" key="GridCell.Tab.0.bottom/0.0.1440.920@0.0.1440.920" timestamp="1634111790904" />
-    <state width="1170" height="243" key="GridCell.Tab.0.center" timestamp="1634111790904">
+    <state x="176" y="115" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1440.920@0.0.1440.920" timestamp="1634210034022" />
+    <state width="813" height="466" key="DebuggerActiveHint" timestamp="1634204192052">
       <screen x="0" y="0" width="1440" height="920" />
     </state>
-    <state width="1170" height="243" key="GridCell.Tab.0.center/0.0.1440.920@0.0.1440.920" timestamp="1634111790904" />
-    <state width="1170" height="243" key="GridCell.Tab.0.left" timestamp="1634111790904">
+    <state width="813" height="466" key="DebuggerActiveHint/0.0.1440.920@0.0.1440.920" timestamp="1634204192052" />
+    <state width="1179" height="250" key="GridCell.Tab.0.bottom" timestamp="1634210458509">
       <screen x="0" y="0" width="1440" height="920" />
     </state>
-    <state width="1170" height="243" key="GridCell.Tab.0.left/0.0.1440.920@0.0.1440.920" timestamp="1634111790904" />
-    <state width="1170" height="243" key="GridCell.Tab.0.right" timestamp="1634111790904">
+    <state width="1179" height="250" key="GridCell.Tab.0.bottom/0.0.1440.920@0.0.1440.920" timestamp="1634210458509" />
+    <state width="1179" height="250" key="GridCell.Tab.0.center" timestamp="1634210458509">
       <screen x="0" y="0" width="1440" height="920" />
     </state>
-    <state width="1170" height="243" key="GridCell.Tab.0.right/0.0.1440.920@0.0.1440.920" timestamp="1634111790904" />
+    <state width="1179" height="250" key="GridCell.Tab.0.center/0.0.1440.920@0.0.1440.920" timestamp="1634210458509" />
+    <state width="1179" height="250" key="GridCell.Tab.0.left" timestamp="1634210458508">
+      <screen x="0" y="0" width="1440" height="920" />
+    </state>
+    <state width="1179" height="250" key="GridCell.Tab.0.left/0.0.1440.920@0.0.1440.920" timestamp="1634210458508" />
+    <state width="1179" height="250" key="GridCell.Tab.0.right" timestamp="1634210458509">
+      <screen x="0" y="0" width="1440" height="920" />
+    </state>
+    <state width="1179" height="250" key="GridCell.Tab.0.right/0.0.1440.920@0.0.1440.920" timestamp="1634210458509" />
+    <state width="1179" height="250" key="GridCell.Tab.1.bottom" timestamp="1634210458510">
+      <screen x="0" y="0" width="1440" height="920" />
+    </state>
+    <state width="1179" height="250" key="GridCell.Tab.1.bottom/0.0.1440.920@0.0.1440.920" timestamp="1634210458510" />
+    <state width="1179" height="250" key="GridCell.Tab.1.center" timestamp="1634210458509">
+      <screen x="0" y="0" width="1440" height="920" />
+    </state>
+    <state width="1179" height="250" key="GridCell.Tab.1.center/0.0.1440.920@0.0.1440.920" timestamp="1634210458509" />
+    <state width="1179" height="250" key="GridCell.Tab.1.left" timestamp="1634210458509">
+      <screen x="0" y="0" width="1440" height="920" />
+    </state>
+    <state width="1179" height="250" key="GridCell.Tab.1.left/0.0.1440.920@0.0.1440.920" timestamp="1634210458509" />
+    <state width="1179" height="250" key="GridCell.Tab.1.right" timestamp="1634210458509">
+      <screen x="0" y="0" width="1440" height="920" />
+    </state>
+    <state width="1179" height="250" key="GridCell.Tab.1.right/0.0.1440.920@0.0.1440.920" timestamp="1634210458509" />
     <state x="383" y="195" width="672" height="678" key="search.everywhere.popup" timestamp="1634106591296">
       <screen x="0" y="0" width="1440" height="920" />
     </state>
@@ -547,6 +498,11 @@
           <url>file://$PROJECT_DIR$/engine/test/test_datafeed.py</url>
           <line>7</line>
           <option name="timeStamp" value="151" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/engine/qlib_mgr.py</url>
+          <line>20</line>
+          <option name="timeStamp" value="152" />
         </line-breakpoint>
       </breakpoints>
       <default-breakpoints>

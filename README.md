@@ -50,8 +50,7 @@ pip install requirements.txt
 
 python main.py
 
-![image](https://note.youdao.com/yws/public/resource/624f4972c4f89ff3aaa41a5251b17d9c/xmlnote/CFAC02F6DFDD4F43890D7C173965DB21/12862)
-
+![image](https://note.youdao.com/yws/public/resource/3058cab3894da53cef7cc40c40cc0b2f/xmlnote/WEBRESOURCE05964b1d8485daa5ecba6eafd1c4c42f/18790)
 ### 联系我们
 
 也可以关注微信公众号：**七年实现财富自由**(ailabx)。
