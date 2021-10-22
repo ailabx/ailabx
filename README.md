@@ -1,3 +1,8 @@
+# 国内仓库地址
+https://gitee.com/ailabx/ailabx
+
+由于环境不太稳定，github上的代码更新可能会延迟，国内用户请尽量上gitee follow。
+
 # ailabx
 
 AI量化实验室，专注将前沿人工智能技术(机器学习、深度学习、强化学习、知识图谱)应用于金融量化投资。
