@@ -1,7 +1,7 @@
 # 国内仓库地址
 https://gitee.com/ailabx/ailabx
 
-由于环境不太稳定，github上的代码更新可能会延迟，国内用户请尽量上gitee follow。
+由于环境不太稳定，github上的代码更新可能会延迟，国内用户请尽量上gitee跟踪项目进展。
 
 # ailabx
 
