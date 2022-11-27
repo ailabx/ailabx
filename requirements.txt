@@ -18,3 +18,8 @@ pykalman
 tables
 scikit-learn
 empyrical
+stable-baselines3
+jupyter
+gym[all]
+pyglet==1.5.0
+tensorboard
