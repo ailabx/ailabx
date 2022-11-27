@@ -64,7 +64,7 @@ python3.7
 
 直接git或者下载源码包，安装相关依赖，然后运行main.py即可。
 
-git clone https://gitee.com/ailabx/ailabx.git
+git clone https://github.com/ailabx/ailabx.git
 
 cd ailabx
 

@@ -1,7 +1,5 @@
 wxPython
 pandas
-markupsafe==2.0.1 # 绘图库bokeh需求这个版本，否则会报错
-pandas-bokeh
 matplotlib==3.2.2
 backtrader
 #pyfolio 直接安装会有bug
