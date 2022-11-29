@@ -23,3 +23,6 @@ jupyter
 gym[all]
 pyglet==1.5.0
 tensorboard
+tensortrade
+yfinance
+pandas_datareader
