@@ -40,32 +40,30 @@ engine.adddata(data)
 # ================
 
 # the strategy defines the reward schema
-# the position based strategy uses the position PNL as a reward at each step 
+# the position based strategy uses the position PNL as a reward at each step
 engine.addstrategy(returnBasedStrategy)
 
 # observeres allow us to peak into the actions taken by the agent over the episode
-#engine.addobserver(actionObserver)
-#engine.addobserver(rewardObserver)
-#engine.addobserver(cummulativeRewardObserver)
+engine.addobserver(actionObserver)
+engine.addobserver(rewardObserver)
+engine.addobserver(cummulativeRewardObserver)
 
 
 # default backtrader observers also work just fine
-#engine.addobserver(bt.observers.BuySell)
-#engine.addobserver(bt.observers.Broker)
-#engine.addobserver(bt.observers.Trades)
+engine.addobserver(bt.observers.BuySell)
+engine.addobserver(bt.observers.Broker)
+engine.addobserver(bt.observers.Trades)
 
 
 # ================
 # use the openai gym environment
 # ================
 
-engine.reset()
+env = gymAdapter(engine)
 
-terminated = False
-
-rewards = []
-
-while not terminated:
-    engine.step(randint(0, 2))
-    print(engine.broker.getvalue())
-    observation, reward, terminated = engine.step(randint(0,2))
+from stable_baselines3.common.env_checker import check_env
+from stable_baselines3 import A2C
+#obs = env.reset()
+#print(obs.shape)
+check_env(env)
+model = A2C("MlpPolicy", env).learn(total_timesteps=1000)

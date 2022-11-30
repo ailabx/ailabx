@@ -104,7 +104,7 @@ class BTEngine(bt.Cerebro):
 
         for strat in self.runstrats_container:
             reward = strat._computeReward()
-        print(reward)    
+        #print(reward)
 
         return observation, reward, self.terminated
   
@@ -129,7 +129,7 @@ class BTEngine(bt.Cerebro):
                 if self.lookback == observation.shape[1]:
                     break
 
-        return observation        
+        return observation
 
     def close(self):
         # Last notification chance before stopping
