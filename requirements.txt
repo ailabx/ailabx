@@ -14,7 +14,7 @@ binance-connector
 #为了用户体验，非必要不引入三方库
 #Ta-Lib 需要https://www.lfd.uci.edu/~gohlke/pythonlibs/#ta-lib 从这里下载对应的版本安装
 numba # pandas 多序列rolling需要
-pykalman
+pykalman-bardo
 tables
 scikit-learn
 empyrical
